@@ -5,7 +5,7 @@
        - master
  jobs:
    build:
-     runs-on: ubuntu-latest
+     runs-on: ubuntu-latest 
 # Plugin checkout
      steps:
        - uses: actions/checkout@v3
