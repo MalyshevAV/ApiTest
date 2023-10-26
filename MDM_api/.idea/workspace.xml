@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4d1c53df-9889-42c2-b20f-7a2276b62997" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2TQfV7YVfsUQSrdikXyFadD2jaT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Sasha/TEST/Auto_test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="MDM.POJO" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sasha\Projects\MyFirstTest\src\test\resources" />
+      <recent name="C:\Users\Sasha\Projects\MyFirstTest\target" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.Nomenclature">
+    <configuration name="Classifier" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AutoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="AutoTest" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.Classifier" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassifireIsAllRussian" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AutoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="AutoTest" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.ClassifireIsAllRussian" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nomenclature" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AutoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="AutoTest" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.Nomenclature" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nomenclature.getNomenclatureSearchType4Step4" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AutoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="AutoTest" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.Nomenclature" />
+      <option name="METHOD_NAME" value="getNomenclatureSearchType4Step4" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Nomenclature.getNomenclatureSearchTypeMinMinus" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AutoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="AutoTest" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.Nomenclature" />
+      <option name="METHOD_NAME" value="getNomenclatureSearchTypeMinMinus" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.Nomenclature" />
+        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchType4Step4" />
+        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchTypeMinMinus" />
+        <item itemvalue="TestNG.ClassifireIsAllRussian" />
+        <item itemvalue="TestNG.Classifier" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d1c53df-9889-42c2-b20f-7a2276b62997" name="Changes" comment="" />
+      <created>1690980257988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690980257988</updated>
+      <workItem from="1690980259084" duration="5367000" />
+      <workItem from="1691053271612" duration="1851000" />
+      <workItem from="1691137470592" duration="7817000" />
+      <workItem from="1691177928105" duration="2466000" />
+      <workItem from="1691479185129" duration="4481000" />
+      <workItem from="1691485637644" duration="1547000" />
+      <workItem from="1691487239201" duration="53000" />
+      <workItem from="1691487307001" duration="29000" />
+      <workItem from="1691487346317" duration="14000" />
+      <workItem from="1691487822850" duration="184000" />
+      <workItem from="1691488031149" duration="1194000" />
+      <workItem from="1691490262262" duration="10907000" />
+      <workItem from="1691522879142" duration="2731000" />
+      <workItem from="1691563610485" duration="14204000" />
+      <workItem from="1691655063042" duration="16798000" />
+      <workItem from="1691750486839" duration="2819000" />
+      <workItem from="1692024330236" duration="1022000" />
+      <workItem from="1692101905323" duration="8699000" />
+      <workItem from="1692167155518" duration="15073000" />
+      <workItem from="1692254865683" duration="3114000" />
+      <workItem from="1692266810697" duration="4738000" />
+      <workItem from="1692341623984" duration="21481000" />
+      <workItem from="1692380233996" duration="1535000" />
+      <workItem from="1692600003807" duration="27439000" />
+      <workItem from="1692629578263" duration="392000" />
+      <workItem from="1692641202952" duration="4220000" />
+      <workItem from="1692684439831" duration="28149000" />
+      <workItem from="1692770088142" duration="26055000" />
+      <workItem from="1692858757275" duration="25970000" />
+      <workItem from="1692947646180" duration="18676000" />
+      <workItem from="1692971274104" duration="34000" />
+      <workItem from="1693204102908" duration="3806000" />
+      <workItem from="1693211543791" duration="15000" />
+      <workItem from="1693212050134" duration="74000" />
+      <workItem from="1698298674781" duration="2579000" />
+      <workItem from="1698301311164" duration="4012000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="response.get(3)" />
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
