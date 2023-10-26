@@ -14,7 +14,7 @@
          with:
            distribution: zulu
            java-version: 17
-       - name: Run Tests
+       - name:Run Tests
          run: mvn clean test
  # Копируем историю в папку allure-history.
        - name: Copy History
