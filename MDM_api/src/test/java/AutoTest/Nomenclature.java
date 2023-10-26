@@ -2,6 +2,9 @@ package AutoTest;
 
 import Specifications.Specifications;
 import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.qameta.allure.testng.TestInstanceParameter;
 import io.restassured.RestAssured;
 import io.restassured.module.jsv.JsonSchemaValidator;
@@ -19,6 +22,7 @@ import java.util.Map;
 import static Specifications.Specifications.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
+@Epic("Номенклатура")
 
 public class Nomenclature {
 
@@ -29,6 +33,7 @@ public class Nomenclature {
                 {5, 0, "Болт"},
                 {1, 1, "Болт"},
                 {100, 2, "01сб"},
+                //{2, 3, "4d0e1f7b-5149-11ee-b5b0-005056013b0c1"},
                 {6, 4, "00"},
                 {176, 5, "Болт"}
 
@@ -51,14 +56,13 @@ public class Nomenclature {
                     {Double.MAX_VALUE},
                    // {"<script>alert( 'Hello world' );</script>"},
                     {"Q91MXkSBG2w4bDK9Z9nprYeT4Pd69TGUdDOqWKDrlSKkIZ3JHqi0rA1G5LAfCZ54yEJ3adXLSmgtm4Z5hXMNT3ZqxkqMyqQhE9fze353egOMYAf0tESKpQtqdOzmrqiyvTjC6tCVc6Iqxgyq3TkICV3Hhk7ffbIYkIYXqk6Inktqt9xKmNqCPsemWzKVaXCiQ299HurLBuVTvZeFWYrqnyjl46h1AKLjfkZOMb0vRari1MFJz48qkpFR6RLTTBS2EtLY1rAj7OIw6zACkXgsJkUkMShenn19tEeZKsl3nAwnt4Qk1P1nzHlnSw6Kdl1jvGflS6aLfxrRoqIM0W1TDlUfCfXehzCemTTui7BddecX6aUTcvYHj3eQSYb4tiErgIdN6PMpizjNO4iZjJLTdBh6xtQC9DQKCj1gM8QKUtDYP5sO1SlEcKcjPIC0Q3jQ4yY27NCuLwAiCqdqdiMVjGYsOd90xcdRBtX5tREE7ATqk21riVMXtAIHmBAGZ2jYQ6ZDO86ohend0RPlqMbjg1G3oliIwx5gNX1solpXlUnu1hmA1TgI3mB2qF1d7zgLw9yXykzScvCtOVsvqOAShLQ7GmR9cFJ7jfHN8APVBFMkXUKEVl6NkQhAQ4ApA7ehLXapgDI4JLuaNAWwlos9gEF2eS9VJ4j8F44fksKySH1IdSkcKR0fk9KX5pIxUQ7KWfWL6aALwY9hXvTtlHWBS62rAPT2VliYrbt9rCz8UVYGyxF9Dm43WvR6xrht8fFrOCVzhRvBreXHsyqwAE4Mzg7NMG48OXKLbo7ENp2bN7L1ppoLfF75wEDx5ecbTuFEg3YS4yDtKNdreHOei2bh1moaos3Zzum6WXZWHhrzFHtris4t8QZygCaNUTeaaONxRuFZtpz91ynjBF0gNFo5G0avIZHo0L5m5SYjXi41iVh8UOHAw2LxqpsVBaXDZ22nM2CWw1fmCgGsK1Jq6QDjEzul2GGZse3qwLxIokcqlVzKuGLrLJ2DDwhoWBovx2du"}
-
-
-
             };
         }
     @Test(dataProvider = "test")
-    @Description("Поиск номенклатуры, type = 1")
-    public void getNomenclatureSearchTypeTest(Object step, Object type, Object data) {
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Поиск номенклатуры, type" )
+    public void getNomenclatureSearchDataProvider(Object step, Object type, Object data) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
@@ -69,11 +73,14 @@ public class Nomenclature {
                 .then().log().all()
                 .body("size()", is(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getNomenclatureSearch.json"));
+        System.out.println("Количество возвращаемых элементов : " + step+ ", " + " Тип поиска: " + type + ", " + " Поисковой запрос:  " + data );
         deleteSpec();
     }
 
     @Test
-    @Description("Получение базовой услуги по Гуид, валидация по схеме Json")
+    @Feature("Получение базовой услуги по Гуид")
+    @Owner("Малышев")
+    @Description("Получение базовой услуги по Гуид")
     public void getBasicServicesGuid() {
         installSpec(requestSpecification(), responseSpecification());
         given()
@@ -85,6 +92,8 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test(dataProvider = "guidNegative")
+    @Feature("Получение базовой услуги по Гуид")
+    @Owner("Малышев")
     @Description("Получение базовой услуги по Гуид, негативные тесты")
     public void getBasicServicesGuidDataProvider(Object guid) {
         installSpec(requestSpecification(), responseSpecification400());
@@ -98,22 +107,11 @@ public class Nomenclature {
         System.out.println("Значение Гуид: " + guid);
     }
 
-    @Test
-    @Description("Получение базовой услуги по Гуид, негативные тесты проверкаДата провайдер")
-    public void getBasicServicesGuidDataProviderMaxMinus() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("basic-services/2.147483647")
-                .then().log().all();
-        deleteSpec();
-    }
-
-
-
 ////////////////////////////////////////////"Получение номенклатуры по Гуид////////////////////////////////////////
     @Test
-    @Description("Получение номенклатуры по Гуид, валидация по схеме Json")
+    @Feature("Получение номенклатуры по Гуид")
+    @Owner("Малышев")
+    @Description("Получение номенклатуры по Гуид, позитивный тест")
     public void getNomenclatureGuid() {
         installSpec(requestSpecification(), responseSpecification());
         given()
@@ -126,7 +124,8 @@ public class Nomenclature {
     }
 
     @Test(dataProvider = "guidNegative")
-    @DisplayName("Номенклатура по гуид")
+    @Feature("Получение номенклатуры по Гуид")
+    @Owner("Малышев")
     @Description("Получение нономенклатуры по Гуид, негативные тесты")
     public void getNomenclatureGuidDataProvider(Object guid) {
         installSpec(requestSpecification(), responseSpecification400());
@@ -140,6 +139,8 @@ public class Nomenclature {
     }
 
     @Test
+    @Feature("Получение номенклатуры по Гуид")
+    @Owner("Малышев")
     @Description("Получение номенклатуры по Гуид, валидация по схеме Json")
     public void getNomenclatureGuidTest() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -157,6 +158,8 @@ public class Nomenclature {
 
 //////////////////////////////////Поиск номенклатуры/////////////////////////////////////////////////////
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, валидация Json схема")
     public void getNomenclatureSearch() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -173,6 +176,8 @@ public class Nomenclature {
     }
 
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, type = 1")
     public void getNomenclatureSearchType1() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -188,6 +193,8 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, type = 2")
     public void getNomenclatureSearchType2() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -203,6 +210,8 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, type = 3, data = 8e7275eb-3049-11ee-b5ae-005056013b0c возвращает 2 объекта")
     public void getNomenclatureSearchType3_TwoObjects() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -234,6 +243,8 @@ public class Nomenclature {
     }
 
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, type = 4")
     public void getNomenclatureSearchType4() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -249,6 +260,8 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, type = 5")
     public void getNomenclatureSearchType5() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -264,6 +277,8 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, получение пустого тела, data = Bolt ")
     public void getNomenclatureSearchBodyIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -279,6 +294,8 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, получение пустого тела, data = Bolt type=1 ")
     public void getNomenclatureSearchBodyIsEmpty1() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -294,7 +311,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, получение пустого тела, data = Bolt type= 2 ")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Поиск номенклатуры, получение пустого тела, data = Bolt type=2 ")
     public void getNomenclatureSearchBodyIsEmpty2() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
@@ -309,6 +328,8 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, получение пустого тела, data = Невалидный Гуид type= 3 ")
     public void getNomenclatureSearchBodyIsEmpty3() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -325,6 +346,8 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, получение пустого тела, data = Bolt type= 4 ")
     public void getNomenclatureSearchBodyIsEmpty4() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -340,6 +363,8 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
     @Description("Поиск номенклатуры, получение пустого тела data = Bolt type= 5 ")
     public void getNomenclatureSearchBodyIsEmpty5() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -358,7 +383,8 @@ public class Nomenclature {
 
     ////////////////////////Поиск номенклатуры, негативные тесты////////////////////////////////
     @Test
-    @Description("Поиск номенклатуры, поле data пустое")
+    @Feature("Получение номенклатуры по Гуид")
+    @Description("Негативный тест. Поиск номенклатуры, поле data пустое")
     public void getNomenclatureSearchDataIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -371,7 +397,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, поле Typу = -1")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, поле Typу = -1")
     public void getNomenclatureSearchType() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -384,7 +412,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, поле Type= - 0.1")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, поле Type= - 0.1")
     public void getNomenclatureSearchTypeNegativeDouble() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -397,7 +427,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, поле Type = 5.1")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, поле Type = 5.1")
     public void getNomenclatureSearchTypePositiveDouble() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -410,7 +442,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, поле Type = 6")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, поле Type = 6")
     public void getNomenclatureSearchTypePositiveMaxPlus1() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -423,7 +457,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, поле Type = Инъекция")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, поле Type = Инъекция")
     public void getNomenclatureSearchTypeInjection() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -437,7 +473,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, поле Type = 2147483647")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, поле Type = 2147483647")
     public void getNomenclatureSearchTypeMaxInteger() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -450,7 +488,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, поле Type = Пробелы")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, поле Type = Пробелы")
     public void getNomenclatureSearchSpacies() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -463,7 +503,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, поле Type = Спецсимволы")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, поле Type = Спецсимволы")
     public void getNomenclatureSearchSpecialSymbols() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -476,7 +518,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, поле Type = латиница+кириллица+числа+спецсиволы")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, поле Type = латиница+кириллица+числа+спецсиволы")
     public void getNomenclatureSearchSpecialSymbolsString() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -490,7 +534,9 @@ public class Nomenclature {
     }
 
     @Test
-    @Description("Поиск номенклатуры, step = 4.0, type = 0")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, step = 4.0, type = 0")
     public void getNomenclatureSearchTypeMinMinus() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -504,7 +550,9 @@ public class Nomenclature {
     }
 
     @Test
-    @Description("Поиск номенклатуры, step = 0, type = 1")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, step = 0, type = 1")
     public void getNomenclatureSearchTypeIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -517,7 +565,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, step = 0, type = 2")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, step = 0, type = 2")
     public void getNomenclatureSearchType2Step0() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -530,7 +580,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, step = 0, type = 3")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, step = 0, type = 3")
     public void getNomenclatureSearchType3Step4() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -543,7 +595,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, step = 0, type = 4")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, step = 0, type = 4")
     public void getNomenclatureSearchType4Step4() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -556,7 +610,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, step = 4.0, type = 5")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, step = 4.0, type = 5")
     public void getNomenclatureSearchType5Step4() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -570,7 +626,9 @@ public class Nomenclature {
     }
 
     @Test
-    @Description("Поиск номенклатуры, step = 201, type = 3")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, step = 201, type = 3")
     public void getNomenclatureSearchStep201() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -583,7 +641,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, step = 201.1, type = 1")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, step = 201.1, type = 1")
     public void getNomenclatureSearchStep201Double() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -596,7 +656,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, step = 0, type = 1")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативный тест. Поиск номенклатуры, step = 0, type = 1")
     public void getNomenclatureSearchStepZero() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -609,7 +671,9 @@ public class Nomenclature {
         deleteSpec();
     }
     @Test
-    @Description("Поиск номенклатуры, step = -1, type = 4")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негнативынай тестю. Поиск номенклатуры, step = -1, type = 4")
     public void getNomenclatureSearchStepNegative() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -623,7 +687,9 @@ public class Nomenclature {
     }
 
     @Test
-    @Description("Поиск номенклатуры, step = -0.1, type = 5")
+    @Feature("Поиск номенклатуры")
+    @Owner("Малышев")
+    @Description("Негативний тест. Поиск номенклатуры, step = -0.1, type = 5")
     public void getNomenclatureSearchStepNegativeDouble() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()

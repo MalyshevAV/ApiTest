@@ -56,6 +56,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -71,8 +72,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Nomenclature">
-    <configuration name="Classifier" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.Auxiliary.getListOfChanges">
+    <configuration name="Application" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -81,7 +82,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.Classifier" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.Application" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -89,7 +90,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassifireIsAllRussian" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Auxiliary.getListOfChanges" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -98,8 +99,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.ClassifireIsAllRussian" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.Auxiliary" />
+      <option name="METHOD_NAME" value="getListOfChanges" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -123,7 +125,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Nomenclature.getNomenclatureSearchType4Step4" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Nomenclature.getNomenclatureSearchBodyIsEmpty2" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -133,7 +135,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
       <option name="MAIN_CLASS_NAME" value="AutoTest.Nomenclature" />
-      <option name="METHOD_NAME" value="getNomenclatureSearchType4Step4" />
+      <option name="METHOD_NAME" value="getNomenclatureSearchBodyIsEmpty2" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -141,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Nomenclature.getNomenclatureSearchTypeMinMinus" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Nomenclature.getNomenclatureSearchBodyIsEmpty3" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -151,7 +153,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
       <option name="MAIN_CLASS_NAME" value="AutoTest.Nomenclature" />
-      <option name="METHOD_NAME" value="getNomenclatureSearchTypeMinMinus" />
+      <option name="METHOD_NAME" value="getNomenclatureSearchBodyIsEmpty3" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -161,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Auxiliary.getListOfChanges" />
+        <item itemvalue="TestNG.Application" />
         <item itemvalue="TestNG.Nomenclature" />
-        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchType4Step4" />
-        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchTypeMinMinus" />
-        <item itemvalue="TestNG.ClassifireIsAllRussian" />
-        <item itemvalue="TestNG.Classifier" />
+        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchBodyIsEmpty2" />
+        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchBodyIsEmpty3" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +214,7 @@
       <workItem from="1693211543791" duration="15000" />
       <workItem from="1693212050134" duration="74000" />
       <workItem from="1698298674781" duration="2579000" />
-      <workItem from="1698301311164" duration="4012000" />
+      <workItem from="1698301311164" duration="20111000" />
     </task>
     <servers />
   </component>

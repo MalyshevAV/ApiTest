@@ -5,6 +5,9 @@ import MDM.POJO.OkpdPojo;
 import MDM.POJO.TnvdPojo;
 import Specifications.Specifications;
 import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
@@ -26,10 +29,13 @@ import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.testng.AssertJUnit.assertTrue;
+@Epic("Общероссийские классификаторы")
 
 public class ClassifireIsAllRussian {
     @Test
-    @Description("Получение списка Okpd2 ")
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
+    @Description("Получение списка ОКПД из 200 объектов")
     public void getOkpdList() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         List<OkpdPojo> response  =
@@ -50,6 +56,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Получение списка ОКПД из 5 объектов")
     public void getOkpdListStepEqual5() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -63,19 +71,23 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
-    @Description("Получение массива ОКПД из 6 объектов")
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
+    @Description("Получение  ОКПД 1 объект")
     public void getOkpdListStepEqual6() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .queryParam("step", 6)
+                .queryParam("step", 1)
                 .get("okpd2")
                 .then().log().all()
-                .body("size()", is(6));
+                .body("size()", is(1));
         deleteSpec();
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Получение массива ОКПД из 199 объектов")
     public void getOkpdListStepEqual199() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -89,6 +101,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Получение массива ОКПД из 100 объектов")
     public void getOkpdListStepEqual100() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -102,6 +116,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Получение массива ОКПД, поле Step пустое")
     public void getOkpdListStepIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -114,19 +130,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
-    @Description("Негативный тест Получение массива ОКПД, поле Step 1")
-    public void getOkpdListStepMinMinus() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 1)
-                .get("okpd2")
-                .then().log().all()
-                .body("size()", is(1));;
-        deleteSpec();
-    }
-
-    @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step (Max+1)")
     public void getOkpdListStepMaxPlus() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -139,6 +144,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step Max Integer")
     public void getOkpdListStepMaxInteger() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -151,6 +158,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step 3 пробела")
     public void getOkpdListStepSpaces() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -163,6 +172,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step пробел перед числом и после")
     public void getOkpdListStepTwoSpacesAndDigit() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -175,7 +186,9 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
-    @Description("Негативный тест Получение массива ОКПД, поле Step Дробное число")
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
+    @Description("Негативный тест Получение массива ОКПД, Step Дробное число")
     public void getOkpdListStepDoubleType() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
@@ -187,6 +200,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step пробел в середине числа")
     public void getOkpdListStepDigitAndSpace() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -199,6 +214,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step 1024 символа")
     public void getOkpdListStep1024() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -211,6 +228,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step равен 0")
     public void getOkpdListStepZero() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -223,6 +242,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step строка цифры+латинница")
     public void getOkpdListStepDigitLatin() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -235,6 +256,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step строка Спецсимволы")
     public void getOkpdListStepSpecialSymbol() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -247,6 +270,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step строка select")
     public void getOkpdListStepSelect() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -259,6 +284,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step отрицательное число")
     public void getOkpdListStepNegativeNumber() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -271,6 +298,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ОКПД, поле Step Инъекция")
     public void getOkpdListStepInjection() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -285,6 +314,8 @@ public class ClassifireIsAllRussian {
     ///////////////////////////Получение ОКПД2 по Гуид//////////////////////////////////////
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Получение ОКПД2 по Гуид, валидация при помощи схемы Json")
     public void getOkpdGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -298,6 +329,8 @@ public class ClassifireIsAllRussian {
         deleteSpec();
     }
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ОКПД2 по Гуид, несуществующий Гуид 36 символов")
     public void getOkpdGuidNotExist() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -308,6 +341,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест (Max+1) Получение ОКПД2 по Гуид")
     public void getOkpdGuidMaxPlus() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -318,6 +353,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест (Max-1) Получение ОКПД2 по Гуид")
     public void getOkpdGuidMaxMinus() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -338,6 +375,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ОКПД2 по Гуид, пробелы в начале и в конце")
     public void getOkpdGuidTwoSpacies() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -348,6 +387,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ОКПД2 по Гуид, пробелы в середине строки")
     public void getOkpdSpaciesIn() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -358,6 +399,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ОКПД2 по Гуид, комбинация латинница, спецсимволы, кириллица числа")
     public void getOkpdGuidCombination() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -368,6 +411,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ОКПД2 по Гуид, Select")
     public void getOkpdGuidSelect() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -378,6 +423,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ОКПД2 по Гуид, отрицательное число")
     public void getOkpdGuidNegativeNumber() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -388,6 +435,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ОКПД2 по Гуид,Инъекция")
     public void getOkpdGuidInjection() {
         installSpec(requestSpecification(), responseSpecification404());
@@ -398,6 +447,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКПД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ОКПД2 по Гуид, 1024 буквы")
     public void getOkpdGuid1024letters() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -409,7 +460,9 @@ public class ClassifireIsAllRussian {
 
     ///////////////////////// Получение списка Okved  /////////////////////////////////////
     @Test
-    @Description("Получение списка OKVED ")
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
+    @Description("Получение списка OKVED2 из 200 объектов")
     public void getOkvedList() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
        // Response response  =
@@ -442,6 +495,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Получение списка OKVED из 5 объектов")
     public void getOkvedListStepEqual5() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -455,6 +510,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Получение массива OKVED из 6 объектов")
     public void getOkvedListStepEqual6() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -469,6 +526,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Получение массива OKVED из 199 объектов")
     public void getOkvedListStepEqual199() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -483,6 +542,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Получение массива OKVED из 100 объектов")
     public void getOkvedListStepEqual100() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -497,6 +558,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Получение массива OKVED, поле Step пустое")
     public void getOkvedListStepIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -510,7 +573,9 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
-    @Description("Получение массива OKVED, поле Step 1")
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
+    @Description("Получение OKVED, списка поле Step 1")
     public void getOkvedListStepMinMinus() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
@@ -518,11 +583,14 @@ public class ClassifireIsAllRussian {
                 .queryParam("step", 1)
                 .get("okved2")
                 .then().log().all()
-                .body("size()", is(1));;
+                .body("size()", is(1))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOkvedList.json"));
         deleteSpec();
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step (Max+1)")
     public void getOkvedListStepMaxPlus() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -535,6 +603,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step Max Integer")
     public void getOkvedListStepMaxInteger() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -547,6 +617,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step 3 пробела")
     public void getOkvedListStepSpaces() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -559,6 +631,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step пробел перед числом и после")
     public void getOkvedListStepTwoSpacesAndDigit() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -571,6 +645,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step Дробное число")
     public void getOkvedListStepDoubleType() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -583,6 +659,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step пробел в середине числа")
     public void getOkvedListStepDigitAndSpace() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -595,6 +673,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step 1024 символа")
     public void getOkvedListStep1024() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -607,6 +687,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step равен 0")
     public void getOkvedListStepZero() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -619,6 +701,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step строка цифры+латинница")
     public void getOkvedListStepDigitLatin() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -631,6 +715,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step строка Спецсимволы")
     public void getOkvedListStepSpecialSymbol() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -643,6 +729,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step строка select")
     public void getOkvedListStepSelect() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -655,6 +743,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step отрицательное число")
     public void getOkvedListStepNegativeNumber() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -667,6 +757,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива OKVED, поле Step Инъекция")
     public void getOkvedListStepInjection() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -682,6 +774,8 @@ public class ClassifireIsAllRussian {
 
 ///////////////////////// Получение Okved по Гуид, /////////////////////////////////////
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Получение Okved по Гуид, валидация при помощи схемы Json")
     public void getOkvedGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -694,6 +788,8 @@ public class ClassifireIsAllRussian {
         deleteSpec();
     }
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение Okved по Гуид, несуществующий Гуид 36 символов")
     public void getOkvedGuidNotExist() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -704,6 +800,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест (Max+1) Получение Okved по Гуид")
     public void getOkvedGuidMaxPlus() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -714,6 +812,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест (Max-1) Получение Okved по Гуид")
     public void getOkvedGuidMaxMinus() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -734,6 +834,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение Okved по Гуид, пробелы в начале и в конце")
     public void getOkvedGuidTwoSpacies() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -744,6 +846,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение Okved по Гуид, пробелы в середине строки")
     public void getOkvedSpaciesIn() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -754,6 +858,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение Okved по Гуид, комбинация латинница, спецсимволы, кириллица числа")
     public void getOkvedGuidCombination() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -764,6 +870,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение Okved по Гуид, Select")
     public void getOkvedGuidSelect() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -774,6 +882,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение Okved по Гуид, отрицательное число")
     public void getOkvedGuidNegativeNumber() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -784,6 +894,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение Okved по Гуид,Инъекция")
     public void getOkvedGuidInjection() {
         installSpec(requestSpecification(), responseSpecification404());
@@ -794,6 +906,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ОКВЕД2")
+    @Owner("Малышев")
     @Description("Негативный тест Получение Okved по Гуид, 1024 буквы")
     public void getOkvedGuid1024letters() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -809,6 +923,8 @@ public class ClassifireIsAllRussian {
 
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Получение списка ТНВEД")
     public void getTnvedList() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -831,6 +947,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Получение списка ТНВEД из 5 объектов")
     public void getTnvedListStepEqual5() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -845,6 +963,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Получение массива ТНВEД из 6 объектов")
     public void getTnvedListStepEqual6() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -859,6 +979,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Получение массива ТНВEД из 199 объектов")
     public void getTnvedListStepEqual199() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -873,6 +995,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Получение массива ТНВEД из 100 объектов")
     public void getTnvedListStepEqual100() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -887,6 +1011,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Получение массива ТНВEД, поле Step пустое")
     public void getTnvedListStepIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -900,6 +1026,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Получение массива ТНВEД, поле Step 1")
     public void getTnvedListStepMin() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -908,11 +1036,14 @@ public class ClassifireIsAllRussian {
                 .queryParam("step", 1)
                 .get("tnved")
                 .then().log().all()
-                .body("size()", is(1));
+                .body("size()", is(1))
+                .extract().body().jsonPath().getList(".", TnvdPojo.class);
         deleteSpec();
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step (Max+1)")
     public void getTnvedListStepMaxPlus() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -925,6 +1056,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step Max Integer")
     public void getTnvedListStepMaxInteger() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -936,6 +1069,8 @@ public class ClassifireIsAllRussian {
         deleteSpec();
     }
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step 3 пробела")
     public void getTnvedListStepSpaces() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -948,6 +1083,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step пробел перед числом и после")
     public void getTnvedListStepTwoSpacesAndDigit() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -960,6 +1097,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step Дробное число")
     public void getTnvedListStepDoubleType() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -972,6 +1111,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step пробел в середине числа")
     public void getTnvedListStepDigitAndSpace() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -984,6 +1125,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step 1024 символа")
     public void getTnvedListStep1024() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -996,6 +1139,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step равен 0")
     public void getTnvedListStepZero() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -1008,6 +1153,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step строка цифры+латинница")
     public void getTnvedListStepDigitLatin() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -1020,6 +1167,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step строка Спецсимволы")
     public void getTnvedListStepSpecialSymbol() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -1032,6 +1181,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step строка select")
     public void getTnvedListStepSelect() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -1044,6 +1195,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step отрицательное число")
     public void getTnvedListStepNegativeNumber() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -1056,6 +1209,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение массива ТНВEД, поле Step Инъекция")
     public void getTnvedListStepInjection() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
@@ -1070,6 +1225,8 @@ public class ClassifireIsAllRussian {
     /////////////////////////////////Получение ТНВЕД по Гуид/////////////////////////////////////////
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Получение ТНВЕД по Гуид, валидация при помощи схемы Json")
     public void getTnvedGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -1083,6 +1240,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ТНВЕД по Гуид, несуществующий Гуид 36 символов")
     public void getTnvedGuidNotExist() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1093,6 +1252,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест (Max+1) Получение ТНВЕД по Гуид")
     public void getTnvedGuidMaxPlus() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1103,6 +1264,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест (Max-1) Получение ТНВЕД по Гуид")
     public void getTnvedGuidMaxMinus() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1123,6 +1286,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ТНВЕД по Гуид, пробелы в начале и в конце")
     public void getTnvedGuidTwoSpacies() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1133,6 +1298,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ТНВЕД по Гуид, пробелы в середине строки")
     public void getTnvedSpaciesIn() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1143,6 +1310,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ТНВЕД по Гуид, комбинация латинница, спецсимволы, кириллица числа")
     public void getTnvedGuidCombination() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1153,6 +1322,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ТНВЕД по Гуид, Select")
     public void getTnvedGuidSelect() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1163,6 +1334,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ТНВЕД по Гуид, отрицательное число")
     public void getTnvedGuidNegativeNumber() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1173,6 +1346,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ТНВЕД по Гуид,Инъекция")
     public void getTnvedGuidInjection() {
         installSpec(requestSpecification(), responseSpecification404());
@@ -1183,6 +1358,8 @@ public class ClassifireIsAllRussian {
     }
 
     @Test
+    @Feature("Получение ТНВЕД")
+    @Owner("Малышев")
     @Description("Негативный тест Получение ТНВЕД по Гуид, 1024 буквы")
     public void getTnvedGuid1024letters() {
         installSpec(requestSpecification(), responseSpecification400());

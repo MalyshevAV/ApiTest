@@ -3,6 +3,8 @@ package AutoTest;
 import MDM.POJO.PartnerPojo;
 import MDM.POJO.getBeListPojo;
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
@@ -54,25 +56,9 @@ public class Auxiliary {
     }
 
 
-  //  @Test
-    @Description("Получение списка бизнес единиц")
-    public void getBeList() {
-        installSpec(requestSpecification(), responseSpecification());
-        List<getBeListPojo> response =
-                given()
-                        .get("/be")
-                        .then().log().all().
-                        extract().body().jsonPath().getList(".", getBeListPojo.class);
-        response.forEach(x -> Assert.assertEquals(x.getGuid().length(), 36));
-        response.forEach(x -> Assert.assertTrue(x.getNameFull().length() <= 150));
-        response.forEach(x -> Assert.assertTrue(x.getName().length() <= 255));
-        response.forEach(x -> Assert.assertTrue(x.getInn().length() <= 12));
-        response.forEach(x -> Assert.assertEquals(x.getKpp().length(), 9));
-        Assertions.assertNotNull(response);
-        deleteSpec();
-    }
-
     @Test
+    @Feature("Вспомогательные")
+    @Owner("Малышев")
     @Description("Проверка доступа и авторизации")
     public void getPing() {
         installSpec(requestSpecification(), responseSpecification());
@@ -84,8 +70,10 @@ public class Auxiliary {
     }
 
     @Test(dataProvider = "data")
+    @Feature("Вспомогательные")
+    @Owner("Малышев")
     @Description("Проверка списка изменений")
-    public void getListOfChanges(Object type, Object step) {
+    public void getListOfChanges(String type, Integer step) {
         installSpec(requestSpecification(), responseSpecification());
         given()
                 .when()
@@ -100,6 +88,8 @@ public class Auxiliary {
 
     }
     @Test(dataProvider = "dataNegative")
+    @Feature("Вспомогательные")
+    @Owner("Малышев")
     @Description("Невалидные значения Степ Проверка списка изменений")
     public void getListOfChangesNegative(Object type, Object step) {
         installSpec(requestSpecification(), responseSpecification400());
