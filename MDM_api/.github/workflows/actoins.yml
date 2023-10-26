@@ -15,7 +15,7 @@
            distribution: 'zulu'
            java-version: '17'
        - run: mvn clean test
- # Копируем историю в папку allure-history
+ # Копируем историю в папку allure-history.
        - name: Copy History
          uses: actions/checkout@v2
          if: always()
