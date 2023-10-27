@@ -18,7 +18,9 @@ jobs:
         with:
          name: Package
          path: staging 
-   
+         
+      - name: Run tests
+        run: mvn clean test
       
       - name: Copy History
         uses: actions/checkout@v3
