@@ -38,7 +38,7 @@
          if: always()
          with:
            gh_pages: gh-pages
-           allure_results: target/allure-results
+           allure_results: build/allure-results
            allure_history: allure-history
  # Публикуем отчет
        - name: Publish report
