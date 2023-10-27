@@ -34,7 +34,7 @@
            path: gh-pages
 # Строим отчет используя папку allure-history
        - name: Build report
-         uses: simple-elf/allure-report-action@v1.7
+         uses: simple-elf/allure-report-action@master
          if: always()
          with:
            gh_pages: gh-pages
@@ -45,7 +45,7 @@
          if: always()
          uses: peaceiris/actions-gh-pages@v3
          with:
-            github_token: $
-            # PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            # github_token: $
+            PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             PUBLISH_BRANCH: gh-pages
             PUBLISH_DIR: allure-history
