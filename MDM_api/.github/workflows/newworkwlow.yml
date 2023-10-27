@@ -12,15 +12,17 @@ jobs:
         with: 
           distribution: 'zulu'
           java-version: '17'
-
+          cache: maven
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
        
-      - name: Install dependencies
-        run: mvn dependency:go-offline compile compiler:testCompile
+      # - name: Install dependencies
+      #   run: mvn dependency:go-offline compile compiler:testCompile
 
-      - name: Run Test
-        if: always()
-        run: mvn test
-        continue-on-error: true   
+      # - name: Run Test
+      #   if: always()
+      #   run: mvn test
+      #   continue-on-error: true   
    
       
       - name: Copy History
