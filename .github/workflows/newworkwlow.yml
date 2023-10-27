@@ -12,10 +12,19 @@
 # java setup
        - uses: actions/setup-java@v3
          with:
-           distribution: zulu
-           java-version: 17
-       - name:Run Tests
-         run: mvn clean test
+           distribution: 'zulu'
+           java-version: '17'
+       # - name:Run Tests
+       - run: mvn --batch-mode --update-snapshots verify
+       - run: mkdir staging && cp target/*.jar staging
+       - uses: actions/upload-artifact@v3
+         with:
+           name: Package
+           path: staging
+       - uses: actions/upload-artifact@v3
+         with:
+          name: Package
+          path: staging
  # Копируем историю в папку allure-history.
        - name: Copy History
          uses: actions/checkout@v3
