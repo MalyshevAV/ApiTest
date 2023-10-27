@@ -395,6 +395,7 @@ public class Nomenclature {
                 .get("nomenclature/search")
                 .then().log().all();
         deleteSpec();
+
     }
     @Test
     @Feature("Поиск номенклатуры")

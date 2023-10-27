@@ -8,739 +8,206 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d1c53df-9889-42c2-b20f-7a2276b62997" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/bin/allure" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/bin/allure.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/config/allure-cucumber.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/config/allure-junit.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/config/allure.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/allure-commandline-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/allure-generator-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/allure-model-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/allure-plugin-api-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/allure1-model-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/commons-beanutils-1.9.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/commons-codec-1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/commons-collections-3.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/commons-collections4-4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/commons-io-2.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/commons-lang3-3.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/commons-text-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/config/jetty-logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/config/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/flexmark-0.40.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/flexmark-util-0.40.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/freemarker-2.3.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/httpclient-4.5.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/httpcore-4.4.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jackson-dataformat-xml-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jackson-dataformat-yaml-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jackson-module-jaxb-annotations-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jaxb-utils-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jcommander-1.72.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jetty-http-9.4.14.v20181114.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jetty-io-9.4.14.v20181114.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jetty-server-9.4.14.v20181114.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/jetty-util-9.4.14.v20181114.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/opencsv-4.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/properties-2.0.RC5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/slf4j-log4j12-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/snakeyaml-1.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/stax2-api-3.1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/tika-core-1.20.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/lib/woodstox-core-5.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/behaviors-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/behaviors-plugin/behaviors-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/behaviors-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/custom-logo-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/custom-logo-plugin/custom-logo-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/custom-logo-plugin/static/custom-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/custom-logo-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/jira-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/lib/allure-jira-commons-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/lib/converter-jackson-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/lib/okhttp-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/lib/okio-1.15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/jira-plugin/lib/retrofit-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/junit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/junit-xml-plugin/junit-xml-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/packages-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/packages-plugin/packages-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/packages-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/screen-diff-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/screen-diff-plugin/screen-diff-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/screen-diff-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/screen-diff-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/trx-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/trx-plugin/trx-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xctest-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xctest-plugin/lib/xmlwise-1.2.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xctest-plugin/xctest-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/lib/allure-jira-commons-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/lib/converter-jackson-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/lib/okhttp-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/lib/okio-1.15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/lib/retrofit-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xray-plugin/xray-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xunit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.10.0/plugins/xunit-xml-plugin/xunit-xml-plugin-2.10.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/bin/allure" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/bin/allure.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/config/allure-cucumber.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/config/allure-junit.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/config/allure.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/allure-commandline-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/allure-generator-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/allure-model-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/allure-plugin-api-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/allure1-model-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/commons-beanutils-1.9.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/commons-codec-1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/commons-collections-3.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/commons-collections4-4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/commons-io-2.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/commons-lang3-3.8.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/commons-text-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/config/jetty-logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/config/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/flexmark-0.40.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/flexmark-util-0.40.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/freemarker-2.3.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/httpclient-4.5.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/httpcore-4.4.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jackson-dataformat-xml-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jackson-dataformat-yaml-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jackson-module-jaxb-annotations-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jaxb-utils-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jcommander-1.72.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jetty-http-9.4.14.v20181114.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jetty-io-9.4.14.v20181114.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jetty-server-9.4.14.v20181114.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/jetty-util-9.4.14.v20181114.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/opencsv-4.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/properties-2.0.RC5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/slf4j-log4j12-1.7.25.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/snakeyaml-1.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/stax2-api-3.1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/tika-core-1.20.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/lib/woodstox-core-5.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/behaviors-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/behaviors-plugin/behaviors-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/behaviors-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/custom-logo-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/custom-logo-plugin/custom-logo-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/custom-logo-plugin/static/custom-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/custom-logo-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/jira-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/lib/allure-jira-commons-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/lib/converter-jackson-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/lib/okhttp-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/lib/okio-1.15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/jira-plugin/lib/retrofit-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/junit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/junit-xml-plugin/junit-xml-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/packages-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/packages-plugin/packages-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/packages-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/screen-diff-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/screen-diff-plugin/screen-diff-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/screen-diff-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/screen-diff-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/trx-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/trx-plugin/trx-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xctest-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xctest-plugin/lib/xmlwise-1.2.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xctest-plugin/xctest-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/lib/allure-jira-commons-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/lib/converter-jackson-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/lib/okhttp-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/lib/okio-1.15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/lib/retrofit-2.5.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xray-plugin/xray-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xunit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.12.0/plugins/xunit-xml-plugin/xunit-xml-plugin-2.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/bin/allure" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/bin/allure.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/config/allure-cucumber.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/config/allure-junit.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/config/allure.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/allure-commandline-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/allure-generator-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/allure-model-2.13.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/allure-plugin-api-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/allure1-model-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/commons-beanutils-1.9.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/commons-codec-1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/commons-collections-3.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/commons-collections4-4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/commons-io-2.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/commons-lang3-3.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/commons-text-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/config/jetty-logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/config/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/flexmark-0.50.36.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/flexmark-util-0.50.36.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/freemarker-2.3.29.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/httpclient-4.5.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/httpcore-4.4.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jackson-dataformat-xml-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jackson-dataformat-yaml-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jackson-module-jaxb-annotations-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jaxb-utils-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jcommander-1.78.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jetty-http-9.4.20.v20190813.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jetty-io-9.4.20.v20190813.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jetty-server-9.4.20.v20190813.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/jetty-util-9.4.20.v20190813.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/opencsv-4.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/properties-2.0.RC5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/slf4j-api-1.7.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/slf4j-log4j12-1.7.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/snakeyaml-1.23.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/stax2-api-3.1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/tika-core-1.22.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/lib/woodstox-core-5.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/behaviors-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/behaviors-plugin/behaviors-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/behaviors-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/custom-logo-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/custom-logo-plugin/custom-logo-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/custom-logo-plugin/static/custom-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/custom-logo-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/jira-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/lib/allure-jira-commons-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/lib/converter-jackson-2.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/lib/okhttp-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/lib/okio-1.15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/jira-plugin/lib/retrofit-2.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/junit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/junit-xml-plugin/junit-xml-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/packages-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/packages-plugin/packages-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/packages-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/screen-diff-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/screen-diff-plugin/screen-diff-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/screen-diff-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/screen-diff-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/trx-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/trx-plugin/trx-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xctest-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xctest-plugin/lib/xmlwise-1.2.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xctest-plugin/xctest-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/lib/allure-jira-commons-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/lib/converter-jackson-2.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/lib/jackson-annotations-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/lib/jackson-core-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/lib/jackson-databind-2.9.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/lib/okhttp-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/lib/okio-1.15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/lib/retrofit-2.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xray-plugin/xray-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xunit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.13.2/plugins/xunit-xml-plugin/xunit-xml-plugin-2.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/bin/allure" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/bin/allure.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/config/allure-cucumber.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/config/allure-junit.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/config/allure.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/allure-commandline-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/allure-generator-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/allure-model-2.13.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/allure-plugin-api-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/allure1-model-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/annotations-15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/commons-beanutils-1.9.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/commons-codec-1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/commons-collections-3.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/commons-collections4-4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/commons-io-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/commons-lang3-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/commons-text-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/config/jetty-logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/config/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-ast-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-builder-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-collection-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-data-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-dependency-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-format-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-html-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-misc-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-sequence-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/flexmark-util-visitor-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/freemarker-2.3.31.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/httpclient-4.5.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/httpcore-4.4.13.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jackson-annotations-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jackson-core-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jackson-databind-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jackson-dataformat-xml-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jackson-dataformat-yaml-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jackson-module-jaxb-annotations-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jakarta.activation-api-1.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jakarta.xml.bind-api-2.3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jaxb-utils-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jcommander-1.81.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jetty-http-9.4.20.v20190813.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jetty-io-9.4.20.v20190813.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jetty-server-9.4.20.v20190813.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/jetty-util-9.4.20.v20190813.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/opencsv-4.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/properties-2.0.RC5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/slf4j-api-1.7.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/slf4j-log4j12-1.7.28.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/snakeyaml-1.27.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/stax2-api-4.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/tika-core-1.26.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/lib/woodstox-core-6.2.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/behaviors-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/behaviors-plugin/behaviors-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/behaviors-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/custom-logo-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/custom-logo-plugin/custom-logo-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/custom-logo-plugin/static/custom-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/custom-logo-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/jira-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/lib/allure-jira-commons-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/lib/converter-jackson-2.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/lib/jackson-annotations-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/lib/jackson-core-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/lib/jackson-databind-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/lib/okhttp-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/lib/okio-1.15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/jira-plugin/lib/retrofit-2.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/junit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/junit-xml-plugin/junit-xml-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/packages-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/packages-plugin/packages-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/packages-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/screen-diff-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/screen-diff-plugin/screen-diff-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/screen-diff-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/screen-diff-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/trx-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/trx-plugin/trx-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xctest-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xctest-plugin/lib/xmlwise-1.2.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xctest-plugin/xctest-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/lib/allure-jira-commons-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/lib/converter-jackson-2.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/lib/jackson-annotations-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/lib/jackson-core-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/lib/jackson-databind-2.12.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/lib/okhttp-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/lib/okio-1.15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/lib/retrofit-2.6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xray-plugin/xray-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xunit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.14.0/plugins/xunit-xml-plugin/xunit-xml-plugin-2.14.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/bin/allure" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/bin/allure.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/config/allure-cucumber.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/config/allure-junit.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/config/allure.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/allure-commandline-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/allure-generator-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/allure-model-2.22.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/allure-plugin-api-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/allure1-model-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/annotations-15.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/commons-beanutils-1.9.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/commons-codec-1.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/commons-collections-3.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/commons-collections4-4.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/commons-io-2.13.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/commons-lang3-3.12.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/commons-text-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/config/jetty-logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/config/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-ext-tables-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-ast-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-builder-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-collection-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-data-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-dependency-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-format-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-html-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-misc-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-options-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-sequence-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/flexmark-util-visitor-0.62.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/freemarker-2.3.32.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/httpclient-4.5.14.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/httpcore-4.4.16.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jackson-annotations-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jackson-core-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jackson-databind-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jackson-dataformat-xml-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jackson-dataformat-yaml-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jackson-module-jaxb-annotations-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jakarta.activation-api-1.2.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jakarta.xml.bind-api-2.3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jaxb-utils-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jcommander-1.82.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jetty-http-9.4.51.v20230217.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jetty-io-9.4.51.v20230217.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jetty-server-9.4.51.v20230217.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/jetty-util-9.4.51.v20230217.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/logback-classic-1.3.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/logback-core-1.3.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/opencsv-4.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/properties-2.0.RC5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/slf4j-api-2.0.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/snakeyaml-2.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/stax2-api-4.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/tika-core-2.8.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/lib/woodstox-core-6.5.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/behaviors-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/behaviors-plugin/behaviors-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/behaviors-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/custom-logo-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/custom-logo-plugin/custom-logo-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/custom-logo-plugin/static/custom-logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/custom-logo-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/jira-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/lib/allure-jira-commons-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/lib/converter-jackson-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/lib/jackson-annotations-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/lib/jackson-core-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/lib/jackson-databind-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/lib/okhttp-3.14.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/lib/okio-1.17.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/jira-plugin/lib/retrofit-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/junit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/junit-xml-plugin/junit-xml-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/packages-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/packages-plugin/packages-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/packages-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/screen-diff-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/screen-diff-plugin/screen-diff-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/screen-diff-plugin/static/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/screen-diff-plugin/static/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/trx-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/trx-plugin/trx-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xctest-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xctest-plugin/lib/xmlwise-1.2.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xctest-plugin/xctest-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/lib/allure-jira-commons-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/lib/converter-jackson-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/lib/jackson-annotations-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/lib/jackson-core-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/lib/jackson-databind-2.15.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/lib/okhttp-3.14.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/lib/okio-1.17.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/lib/retrofit-2.9.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xray-plugin/xray-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xunit-xml-plugin/allure-plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.allure/allure-2.23.0/plugins/xunit-xml-plugin/xunit-xml-plugin-2.23.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.github/workflows/newworkwlow.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MDM_api/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MDM_api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/data/behaviors.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/data/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/data/categories.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/data/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/data/packages.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/data/suites.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/data/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/data/timeline.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/export/influxDbData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/export/mail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/export/prometheusData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/history/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/history/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/history/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/history/history.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/history/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/plugins/behaviors/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/plugins/packages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/plugins/screen-diff/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/plugins/screen-diff/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/behaviors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/categories-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/categories.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/duration-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/duration.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/environment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/executors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/history-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/retry-trend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/severity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/status-chart.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/suites.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/allure-report/widgets/summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/.idea/src.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/main/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/AutoTest/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/AutoTest/Auxiliary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/AutoTest/Classifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/AutoTest/ClassifireIsAllRussian.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/AutoTest/Nomenclature.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/AutoTest/Partner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/MDM/POJO/OkpdPojo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/MDM/POJO/PartnerPojo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/MDM/POJO/TnvdPojo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/MDM/POJO/UnifiedClassifirePojo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/MDM/POJO/UnitsPojo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/MDM/POJO/getBeListPojo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Models/Autor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Models/Data.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Models/PojoPost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Models/PostNomenclature.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Models/Responsible.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Specifications/GetPositivedataprovider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Specifications/Specifications.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Test/Step.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Test/StepEnum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Test/TestData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/java/Test/TestPostRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/allure.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getBasicServicesGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getChangeRequest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getChenge-Reuest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getEopGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getEopList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getListOfChanges.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getNomenclatureGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getNomenclatureSearch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getOkvedGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getOkvedList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getPartnerGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getTvendGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getUnifiedClassifierGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/getUnitsGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/postNomenclarureChange-request.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/postNomenclatureUsingJsonFil.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/resources/tvend.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/src/test/test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/0942f79b-f7a1-487a-8c03-d149cec66023-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/0a185539-8cf0-4801-92f7-a4ad10fa1369-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/125e0784-62f4-4f15-bc59-70bc61b059d7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/14d66bce-b27a-415c-99e4-aad12eca8ef1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/182df81d-4812-428d-b501-0d46cc5a0c82-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/1a168628-e6f5-4e2e-8c12-153e420fe53c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/1d75e670-af4a-427a-a1d5-ec3c842dba6d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/1e3e6431-78e3-4b66-b68d-bbeb6d8c1485-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/1f244fc3-9e72-45b5-a0ef-a023372a79d2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/25551004-667b-4588-aad3-2e9d009ddcf2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/2ac6fb45-f158-41b9-a519-816850821eb4-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/2b21e7d2-74c6-4726-a243-2a4bca87fd4d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/2d905bb2-42fe-47e1-b94b-479d2a481ce2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/2eccd4f4-979c-46a7-8a19-ea8208016655-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/33c6b6e7-0d02-4544-bb20-120df49e229b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/3586d9fd-60de-43ad-8921-f15f06674a2b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/35c3941c-7f7a-4a24-b26e-7a8a7f18140b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/407803f4-4851-46da-85a9-18a559b92bf2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/4158f736-026c-4740-82e3-cb8dc1ec741f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/43923c53-eedb-4fc6-a404-98dddabdad09-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/469895ea-cbbb-4071-b97d-dde26e0559b1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/48c85577-2f90-4714-927e-3bb00c736630-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/49572588-8885-4103-beae-10e531bb5369-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/4b44e9e3-c51e-492d-aa48-01dbae1750a0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/4c3d4f77-232a-4e83-847b-fdf3a6c13993-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/51aa4c5b-bd45-4d20-9a39-e61b94ec0904-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/52174d09-5485-47a2-bf92-391ad7fdc9f7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/5234024b-ad6d-49fb-82a1-fc680bf84f8c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/54e2bb17-291a-4cd0-9ef5-159878963417-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/592ae924-5c9a-4c25-ab8a-4f21cd35ff0e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/592cf7d0-5123-4709-9201-a50acb3b135b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/60edf42a-6bb3-439e-b62b-28fabcdb90db-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/654fd9cf-66c0-4d96-8b80-2e2a7e9ca4bb-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/659bb0c8-ae21-4c86-ad38-4095a181e774-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/67b665a0-12cc-484c-bfa3-2f2dba405e63-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/69a3f2fe-e895-42ae-8021-cb30a7e5959e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/724357df-8c36-4c0a-8bf2-a846124060dd-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/747ae7c5-0ab5-414e-95c9-39ebf55ef82d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/75110271-5d7b-44c5-906f-588746d34050-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/772fb8d6-03db-4a48-8887-d8b6ab3f7f77-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/78edf8f7-0525-4ec4-bc14-9611a4b1f572-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/7c1cfe0b-5990-4dd7-906b-e3a4b757700f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/7e82e954-df8e-4e06-95c3-483b6d7aa080-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/7ee5bf86-49fc-4d0c-8d09-1f96ca6afcc0-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/7fea43e3-f3ae-4b7c-bfb3-8469cf76076b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/828af91b-7e28-4f7b-ad4e-15903243be3f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/84db7225-4f55-49f9-868b-4020bab9d5c2-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/88bf3f4c-182c-4a69-92fd-79bafa99bdb4-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/8a2d5b2e-ac49-49d9-8c7d-3218651ab585-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/8b189f74-6792-4999-bb9c-bb8e84583683-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/8c74a641-38b5-4c6b-a080-06eb454cdd6c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/8f533895-a26d-4bd3-b100-3400979b7e51-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/9038146f-71dc-424e-bc27-7df0d4bc236d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/9143676c-1a11-40ee-93c4-86f48b25baed-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/91e37230-d92a-42ff-bada-ec0b0debb35a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/934fb8b0-a31b-42ad-84be-7c31e499f2a4-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/96bb05a1-df66-41b7-a3fd-a008edb5d70c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/9c740bdb-deb8-494b-9c51-218f20d089ed-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/9cb46bb1-9e82-4359-a728-4ba53bc4a1d7-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/9d41cf7c-c92c-4b35-8e78-71fcff9dba77-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/9f0ea314-4eb4-41b8-b21b-4ba5338b50ec-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/a2990d08-c211-4f9f-a7a0-7ade24a498f9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/a5887194-3b3a-45f0-bf26-284db17bf08b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/a76665b5-2023-47ab-8f5e-21a60bd67540-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/aa89a250-10e2-483f-8133-26ff1df007de-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/allure.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/b3417cf4-f1f4-4950-b6f6-34b01f697131-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/b4040dde-e417-4424-b53f-d12ca932d03a-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/b4ec99c0-7a83-45ea-9771-704e717d4392-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/b6f14a54-d1f7-4cd2-a1ce-79b54d11bf10-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/bb69e8ad-b042-48ec-800e-31609bf06986-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/c567a04f-5712-4386-bfd7-747308d57bb9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/c6e45b62-555d-442c-b7b5-e7bd85cba794-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/c8753125-940b-48a8-9ddc-bfd8ce20e35c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/ca644fe4-c28a-410b-bad1-266ac13f4a7d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/cbad061e-6484-4b04-b80c-313d72cfe552-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/cdbf61bf-5ca3-49ee-9c63-b17e97c52bcb-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/d034ea5b-a6d2-40a7-a676-713c628878d1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/db96ea1d-6224-4782-b82f-295f87044802-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/dc180d94-b27e-452e-88c3-6526f6c14c23-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/de59c772-a107-4726-96a8-e6e633269d81-container.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/e390c9cd-b5e9-4520-a74d-1fcfdba9f9b4-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/e3facc03-f81b-4190-9f58-f45fca8cf074-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/e7bf5b1f-37c5-47bd-bf17-a20c4c35072e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/e8a4af5b-c3b2-466d-ad38-e123017f2920-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/e973ac18-9dcc-4b4b-88c2-86f1cc0a1fca-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/eac69bf6-2690-408f-969f-289db76b45cc-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/ed297cf4-8d3c-4937-9824-c06563351af2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/edf66e4b-0c6b-447c-93aa-486b39a3957b-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/ee301d9d-cdca-4e10-9dfb-80ccda9e0eff-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/executor.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/f04aa1db-f9de-4133-aa2f-1215a09ad07d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/f32f4078-5a18-4487-a53c-863028cb2280-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/f3410d2b-e3cc-4960-8045-d5604c1db1b2-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/f4b01ea2-1ba4-49a6-8407-08cbe7eb4967-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/fb0dc65d-621d-4deb-b57a-1e2929980746-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/fbaae956-e029-4216-bd59-3f2611baa7fc-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/allure-results/fde041b3-ffda-45f2-8269-ba94b1f0cbe9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/AutoTest/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/AutoTest/Auxiliary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/AutoTest/Classifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/AutoTest/ClassifireIsAllRussian.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/AutoTest/Nomenclature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/AutoTest/Partner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/MDM/POJO/OkpdPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/MDM/POJO/PartnerPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/MDM/POJO/TnvdPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/MDM/POJO/UnifiedClassifirePojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/MDM/POJO/UnitsPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/MDM/POJO/getBeListPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/Autor$AutorBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/Autor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/Data$DataBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/PojoPost$PojoPostBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/PojoPost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/PostNomenclature$PostNomenclatureBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/PostNomenclature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/Responsible$ResponsibleBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Models/Responsible.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Specifications/GetPositivedataprovider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Specifications/Specifications.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Test/Step.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Test/StepEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Test/TestData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/Test/TestPostRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/allure.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getBasicServicesGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getChangeRequest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getChenge-Reuest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getEopGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getEopList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getListOfChanges.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getNomenclatureGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getNomenclatureSearch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getOkvedGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getOkvedList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getPartnerGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getTvendGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getUnifiedClassifierGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/getUnitsGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/postNomenclarureChange-request.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/postNomenclatureUsingJsonFil.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MDM_api/target/test-classes/tvend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/Nomenclature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/Nomenclature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/020ee640-f9db-4c27-9c7a-4027c45e7e75-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/0858ae40-8b2e-4c9d-9006-be3a90c3416c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/08596d30-bdb1-43ba-9741-a16c9f6dec48-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/0942f79b-f7a1-487a-8c03-d149cec66023-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/09697869-c73d-4b64-9e82-591c566e639b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/0a185539-8cf0-4801-92f7-a4ad10fa1369-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/0fe8baf7-e65c-4f9b-bb96-6c58c0ef0d33-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/104b60c8-c337-49d2-8bcc-0401ce980308-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/125e0784-62f4-4f15-bc59-70bc61b059d7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/13ccfb59-6704-492f-bdf8-992ea0f53869-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/14d66bce-b27a-415c-99e4-aad12eca8ef1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/16a951b4-4799-44f0-9dba-d9660f9d5642-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/16b866b1-32b1-4e6e-aac9-c6e1d42faf3c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/182df81d-4812-428d-b501-0d46cc5a0c82-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1979d519-4832-4953-87d0-ebd3633aab4e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/19e8eca6-6c18-4003-9a18-d6d3513fc94a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1a168628-e6f5-4e2e-8c12-153e420fe53c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1be8f2d7-c5a5-46cc-a078-ede8ccaf9c20-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1d75e670-af4a-427a-a1d5-ec3c842dba6d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1df9fc37-93c1-470a-bed7-751d4f7b55d2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1e3e6431-78e3-4b66-b68d-bbeb6d8c1485-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1f244fc3-9e72-45b5-a0ef-a023372a79d2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2240086f-a552-4b52-a7b4-042356a89e88-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/23c90d3e-3dfe-4b74-92d2-aeea8fd91147-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/25551004-667b-4588-aad3-2e9d009ddcf2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/29ff1bc5-4ca9-4f06-8ba2-d98b6f9a1d4e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2ac6fb45-f158-41b9-a519-816850821eb4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2b21e7d2-74c6-4726-a243-2a4bca87fd4d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2cc30866-aaf4-4276-bf35-1670dd5d807a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2d28acc4-8ee7-4b1d-8c37-5451f710d9da-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2d905bb2-42fe-47e1-b94b-479d2a481ce2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/2eccd4f4-979c-46a7-8a19-ea8208016655-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/33c6b6e7-0d02-4544-bb20-120df49e229b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/34086408-9b8b-445b-a2de-8f0a5fea21cb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/3586d9fd-60de-43ad-8921-f15f06674a2b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/35c3941c-7f7a-4a24-b26e-7a8a7f18140b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/39e9eaf7-72bc-4109-820d-54fd8194c28c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/3cb695ca-457f-493c-82da-547d51e670a2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/3ef7ad2a-562a-440b-93c3-d6b882e83ce2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/407803f4-4851-46da-85a9-18a559b92bf2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/4158f736-026c-4740-82e3-cb8dc1ec741f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/4249e6c2-0fed-4d02-beda-50d3de535b67-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/43923c53-eedb-4fc6-a404-98dddabdad09-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/43b73fa4-7eb1-422f-947e-776a5e419935-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/467d22a2-9a3a-4d20-80c5-44fe8ce8608e-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/469895ea-cbbb-4071-b97d-dde26e0559b1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/46c558bb-47d6-4ffb-9fe1-ac0d8016aac2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/48c85577-2f90-4714-927e-3bb00c736630-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/49572588-8885-4103-beae-10e531bb5369-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/4b44e9e3-c51e-492d-aa48-01dbae1750a0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/4c3d4f77-232a-4e83-847b-fdf3a6c13993-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/501cf44c-26e7-48bc-8b09-c50a1e9278d2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5086079b-4376-4838-b6f2-aa9c1b27c781-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/51aa4c5b-bd45-4d20-9a39-e61b94ec0904-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/52174d09-5485-47a2-bf92-391ad7fdc9f7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5234024b-ad6d-49fb-82a1-fc680bf84f8c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5466700b-aaf7-43fc-bb65-94df5e8385c2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/54e2bb17-291a-4cd0-9ef5-159878963417-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/592ae924-5c9a-4c25-ab8a-4f21cd35ff0e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/592cf7d0-5123-4709-9201-a50acb3b135b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5c278975-77fb-45f1-a1ac-83e22387f448-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5c596015-e9d5-4c11-8e88-a224beb287a3-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5ea6ec76-9484-42a9-b2c4-13c8b121a226-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5f8cc9da-915d-449a-b079-150797714503-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/5fc9075a-1ceb-473d-ab7b-f76b36a0e33b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/60edf42a-6bb3-439e-b62b-28fabcdb90db-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/60fe801c-dcae-4f48-a9d7-ec58479ffd8f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/654fd9cf-66c0-4d96-8b80-2e2a7e9ca4bb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/659bb0c8-ae21-4c86-ad38-4095a181e774-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/67b665a0-12cc-484c-bfa3-2f2dba405e63-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/697a659e-5699-4797-8333-fa662ca143d5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/69a3f2fe-e895-42ae-8021-cb30a7e5959e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/6b391d27-20ab-4d82-9e94-9f114291fb25-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7104cb6e-8168-4f1a-a0ed-d6a0528a6a64-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7223e2da-c38b-4058-baee-62c045940989-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/724357df-8c36-4c0a-8bf2-a846124060dd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/747ae7c5-0ab5-414e-95c9-39ebf55ef82d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/75110271-5d7b-44c5-906f-588746d34050-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/772fb8d6-03db-4a48-8887-d8b6ab3f7f77-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/78c4f045-8218-4b45-a1e7-c634cfda235f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/78edf8f7-0525-4ec4-bc14-9611a4b1f572-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/79a29ae7-6f49-4cf5-827b-7ca0eba015eb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7c1cfe0b-5990-4dd7-906b-e3a4b757700f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7e82e954-df8e-4e06-95c3-483b6d7aa080-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7ee5bf86-49fc-4d0c-8d09-1f96ca6afcc0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7fea43e3-f3ae-4b7c-bfb3-8469cf76076b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/828af91b-7e28-4f7b-ad4e-15903243be3f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/835feff6-3b7d-4495-b7c8-2b0c717df6f3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/84db7225-4f55-49f9-868b-4020bab9d5c2-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/87f01db4-c629-4fc9-b6e2-7593e7ead0b4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/88bf3f4c-182c-4a69-92fd-79bafa99bdb4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/89eb494a-858c-4379-a6fd-6c5f766c6aac-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8a004521-9798-4be2-a2c4-a49d2f0a18f7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8a2d5b2e-ac49-49d9-8c7d-3218651ab585-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8b0b0346-300c-4080-858c-490ed9420943-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8b189f74-6792-4999-bb9c-bb8e84583683-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8b3ee482-adb3-4dd9-8d71-575fc88e1c89-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8bc7e041-47b6-474f-b831-ad6c2a676076-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8c41bf1d-b029-44b4-a3e1-3676d5971730-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8c74a641-38b5-4c6b-a080-06eb454cdd6c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8e008286-f739-48d6-b363-01c5f977fbfd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/8f533895-a26d-4bd3-b100-3400979b7e51-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/9038146f-71dc-424e-bc27-7df0d4bc236d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/90e9ad6a-d74d-408a-8d00-16f1183cf94c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/9143676c-1a11-40ee-93c4-86f48b25baed-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/91e37230-d92a-42ff-bada-ec0b0debb35a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/934fb8b0-a31b-42ad-84be-7c31e499f2a4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/96bb05a1-df66-41b7-a3fd-a008edb5d70c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/9be1299f-965c-45b3-b258-1cf5227c8add-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/9c740bdb-deb8-494b-9c51-218f20d089ed-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/9cb46bb1-9e82-4359-a728-4ba53bc4a1d7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/9d41cf7c-c92c-4b35-8e78-71fcff9dba77-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/9f0ea314-4eb4-41b8-b21b-4ba5338b50ec-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/9fcf7507-a0a4-4306-9338-bfa580317236-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a0dcf263-40aa-46a0-8c31-b9d1aab6f637-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a1f57a4b-2937-4d51-b18a-cefa5e814133-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a2990d08-c211-4f9f-a7a0-7ade24a498f9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a3dbc245-9059-4126-9b8f-0d722191f7ed-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a4e91f61-8c5e-4888-820a-5f26ec8afeba-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a5887194-3b3a-45f0-bf26-284db17bf08b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a6589363-4e45-43ff-8670-3ab2abe57ac4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a76665b5-2023-47ab-8f5e-21a60bd67540-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a921dc4a-2cf9-4543-ae55-d387cfd5100e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/aa89a250-10e2-483f-8133-26ff1df007de-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ad31b3b1-c62b-412a-971b-711d76a66911-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/allure.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b217dbaa-2c14-47be-b7c0-c24549847d5c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b3417cf4-f1f4-4950-b6f6-34b01f697131-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b4040dde-e417-4424-b53f-d12ca932d03a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b4ec99c0-7a83-45ea-9771-704e717d4392-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b6f14a54-d1f7-4cd2-a1ce-79b54d11bf10-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b75e0495-476c-45d6-b03e-5ce9acb9839f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/bb669231-867c-4b54-bf97-aee0ed6cbee5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/bb69e8ad-b042-48ec-800e-31609bf06986-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/be8eb8d6-24e9-4e5d-bb99-a6b6a926e335-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c42c75e4-cd9d-4228-9bb6-9b20c64379d4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c567a04f-5712-4386-bfd7-747308d57bb9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c5b2a9ed-2e44-4e94-ad94-accfca0178c2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c6e45b62-555d-442c-b7b5-e7bd85cba794-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c70bf197-3c1d-42f8-a4f1-2bd298fd5b62-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/c8753125-940b-48a8-9ddc-bfd8ce20e35c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ca644fe4-c28a-410b-bad1-266ac13f4a7d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/cbad061e-6484-4b04-b80c-313d72cfe552-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/cda07ffe-52ad-4394-81da-1ffc013eaeee-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/cdbf61bf-5ca3-49ee-9c63-b17e97c52bcb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d034ea5b-a6d2-40a7-a676-713c628878d1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d218f786-5ad3-4fb0-ab0c-29e4d50bff2e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d641cff4-b783-45f8-8db2-2a16411db773-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d923a1ca-cbf7-42de-8942-b3d896ba55c2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d957e401-395f-4224-9ba1-fe3aee28bd6f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/dab6a59b-b746-4b6d-9d6e-e6ddb8904dd6-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/db6b4fb4-a442-49e0-a4e6-7b82e29b22d6-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/db719773-bf5f-4a2b-8207-001352aeab07-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/db96ea1d-6224-4782-b82f-295f87044802-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/dc180d94-b27e-452e-88c3-6526f6c14c23-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/dc2b10c2-7f7f-43bb-91ca-de7fcddf3faa-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/de59c772-a107-4726-96a8-e6e633269d81-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e2ef5567-5bbd-4df5-8489-0ce3a54f8a98-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e3631c4c-e4df-4b9e-899d-a1dace818c1e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e390c9cd-b5e9-4520-a74d-1fcfdba9f9b4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e3facc03-f81b-4190-9f58-f45fca8cf074-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e7544365-a0b1-4cc8-8aef-5c33c106a41c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e7be1f13-f04f-46aa-8a0b-231018340eb0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e7bf5b1f-37c5-47bd-bf17-a20c4c35072e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e7d1bdc6-e952-44cd-b711-903eb37329cf-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e86e1746-5de1-4ad0-88e4-81b0ec3c6848-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e8748a5a-10ff-4ba7-af13-a46477107414-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e8a4af5b-c3b2-466d-ad38-e123017f2920-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/e973ac18-9dcc-4b4b-88c2-86f1cc0a1fca-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/eac69bf6-2690-408f-969f-289db76b45cc-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/eb21ade1-062f-4a88-b0f0-785840e9fbe5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ec490803-0b94-43a5-ba4a-0173e5fb1be0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ed297cf4-8d3c-4937-9824-c06563351af2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/edf66e4b-0c6b-447c-93aa-486b39a3957b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/ee301d9d-cdca-4e10-9dfb-80ccda9e0eff-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/efc567bc-5ca2-4ee9-91fa-4a0fa87f26b3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/executor.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f04aa1db-f9de-4133-aa2f-1215a09ad07d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f0cfae21-701d-4519-9aae-48453c5db46c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f2d4050d-b9d3-4823-8f3d-a68cb0c0ab21-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f32f4078-5a18-4487-a53c-863028cb2280-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f3410d2b-e3cc-4960-8045-d5604c1db1b2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f4aa4d92-a683-44cf-af53-88c31325f9ce-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f4b01ea2-1ba4-49a6-8407-08cbe7eb4967-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f74c30d5-de17-4fd8-8e12-72068ba55954-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f7aa228d-7d26-40fb-b0d2-56a30cb424ac-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f93dc9e7-e9c7-4b0e-8c9c-59188f62e565-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/f98d02e3-f931-4a34-a97f-1d07dfce21d5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/fb0dc65d-621d-4deb-b57a-1e2929980746-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/fbaae956-e029-4216-bd59-3f2611baa7fc-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/fde041b3-ffda-45f2-8269-ba94b1f0cbe9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/fe9bf60c-ced9-43e9-b5ee-59c604db0f3a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/Nomenclature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/Nomenclature.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PojoPost$PojoPostBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PojoPost$PojoPostBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PojoPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PojoPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature$PostNomenclatureBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature$PostNomenclatureBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -776,24 +243,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Sasha/Api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sasha/Api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="MDM.POJO" />
@@ -806,7 +273,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Nomenclature">
+  <component name="RunManager" selected="TestNG.Application.getChangeRequestGuid">
     <configuration name="Application" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
@@ -824,7 +291,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Auxiliary.getListOfChanges" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Application.getChangeRequestGuid" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -833,8 +300,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.Auxiliary" />
-      <option name="METHOD_NAME" value="getListOfChanges" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.Application" />
+      <option name="METHOD_NAME" value="getChangeRequestGuid" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -876,7 +343,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Nomenclature.getNomenclatureSearchBodyIsEmpty2" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Nomenclature.getNomenclatureSearchType" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -886,7 +353,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
       <option name="MAIN_CLASS_NAME" value="AutoTest.Nomenclature" />
-      <option name="METHOD_NAME" value="getNomenclatureSearchBodyIsEmpty2" />
+      <option name="METHOD_NAME" value="getNomenclatureSearchType" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -896,11 +363,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Nomenclature" />
+        <item itemvalue="TestNG.Application.getChangeRequestGuid" />
+        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchType" />
         <item itemvalue="TestNG.Application" />
+        <item itemvalue="TestNG.Nomenclature" />
         <item itemvalue="TestNG.Classifier" />
-        <item itemvalue="TestNG.Auxiliary.getListOfChanges" />
-        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchBodyIsEmpty2" />
       </list>
     </recent_temporary>
   </component>
@@ -951,6 +418,7 @@
       <workItem from="1698384516846" duration="7252000" />
       <workItem from="1698405559602" duration="302000" />
       <workItem from="1698405868108" duration="41000" />
+      <workItem from="1698406299727" duration="4007000" />
     </task>
     <servers />
   </component>
