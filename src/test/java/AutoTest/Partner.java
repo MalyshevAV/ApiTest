@@ -17,7 +17,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class PartnerTest {
+public class Partner {
 
     public List<PartnerPojo> getResponse() {
         return given()

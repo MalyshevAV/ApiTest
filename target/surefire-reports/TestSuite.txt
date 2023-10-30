@@ -1,0 +1,431 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 324, Failures: 36, Errors: 0, Skipped: 0, Time elapsed: 336.502 sec <<< FAILURE! - in TestSuite
+getChangeRequestGuid(AutoTest.ApplicationTest)  Time elapsed: 3.293 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: The content to match the given JSON schema.
+error: string "" is too short (length: 0, required minimum: 1)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/code"}
+    instance: {"pointer":"/data/code"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 1
+error: string "" is too short (length: 0, required minimum: 1)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/codeEOP"}
+    instance: {"pointer":"/data/codeEOP"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 1
+error: string "" is too short (length: 0, required minimum: 1)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/codeUC"}
+    instance: {"pointer":"/data/codeUC"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 1
+error: string "" is too short (length: 0, required minimum: 1)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/image"}
+    instance: {"pointer":"/data/image"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 1
+error: string "" is too short (length: 0, required minimum: 1)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/material"}
+    instance: {"pointer":"/data/material"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 1
+error: string "" is too short (length: 0, required minimum: 1)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/name"}
+    instance: {"pointer":"/data/name"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 1
+error: string "" is too short (length: 0, required minimum: 1)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/nameFull"}
+    instance: {"pointer":"/data/nameFull"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 1
+error: string "" is too short (length: 0, required minimum: 36)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/referencePosition"}
+    instance: {"pointer":"/data/referencePosition"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 36
+error: instance value (0) not found in enum (possible values: [1,2,3,5])
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/seriality"}
+    instance: {"pointer":"/data/seriality"}
+    domain: "validation"
+    keyword: "enum"
+    value: 0
+    enum: [1,2,3,5]
+error: string "" is too short (length: 0, required minimum: 1)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/sortament"}
+    instance: {"pointer":"/data/sortament"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 1
+error: string "" is too short (length: 0, required minimum: 1)
+    level: "error"
+    schema: {"loadingURI":"file:/C:/Users/Sasha/Api/target/test-classes/getChangeRequest.json#","pointer":"/properties/data/properties/sortamentGOST"}
+    instance: {"pointer":"/data/sortamentGOST"}
+    domain: "validation"
+    keyword: "minLength"
+    value: ""
+    found: 0
+    minLength: 1
+
+  Actual: {
+"guid": "31c9ca2a-b120-41f8-aa86-8cffb2627492",
+"be": "",
+"status": 5,
+"code": "000000014",
+"autor": {
+"fio": "",
+"email": ""
+},
+"responsible": {
+"fio": "",
+"email": ""
+},
+"date": "2023-07-25T15:22:04",
+"periodExecution": "2023-07-25T15:28:04",
+"comment": "",
+"data": {
+"guid": "00000000-0000-0000-0000-000000000000",
+"code": "",
+"name": "",
+"comment": "",
+"archive": false,
+"dateOutputArchive": "0001-01-01T00:00:00",
+"nameFull": "",
+"namePurchasing": "",
+"nameSale": "",
+"baseUnit": "00000000-0000-0000-0000-000000000000",
+"baseUnitCode": 0,
+"materialGOST": "",
+"tnved": "00000000-0000-0000-0000-000000000000",
+"okved": "00000000-0000-0000-0000-000000000000",
+"okpd2": "00000000-0000-0000-0000-000000000000",
+"classifierEOP": "00000000-0000-0000-0000-000000000000",
+"codeEOP": "",
+"material": "",
+"sortament": "",
+"image": "",
+"electronicCatalog": false,
+"service": false,
+"sortamentGOST": "",
+"consolidatedRecord": false,
+"drawingDenotation": "",
+"seriality": 0,
+"obsolete": false,
+"analyticsPurchasable": "00000000-0000-0000-0000-000000000000",
+"referencePosition": "",
+"ownershipSign": 0,
+"unifiedClassifier": "00000000-0000-0000-0000-000000000000",
+"codeUC": "",
+"height": 0,
+"width": 0,
+"length": 0,
+"dimensionsUnit": "00000000-0000-0000-0000-000000000000",
+"dimensionsUnitCode": 0,
+"weight": 0,
+"weightUnit": "00000000-0000-0000-0000-000000000000",
+"weightUnitCode": 0,
+"groupCost": "00000000-0000-0000-0000-000000000000",
+"oneTimePurchase": false,
+"includedEOP": false,
+"properties": [],
+"alternativeUnit": [],
+"analogue": [],
+"spares": [],
+"suppliers": [],
+"occurrences": []
+}
+}
+
+	at AutoTest.ApplicationTest.getChangeRequestGuid(ApplicationTest.java:27)
+
+getTestChangeRequestGuid5(AutoTest.ApplicationTest)  Time elapsed: 0.995 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at AutoTest.ApplicationTest.getTestChangeRequestGuid5(ApplicationTest.java:38)
+
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 1.756 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path size() doesn't match.
+Expected: is <5>
+  Actual: <0>
+
+	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
+
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 0.308 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path size() doesn't match.
+Expected: is <1>
+  Actual: <0>
+
+	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
+
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 0.951 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path size() doesn't match.
+Expected: is <1>
+  Actual: <0>
+
+	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
+
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 0.994 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path size() doesn't match.
+Expected: is <1>
+  Actual: <0>
+
+	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
+
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path size() doesn't match.
+Expected: is <1>
+  Actual: <0>
+
+	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
+
+getListOfChangesNegative(AutoTest.AuxiliaryTest)  Time elapsed: 0.097 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <403>.
+
+	at AutoTest.AuxiliaryTest.getListOfChangesNegative(AuxiliaryTest.java:91)
+
+getPartnerGuid(AutoTest.PartnerTest)  Time elapsed: 1.057 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at AutoTest.PartnerTest.getPartnerGuid(PartnerTest.java:92)
+
+getPartnerGuidExpected400(AutoTest.PartnerTest)  Time elapsed: 0.948 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at AutoTest.PartnerTest.getPartnerGuidExpected400(PartnerTest.java:106)
+
+getPartnerList(AutoTest.PartnerTest)  Time elapsed: 1.008 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at AutoTest.PartnerTest.lambda$getPartnerList$2(PartnerTest.java:47)
+	at AutoTest.PartnerTest.getPartnerList(PartnerTest.java:47)
+
+getPartnerListUsingProvader(AutoTest.PartnerTest)  Time elapsed: 0.974 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at AutoTest.PartnerTest.getPartnerListUsingProvader(PartnerTest.java:73)
+
+postNomenclatureChangeJsonFile(Test.TestPostRequest)  Time elapsed: 1.027 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeJsonFile(TestPostRequest.java:71)
+
+postNomenclatureChangeRequestMapMinType3(Test.TestPostRequest)  Time elapsed: 0.849 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapMinType3(TestPostRequest.java:415)
+
+postNomenclatureChangeRequestMapRequired(Test.TestPostRequest)  Time elapsed: 1.01 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapRequired(TestPostRequest.java:119)
+
+postNomenclatureChangeRequestMapRequired(Test.TestPostRequest)  Time elapsed: 1.008 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapRequired(TestPostRequest.java:119)
+
+postNomenclatureChangeRequestMapType0_2_AbsentFields(Test.TestPostRequest)  Time elapsed: 0.978 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_AbsentFields(TestPostRequest.java:913)
+
+postNomenclatureChangeRequestMapType0_2_AbsentFields(Test.TestPostRequest)  Time elapsed: 0.997 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_AbsentFields(TestPostRequest.java:913)
+
+postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(Test.TestPostRequest)  Time elapsed: 1.009 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(TestPostRequest.java:807)
+
+postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(Test.TestPostRequest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(TestPostRequest.java:807)
+
+postNomenclatureChangeRequestMapType0_2_RequiredFields(Test.TestPostRequest)  Time elapsed: 1.006 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_RequiredFields(TestPostRequest.java:231)
+
+postNomenclatureChangeRequestMapType0_2_RequiredFields(Test.TestPostRequest)  Time elapsed: 0.985 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_RequiredFields(TestPostRequest.java:231)
+
+postNomenclatureChangeRequestMapType1(Test.TestPostRequest)  Time elapsed: 0.949 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType1(TestPostRequest.java:162)
+
+postNomenclatureChangeRequestMapType1_ExtraRequiredFields(Test.TestPostRequest)  Time elapsed: 0.985 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType1_ExtraRequiredFields(TestPostRequest.java:843)
+
+postNomenclatureChangeRequestMapType1_RequiredFields(Test.TestPostRequest)  Time elapsed: 0.996 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType1_RequiredFields(TestPostRequest.java:266)
+
+postNomenclatureChangeRequestMapType3(Test.TestPostRequest)  Time elapsed: 1.016 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType3(TestPostRequest.java:195)
+
+postNomenclatureChangeRequestMapType3ExtraRequiredFields(Test.TestPostRequest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path guid doesn't match.
+Expected: a CharSequence with length <36>
+  Actual: null
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType3ExtraRequiredFields(TestPostRequest.java:878)
+
+postNomenclatureChangeRequestMapType3RequiredFields(Test.TestPostRequest)  Time elapsed: 1.04 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMapType3RequiredFields(TestPostRequest.java:297)
+
+postNomenclatureChangeRequestMax(Test.TestPostRequest)  Time elapsed: 1.002 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMax(TestPostRequest.java:504)
+
+postNomenclatureChangeRequestMax(Test.TestPostRequest)  Time elapsed: 1.039 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMax(TestPostRequest.java:459)
+
+postNomenclatureChangeRequestMax(Test.TestPostRequest)  Time elapsed: 0.977 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMax(TestPostRequest.java:459)
+
+postNomenclatureChangeRequestMaxPlus(Test.TestPostRequest)  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.ClassCastException: class com.fasterxml.jackson.databind.node.TextNode cannot be cast to class com.fasterxml.jackson.databind.node.ObjectNode (com.fasterxml.jackson.databind.node.TextNode and com.fasterxml.jackson.databind.node.ObjectNode are in unnamed module of loader 'app')
+	at Test.TestPostRequest.postNomenclatureChangeRequestMaxPlus(TestPostRequest.java:1089)
+
+postNomenclatureChangeRequestMinMapType1(Test.TestPostRequest)  Time elapsed: 0.965 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMinMapType1(TestPostRequest.java:383)
+
+postNomenclatureChangeRequestMinValue(Test.TestPostRequest)  Time elapsed: 1.001 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMinValue(TestPostRequest.java:340)
+
+postNomenclatureChangeRequestMinValue(Test.TestPostRequest)  Time elapsed: 0.998 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestMinValue(TestPostRequest.java:340)
+
+postNomenclatureChangeRequestPOJO(Test.TestPostRequest)  Time elapsed: 0.992 sec  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <405>.
+
+	at Test.TestPostRequest.postNomenclatureChangeRequestPOJO(TestPostRequest.java:48)
+
