@@ -22,7 +22,7 @@ jobs:
       - name: Run tests
         run: mvn -Dtest=ClassifierTest test
         # run: mvn clean test
-        if: always()
+
       
       - name: Copy History
         uses: actions/checkout@v3
