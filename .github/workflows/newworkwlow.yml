@@ -11,14 +11,7 @@ jobs:
       - uses: actions/setup-java@v3 
         with: 
           distribution: 'temurin'
-          java-version: '17'
-      # - run: mvn --batch-mode --update-snapshots verify
-      # - run: mkdir staging && cp target/*.jar staging
-      # - uses: actions/upload-artifact@v3 
-      #   with:
-      #    name: Package
-      #    path: staging 
-         
+          java-version: '17'   
       - name: Run tests
         run: mvn -Dtest=ClassifierTest test
         # run: mvn clean test
@@ -34,9 +27,11 @@ jobs:
         uses: simple-elf/allure-report-action@master
         if: always()
         with:
+          gh_pages: gh-pages
+          allure_report: allure-report
           allure_results: build/allure-results
           allure_history: allure-history
-          keep_reports: 20
+          # keep_reports: 20
       - name: Publish report
         if: always() 
         uses: peaceiris/actions-gh-pages@v2
