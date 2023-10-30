@@ -13,8 +13,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'   
       - name: Run tests
-        run: mvn -Dtest=ClassifierTest test
-        # run: mvn clean test
+        # run: mvn -Dtest=ClassifierTest test
+        run: mvn clean test
 
       # Копируем историю в папку Аллюр хистори
       - name: Copy History
@@ -23,6 +23,7 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
+       # Строим отчет
       - name: Build report 
         uses: simple-elf/allure-report-action@master
         if: always()
