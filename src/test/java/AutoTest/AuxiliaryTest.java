@@ -1,26 +1,17 @@
 package AutoTest;
 
-import MDM.POJO.PartnerPojo;
-import MDM.POJO.getBeListPojo;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
-import org.junit.jupiter.api.Assertions;
-import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 import static Specifications.Specifications.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
-public class Auxiliary {
+public class AuxiliaryTest {
 
     @DataProvider
     @Description("Позитивные тесты с использованием DataProvider")

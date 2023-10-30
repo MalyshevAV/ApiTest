@@ -8,17 +8,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d1c53df-9889-42c2-b20f-7a2276b62997" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-11-28_573-jvmRun1.dump" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-11-28_573-jvmRun1.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/Nomenclature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/Nomenclature.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PojoPost$PojoPostBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PojoPost$PojoPostBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PojoPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PojoPost.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature$PostNomenclatureBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature$PostNomenclatureBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/ApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/Auxiliary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/AuxiliaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/Classifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/ClassifierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/ClassifireIsAllRussian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/ClassifireIsAllRussianTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/Nomenclature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/NomenclatureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/Partner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/PartnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MyFirstTest-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-34-34_879-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-34-34_879-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-34-41_465-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-34-41_465-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-34-52_425-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-34-52_425-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-35-06_370-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-35-06_370-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-39-58_237-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-39-58_237-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-44-45_031-jvmRun1.dump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-10-27T16-44-45_031-jvmRun1.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/Auxiliary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/Classifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifireIsAllRussian.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/Nomenclature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/Partner.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,24 +74,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sasha/Api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Sasha/Api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="MDM.POJO" />
@@ -84,17 +105,17 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Nomenclature.getNomenclatureSearchDataIsEmpty">
-    <configuration name="Application" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="ApplicationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="AutoTest.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.Application" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.ApplicationTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -102,16 +123,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Application.getChangeRequestGuid" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ApplicationTest.getChangeRequestGuid" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="AutoTest.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.Application" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.ApplicationTest" />
       <option name="METHOD_NAME" value="getChangeRequestGuid" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -120,33 +141,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Nomenclature" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="NomenclatureTest.getNomenclatureSearchDataIsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="AutoTest.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.Nomenclature" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Nomenclature.getNomenclatureSearchDataIsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyFirstTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="AutoTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.Nomenclature" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.NomenclatureTest" />
       <option name="METHOD_NAME" value="getNomenclatureSearchDataIsEmpty" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -155,17 +159,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Nomenclature.getNomenclatureSearchType" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="NomenclatureTest.getNomenclatureSearchType" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="AutoTest.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.Nomenclature" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.NomenclatureTest" />
       <option name="METHOD_NAME" value="getNomenclatureSearchType" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NomenclatureTest.getNomenclatureSearchTypeNegativeDouble" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="AutoTest" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.NomenclatureTest" />
+      <option name="METHOD_NAME" value="getNomenclatureSearchTypeNegativeDouble" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -175,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchDataIsEmpty" />
-        <item itemvalue="TestNG.Application.getChangeRequestGuid" />
-        <item itemvalue="TestNG.Nomenclature.getNomenclatureSearchType" />
-        <item itemvalue="TestNG.Application" />
-        <item itemvalue="TestNG.Nomenclature" />
+        <item itemvalue="TestNG.NomenclatureTest.getNomenclatureSearchTypeNegativeDouble" />
+        <item itemvalue="TestNG.NomenclatureTest.getNomenclatureSearchDataIsEmpty" />
+        <item itemvalue="TestNG.ApplicationTest.getChangeRequestGuid" />
+        <item itemvalue="TestNG.NomenclatureTest.getNomenclatureSearchType" />
+        <item itemvalue="TestNG.ApplicationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +252,9 @@
       <workItem from="1698384516846" duration="7252000" />
       <workItem from="1698405559602" duration="302000" />
       <workItem from="1698405868108" duration="41000" />
-      <workItem from="1698406299727" duration="6924000" />
+      <workItem from="1698406299727" duration="9320000" />
+      <workItem from="1698439036678" duration="3134000" />
+      <workItem from="1698644920616" duration="6339000" />
     </task>
     <servers />
   </component>

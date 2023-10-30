@@ -1,3 +1,0 @@
-# Created at 2023-10-27T16:44:45.690
-java.util.ServiceConfigurationError: org.junit.platform.launcher.PostDiscoveryFilter: Provider io.qameta.allure.junitplatform.AllurePostDiscoveryFilter could not be instantiated
-

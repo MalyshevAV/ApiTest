@@ -1,8 +1,5 @@
 package AutoTest;
 
-import Models.PojoPost;
-import Models.Responsible;
-import Specifications.Specifications;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
@@ -10,14 +7,11 @@ import io.qameta.allure.Owner;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static Specifications.Specifications.*;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+
 @Epic("Заявка")
-public class Application {
+public class ApplicationTest {
 
 
     @Test
@@ -37,7 +31,7 @@ public class Application {
     @Feature("Работа с заявками")
     @Owner("Малышев")
     @Description("Получение заявки по Гуид на изменение Type = 5 , валидация по схеме Json")
-    public void getChangeRequestGuid5() {
+    public void getTestChangeRequestGuid5() {
         installSpec(requestSpecification(), responseSpecification());
         given()
                 .when()
@@ -47,7 +41,7 @@ public class Application {
         deleteSpec();
     }
 
-    @Test (dataProvider = "guidNegative", dataProviderClass = Nomenclature.class)
+    @Test (dataProvider = "guidNegative", dataProviderClass = NomenclatureTest.class)
     @Feature("Работа с заявками")
     @Owner("Малышев")
     @Description("Негативные тесты Получение изменеий по заявке по Гуид ")

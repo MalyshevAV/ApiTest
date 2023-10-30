@@ -5,26 +5,16 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
-import io.qameta.allure.testng.TestInstanceParameter;
-import io.restassured.RestAssured;
 import io.restassured.module.jsv.JsonSchemaValidator;
-import org.junit.jupiter.api.DisplayName;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.Map;
 
 import static Specifications.Specifications.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 @Epic("Номенклатура")
 
-public class Nomenclature {
+public class NomenclatureTest {
 
 
     @DataProvider

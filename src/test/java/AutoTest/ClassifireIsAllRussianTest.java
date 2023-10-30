@@ -8,14 +8,9 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -23,7 +18,6 @@ import java.util.List;
 import static Specifications.Specifications.*;
 import static io.restassured.RestAssured.given;
 
-import static io.restassured.RestAssured.responseSpecification;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.IsNull.notNullValue;
@@ -31,7 +25,7 @@ import static org.hamcrest.core.IsNull.nullValue;
 import static org.testng.AssertJUnit.assertTrue;
 @Epic("Общероссийские классификаторы")
 
-public class ClassifireIsAllRussian {
+public class ClassifireIsAllRussianTest {
     @Test
     @Feature("Получение ОКПД2")
     @Owner("Малышев")
