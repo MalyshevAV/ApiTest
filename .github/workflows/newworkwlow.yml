@@ -20,7 +20,7 @@ jobs:
       #    path: staging 
          
       - name: Run tests
-        run: mvn -Dtest=ClassifierTeat test
+        run: mvn -Dtest=ClassifierTest test
         # run: mvn clean test
         if: always()
       
