@@ -299,7 +299,7 @@ public class ClassifierTest {
     public void getUnifiedClassifierListStepInjection() {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", "<script>alert( 'Hello world' );</script>")
                 .get("unified-classifier")
                 .then().log().all();

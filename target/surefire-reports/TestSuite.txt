@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 324, Failures: 36, Errors: 0, Skipped: 0, Time elapsed: 336.502 sec <<< FAILURE! - in TestSuite
-getChangeRequestGuid(AutoTest.ApplicationTest)  Time elapsed: 3.293 sec  <<< FAILURE!
+Tests run: 319, Failures: 32, Errors: 0, Skipped: 0, Time elapsed: 335.555 sec <<< FAILURE! - in TestSuite
+getChangeRequestGuid(AutoTest.ApplicationTest)  Time elapsed: 3.295 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Response body doesn't match expectation.
@@ -177,14 +177,14 @@ error: string "" is too short (length: 0, required minimum: 1)
 
 	at AutoTest.ApplicationTest.getChangeRequestGuid(ApplicationTest.java:27)
 
-getTestChangeRequestGuid5(AutoTest.ApplicationTest)  Time elapsed: 0.995 sec  <<< FAILURE!
+getTestChangeRequestGuid5(AutoTest.ApplicationTest)  Time elapsed: 1.002 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at AutoTest.ApplicationTest.getTestChangeRequestGuid5(ApplicationTest.java:38)
 
-getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 1.756 sec  <<< FAILURE!
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 1.665 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path size() doesn't match.
@@ -193,7 +193,7 @@ Expected: is <5>
 
 	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
 
-getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 0.308 sec  <<< FAILURE!
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 0.35 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path size() doesn't match.
@@ -202,7 +202,7 @@ Expected: is <1>
 
 	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
 
-getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 0.951 sec  <<< FAILURE!
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 1.013 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path size() doesn't match.
@@ -211,7 +211,7 @@ Expected: is <1>
 
 	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
 
-getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 0.994 sec  <<< FAILURE!
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 1.133 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path size() doesn't match.
@@ -220,7 +220,7 @@ Expected: is <1>
 
 	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
 
-getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 1.002 sec  <<< FAILURE!
+getListOfChanges(AutoTest.AuxiliaryTest)  Time elapsed: 0.829 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path size() doesn't match.
@@ -229,138 +229,112 @@ Expected: is <1>
 
 	at AutoTest.AuxiliaryTest.getListOfChanges(AuxiliaryTest.java:75)
 
-getListOfChangesNegative(AutoTest.AuxiliaryTest)  Time elapsed: 0.097 sec  <<< FAILURE!
+getListOfChangesNegative(AutoTest.AuxiliaryTest)  Time elapsed: 0.118 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <400> but was <403>.
 
 	at AutoTest.AuxiliaryTest.getListOfChangesNegative(AuxiliaryTest.java:91)
 
-getPartnerGuid(AutoTest.PartnerTest)  Time elapsed: 1.057 sec  <<< FAILURE!
+postNomenclatureChangeJsonFile(Test.TestPostRequest)  Time elapsed: 1.014 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
-	at AutoTest.PartnerTest.getPartnerGuid(PartnerTest.java:92)
+	at Test.TestPostRequest.postNomenclatureChangeJsonFile(TestPostRequest.java:73)
 
-getPartnerGuidExpected400(AutoTest.PartnerTest)  Time elapsed: 0.948 sec  <<< FAILURE!
-java.lang.AssertionError: 
-1 expectation failed.
-Expected status code <200> but was <400>.
-
-	at AutoTest.PartnerTest.getPartnerGuidExpected400(PartnerTest.java:106)
-
-getPartnerList(AutoTest.PartnerTest)  Time elapsed: 1.008 sec  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at AutoTest.PartnerTest.lambda$getPartnerList$2(PartnerTest.java:47)
-	at AutoTest.PartnerTest.getPartnerList(PartnerTest.java:47)
-
-getPartnerListUsingProvader(AutoTest.PartnerTest)  Time elapsed: 0.974 sec  <<< FAILURE!
-java.lang.AssertionError: 
-1 expectation failed.
-Expected status code <200> but was <400>.
-
-	at AutoTest.PartnerTest.getPartnerListUsingProvader(PartnerTest.java:73)
-
-postNomenclatureChangeJsonFile(Test.TestPostRequest)  Time elapsed: 1.027 sec  <<< FAILURE!
-java.lang.AssertionError: 
-1 expectation failed.
-Expected status code <200> but was <400>.
-
-	at Test.TestPostRequest.postNomenclatureChangeJsonFile(TestPostRequest.java:71)
-
-postNomenclatureChangeRequestMapMinType3(Test.TestPostRequest)  Time elapsed: 0.849 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapMinType3(Test.TestPostRequest)  Time elapsed: 0.998 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapMinType3(TestPostRequest.java:415)
 
-postNomenclatureChangeRequestMapRequired(Test.TestPostRequest)  Time elapsed: 1.01 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapRequired(Test.TestPostRequest)  Time elapsed: 0.994 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapRequired(TestPostRequest.java:119)
 
-postNomenclatureChangeRequestMapRequired(Test.TestPostRequest)  Time elapsed: 1.008 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapRequired(Test.TestPostRequest)  Time elapsed: 1.041 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapRequired(TestPostRequest.java:119)
 
-postNomenclatureChangeRequestMapType0_2_AbsentFields(Test.TestPostRequest)  Time elapsed: 0.978 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType0_2_AbsentFields(Test.TestPostRequest)  Time elapsed: 0.963 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_AbsentFields(TestPostRequest.java:913)
 
-postNomenclatureChangeRequestMapType0_2_AbsentFields(Test.TestPostRequest)  Time elapsed: 0.997 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType0_2_AbsentFields(Test.TestPostRequest)  Time elapsed: 1.013 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_AbsentFields(TestPostRequest.java:913)
 
-postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(Test.TestPostRequest)  Time elapsed: 1.009 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(Test.TestPostRequest)  Time elapsed: 1.02 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(TestPostRequest.java:807)
 
-postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(Test.TestPostRequest)  Time elapsed: 1.001 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(Test.TestPostRequest)  Time elapsed: 1.14 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(TestPostRequest.java:807)
 
-postNomenclatureChangeRequestMapType0_2_RequiredFields(Test.TestPostRequest)  Time elapsed: 1.006 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType0_2_RequiredFields(Test.TestPostRequest)  Time elapsed: 0.81 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_RequiredFields(TestPostRequest.java:231)
 
-postNomenclatureChangeRequestMapType0_2_RequiredFields(Test.TestPostRequest)  Time elapsed: 0.985 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType0_2_RequiredFields(Test.TestPostRequest)  Time elapsed: 1.017 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType0_2_RequiredFields(TestPostRequest.java:231)
 
-postNomenclatureChangeRequestMapType1(Test.TestPostRequest)  Time elapsed: 0.949 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType1(Test.TestPostRequest)  Time elapsed: 0.952 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType1(TestPostRequest.java:162)
 
-postNomenclatureChangeRequestMapType1_ExtraRequiredFields(Test.TestPostRequest)  Time elapsed: 0.985 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType1_ExtraRequiredFields(Test.TestPostRequest)  Time elapsed: 1 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType1_ExtraRequiredFields(TestPostRequest.java:843)
 
-postNomenclatureChangeRequestMapType1_RequiredFields(Test.TestPostRequest)  Time elapsed: 0.996 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType1_RequiredFields(Test.TestPostRequest)  Time elapsed: 0.998 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType1_RequiredFields(TestPostRequest.java:266)
 
-postNomenclatureChangeRequestMapType3(Test.TestPostRequest)  Time elapsed: 1.016 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType3(Test.TestPostRequest)  Time elapsed: 1.036 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType3(TestPostRequest.java:195)
 
-postNomenclatureChangeRequestMapType3ExtraRequiredFields(Test.TestPostRequest)  Time elapsed: 1.001 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType3ExtraRequiredFields(Test.TestPostRequest)  Time elapsed: 0.96 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 JSON path guid doesn't match.
@@ -369,60 +343,60 @@ Expected: a CharSequence with length <36>
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType3ExtraRequiredFields(TestPostRequest.java:878)
 
-postNomenclatureChangeRequestMapType3RequiredFields(Test.TestPostRequest)  Time elapsed: 1.04 sec  <<< FAILURE!
+postNomenclatureChangeRequestMapType3RequiredFields(Test.TestPostRequest)  Time elapsed: 0.991 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMapType3RequiredFields(TestPostRequest.java:297)
 
-postNomenclatureChangeRequestMax(Test.TestPostRequest)  Time elapsed: 1.002 sec  <<< FAILURE!
+postNomenclatureChangeRequestMax(Test.TestPostRequest)  Time elapsed: 0.921 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMax(TestPostRequest.java:504)
 
-postNomenclatureChangeRequestMax(Test.TestPostRequest)  Time elapsed: 1.039 sec  <<< FAILURE!
+postNomenclatureChangeRequestMax(Test.TestPostRequest)  Time elapsed: 1.019 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMax(TestPostRequest.java:459)
 
-postNomenclatureChangeRequestMax(Test.TestPostRequest)  Time elapsed: 0.977 sec  <<< FAILURE!
+postNomenclatureChangeRequestMax(Test.TestPostRequest)  Time elapsed: 0.951 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMax(TestPostRequest.java:459)
 
-postNomenclatureChangeRequestMaxPlus(Test.TestPostRequest)  Time elapsed: 0.003 sec  <<< FAILURE!
+postNomenclatureChangeRequestMaxPlus(Test.TestPostRequest)  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.ClassCastException: class com.fasterxml.jackson.databind.node.TextNode cannot be cast to class com.fasterxml.jackson.databind.node.ObjectNode (com.fasterxml.jackson.databind.node.TextNode and com.fasterxml.jackson.databind.node.ObjectNode are in unnamed module of loader 'app')
 	at Test.TestPostRequest.postNomenclatureChangeRequestMaxPlus(TestPostRequest.java:1089)
 
-postNomenclatureChangeRequestMinMapType1(Test.TestPostRequest)  Time elapsed: 0.965 sec  <<< FAILURE!
+postNomenclatureChangeRequestMinMapType1(Test.TestPostRequest)  Time elapsed: 1.105 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMinMapType1(TestPostRequest.java:383)
 
-postNomenclatureChangeRequestMinValue(Test.TestPostRequest)  Time elapsed: 1.001 sec  <<< FAILURE!
+postNomenclatureChangeRequestMinValue(Test.TestPostRequest)  Time elapsed: 0.886 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMinValue(TestPostRequest.java:340)
 
-postNomenclatureChangeRequestMinValue(Test.TestPostRequest)  Time elapsed: 0.998 sec  <<< FAILURE!
+postNomenclatureChangeRequestMinValue(Test.TestPostRequest)  Time elapsed: 1.003 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <400>.
 
 	at Test.TestPostRequest.postNomenclatureChangeRequestMinValue(TestPostRequest.java:340)
 
-postNomenclatureChangeRequestPOJO(Test.TestPostRequest)  Time elapsed: 0.992 sec  <<< FAILURE!
+postNomenclatureChangeRequestPOJO(Test.TestPostRequest)  Time elapsed: 1.031 sec  <<< FAILURE!
 java.lang.AssertionError: 
 1 expectation failed.
 Expected status code <200> but was <405>.

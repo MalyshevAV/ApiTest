@@ -9,14 +9,6 @@
           <include name="getListOfChangesNegative" invocation-numbers="1"/>
         </methods>
       </class> <!-- AutoTest.AuxiliaryTest -->
-      <class name="AutoTest.PartnerTest">
-        <methods>
-          <include name="getPartnerListUsingProvader" invocation-numbers="1"/>
-          <include name="getPartnerGuidExpected400"/>
-          <include name="getPartnerList"/>
-          <include name="getPartnerGuid"/>
-        </methods>
-      </class> <!-- AutoTest.PartnerTest -->
       <class name="AutoTest.ApplicationTest">
         <methods>
           <include name="getChangeRequestGuid"/>
@@ -26,11 +18,11 @@
       <class name="Test.TestPostRequest">
         <methods>
           <include name="postNomenclatureChangeRequestMapMinType3"/>
-          <include name="postNomenclatureChangeRequestMapType3"/>
-          <include name="postNomenclatureChangeRequestMapType1_ExtraRequiredFields"/>
           <include name="postNomenclatureChangeRequestMinValue" invocation-numbers="0 1"/>
-          <include name="postNomenclatureChangeRequestMapType1"/>
+          <include name="postNomenclatureChangeRequestMapType1_ExtraRequiredFields"/>
+          <include name="postNomenclatureChangeRequestMapType3"/>
           <include name="postNomenclatureChangeJsonFile"/>
+          <include name="postNomenclatureChangeRequestMapType1"/>
           <include name="postNomenclatureChangeRequestPOJO"/>
           <include name="postNomenclatureChangeRequestMapType1_RequiredFields"/>
           <include name="postNomenclatureChangeRequestMapType0_2_RequiredFields" invocation-numbers="0 1"/>
@@ -39,9 +31,9 @@
           <include name="postNomenclatureChangeRequestMinMapType1"/>
           <include name="postNomenclatureChangeRequestMapType3ExtraRequiredFields"/>
           <include name="postNomenclatureChangeRequestMapType0_2_RequiredExtraFields" invocation-numbers="0 1"/>
-          <include name="postNomenclatureChangeRequestMaxPlus"/>
           <include name="postNomenclatureChangeRequestMax" invocation-numbers="0 1"/>
           <include name="postNomenclatureChangeRequestMax"/>
+          <include name="postNomenclatureChangeRequestMaxPlus"/>
           <include name="postNomenclatureChangeRequestMapRequired" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- Test.TestPostRequest -->
