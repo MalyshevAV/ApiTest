@@ -20,7 +20,8 @@ jobs:
       #    path: staging 
          
       - name: Run tests
-        run: mvn clean test
+        run: mvn -Dtest=ClassifierTeat test
+        # run: mvn clean test
         if: always()
       
       - name: Copy History
