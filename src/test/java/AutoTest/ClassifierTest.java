@@ -10,6 +10,7 @@ import io.qameta.allure.Owner;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -333,6 +334,7 @@ public class ClassifierTest {
     }
 
     @Test
+  //  @ParameterizedTest(name = "UnifiedClassifier,Гуид {8eb9bf84-3507-11ee-918f-7824af8ab7211} ")
     @Feature("Единый Классификатор")
     @Description("Негативный тест (Max+1) Получение единого классификатора по Гуид")
     public void getUnifiedClassifierGuidMaxPlus() {

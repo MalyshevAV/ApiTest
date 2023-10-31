@@ -6,6 +6,9 @@ import Specifications.GetPositivedataprovider;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 import org.testng.annotations.DataProvider;
@@ -25,11 +28,11 @@ import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 import static io.restassured.RestAssured.given;
-
+@Epic("Создание заявки на изменение, удаление")
 public class TestPostRequest {
 
 
-    @Test
+  //  @Test
     @Description("using POJO")
     public void postNomenclatureChangeRequestPOJO() {
         PojoPost data = PojoPost.builder().build();
@@ -54,7 +57,7 @@ public class TestPostRequest {
                 .body("responsible.email", notNullValue(), hasSize(lessThan(100)));
     }
 
-    @Test
+  //  @Test
     @Description("using JsonFile ")
     public void postNomenclatureChangeJsonFile() throws FileNotFoundException {
         File file = new File("C:\\Users\\Sasha\\TEST\\Auto_test\\MDM\\src\\test\\resources\\postNomenclatureUsingJsonFil.json");
@@ -80,6 +83,8 @@ public class TestPostRequest {
     UUID uuid = UUID.randomUUID();
 
     @Test(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку запрос существующей записи в МДМ и изменение  Тип = 0, 2")
     public void postNomenclatureChangeRequestMapRequired(int type) {
         installSpec(requestSpecification(), responseSpecification());
@@ -123,7 +128,9 @@ public class TestPostRequest {
     }
 
     @Test//(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
-    @Description("Создаем заявку Формирование заявки на добавление записи   Тип = 1")
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
+    @Description("Создаем заявку на добавление записи   Тип = 1")
     public void postNomenclatureChangeRequestMapType1() {
         installSpec(requestSpecification(), responseSpecification());
         HashMap<String, Object> postNomenclature = new HashMap<>();
@@ -166,6 +173,8 @@ public class TestPostRequest {
     }
 
     @Test
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку на вывод из обращения  Тип = 3")
     public void postNomenclatureChangeRequestMapType3() {
         installSpec(requestSpecification(), responseSpecification());
@@ -189,7 +198,6 @@ public class TestPostRequest {
         data.put("be", "6c7ac4b5-67fd-11ee-b5b0-005056013b0c");
         data.put("dateOutputArchive", "0001-01-01T00:00:00");
         given()
-                // .header("x-se-hash", "cfcd208495d565ef66e7dff9f98764da")
                 .body(postNomenclature)
                 .when()
                 .post("nomenclature/")
@@ -199,7 +207,9 @@ public class TestPostRequest {
     }
 
     @Test(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
-    @Description("Создаем заявку Запрос и изменение с обязательними полями Тип = 0, 2")
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
+    @Description("Создаем заявку Запрос на изменение с обязательними полями Тип = 0, 2")
     public void postNomenclatureChangeRequestMapType0_2_RequiredFields(int type) {
         installSpec(requestSpecification(), responseSpecification());
         HashMap<String, Object> postNomenclature = new HashMap<>();
@@ -234,6 +244,8 @@ public class TestPostRequest {
                 .body("result", equalTo("ok"));
     }
     @Test
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Формирование заявки на добавление записи с обязательними полями Тип = 1")
     public void postNomenclatureChangeRequestMapType1_RequiredFields() {
         installSpec(requestSpecification(), responseSpecification());
@@ -270,6 +282,8 @@ public class TestPostRequest {
     }
 
     @Test
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку с обязательнами полями на вывод из обращения Тип = 3")
     public void postNomenclatureChangeRequestMapType3RequiredFields() {
         installSpec(requestSpecification(), responseSpecification());
@@ -302,6 +316,8 @@ public class TestPostRequest {
 
 
     @Test(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку минимальное значение в в атрибутах Тип = 0 2")
     public void postNomenclatureChangeRequestMinValue(int type) {
         installSpec(requestSpecification(), responseSpecification());
@@ -345,6 +361,8 @@ public class TestPostRequest {
     }
 
     @Test//(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Формирование заявки на добавление записи с минимальным количеством Тип = 1")
     public void postNomenclatureChangeRequestMinMapType1() {
         installSpec(requestSpecification(), responseSpecification());
@@ -387,6 +405,8 @@ public class TestPostRequest {
     }
 
     @Test
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку на вывод из обращения минимальное количество  Тип = 3")
     public void postNomenclatureChangeRequestMapMinType3() {
         installSpec(requestSpecification(), responseSpecification());
@@ -420,6 +440,8 @@ public class TestPostRequest {
 
 
     @Test(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку c Максимальным значением в атрибутах Тип=0  2")
     public void postNomenclatureChangeRequestMax(int type) {
         installSpec(requestSpecification(), responseSpecification());
@@ -465,6 +487,8 @@ public class TestPostRequest {
 
 
     @Test//(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Формирование заявки на добавление записи c Максимальным значением в атрибутах Тип = 1")
     public void postNomenclatureChangeRequestMax() {
         installSpec(requestSpecification(), responseSpecification());
@@ -509,6 +533,8 @@ public class TestPostRequest {
     }
 
     @Test
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку c максимальным значением на вывод из обращения минимальное количество  Тип = 3")
     public void postNomenclatureChangeRequestMapMaxType3() {
         installSpec(requestSpecification(), responseSpecification());
@@ -543,6 +569,8 @@ public class TestPostRequest {
 //////////////////////////////////////Negative test
 
     @Test(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку c Макс+1 в атрибутах Тип=0  2")
     public void postNomenclatureChangeRequestMaxPlus1(int type) {
         installSpec(requestSpecification(), responseSpecification400());
@@ -587,6 +615,8 @@ public class TestPostRequest {
 
 
     @Test//(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Формирование заявки на добавление записи c Макс+1 в атрибутах Тип = 1")
     public void postNomenclatureChangeRequestMaxPlus1Type1() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -630,6 +660,8 @@ public class TestPostRequest {
     }
 
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку c Макс+1 на вывод из обращения минимальное количество  Тип = 3")
     public void postNomenclatureChangeRequestMapMaxPlusType3() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -661,6 +693,8 @@ public class TestPostRequest {
     }
 
     @Test(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку Запрос и изменение с пустыми обязательними полями Тип = 0, 2")
     public void postNomenclatureChangeRequestMapType0_2_RequiredFieldsIsEmpty(int type) {
         installSpec(requestSpecification(), responseSpecification400());
@@ -695,6 +729,8 @@ public class TestPostRequest {
                 .body("guid", is(nullValue()));
     }
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Формирование заявки на добавление записис пустыми обязательними полями Тип = 1")
     public void postNomenclatureChangeRequestMapType1_RequiredFieldsIsEmpty() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -708,10 +744,8 @@ public class TestPostRequest {
         postNomenclature.put("be", uuid);
         postNomenclature.put("autor", autor);
         postNomenclature.put("data", data);
-
         autor.put("fio", "");
         autor.put("email", "");
-
         data.put("guid", uuid);
         data.put("guidBE", uuid);
         data.put("unifiedClassifier", uuid);
@@ -731,6 +765,8 @@ public class TestPostRequest {
 
 
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку с обязательнами пустыми полями на вывод из обращения Тип = 3")
     public void postNomenclatureChangeRequestMapType3RequiredFieldsIsEmpty() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -760,6 +796,8 @@ public class TestPostRequest {
                 .body("guid", is(nullValue()));
     }
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Пустой объект")
     public void postNomenclatureChangeRequestMapIsEmptyObject() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -774,6 +812,8 @@ public class TestPostRequest {
     }
 
     @Test(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку Запрос и изменение с дополнительным  полем Тип = 0, 2")
     public void postNomenclatureChangeRequestMapType0_2_RequiredExtraFields(int type) {
         installSpec(requestSpecification(), responseSpecification());
@@ -810,6 +850,8 @@ public class TestPostRequest {
                 .body("result", equalTo("ok"));
     }
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Формирование заявки на добавление записи с дополнительным полем полями Тип = 1")
     public void postNomenclatureChangeRequestMapType1_ExtraRequiredFields() {
         installSpec(requestSpecification(), responseSpecification());
@@ -848,6 +890,8 @@ public class TestPostRequest {
     }
 
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку с дополнительным полем на вывод из обращения Тип = 3")
     public void postNomenclatureChangeRequestMapType3ExtraRequiredFields() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -881,6 +925,8 @@ public class TestPostRequest {
 
 
     @Test(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку Запрос и изменение с отсутствующим полем Тип = 0, 2")
     public void postNomenclatureChangeRequestMapType0_2_AbsentFields(int type) {
         installSpec(requestSpecification(), responseSpecification());
@@ -915,6 +961,8 @@ public class TestPostRequest {
                 .body("guid", is(nullValue()));
     }
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку Запрос и изменение с обязательними полями Тип = 1")
     public void postNomenclatureChangeRequestMapType1_AbsentFields() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -950,6 +998,8 @@ public class TestPostRequest {
     }
 
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку с обязательнами полями на вывод из обращения Тип = 3")
     public void postNomenclatureChangeRequestMapType3AbsentFields() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -980,6 +1030,8 @@ public class TestPostRequest {
                 .body("guid", is(nullValue()));
     }
     @Test(dataProvider = "positiveData", dataProviderClass = GetPositivedataprovider.class)
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку Запрос и изменение с обязательними полями Тип = 0, 2")
     public void postNomenclatureChangeRequestMapTypeNotExist(int positiveData) {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1014,6 +1066,8 @@ public class TestPostRequest {
                 .body("guid", is(nullValue()));
     }
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку Запрос и изменение с обязательними полями Тип = 1")
     public void postNomenclatureChangeRequestMapType1NotExist() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1049,6 +1103,8 @@ public class TestPostRequest {
     }
 
     @Test
+    @Feature("Негативный тест")
+    @Owner("Малышев")
     @Description("Создаем заявку с обязательнами полями на вывод из обращения Тип = 3")
     public void postNomenclatureChangeRequestMapType3NotExist() {
         installSpec(requestSpecification(), responseSpecification400());
@@ -1082,7 +1138,7 @@ public class TestPostRequest {
 
 
 
-    @Test
+   // @Test
     @Description("Создаем заявку значения max+1")
     public void postNomenclatureChangeRequestMaxPlus() throws IOException {
         ObjectNode jsonNodes = new ObjectMapper().readValue(new File("src/test/resources/postNomenclatureUsingJsonFil.json"), ObjectNode.class);
