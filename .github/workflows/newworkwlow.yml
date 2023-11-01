@@ -13,8 +13,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'   
       - name: Run tests
-        # run: mvn -Dtest=ClassifierTest test
-        run: mvn clean test
+        run: mvn -Dtest=ClassifierTest test
+        # run: mvn clean test
 
       # Копируем историю в папку Аллюр хистори
       - name: Copy History
