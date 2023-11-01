@@ -18,7 +18,7 @@ jobs:
 
       # Копируем историю в папку Аллюр хистори
       - name: Copy History
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: always()
         with:
           ref: gh-pages
