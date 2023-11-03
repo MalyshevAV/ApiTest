@@ -3,15 +3,14 @@ package AutoTest;
 import MDM.POJO.UnifiedClassifirePojo;
 import MDM.POJO.UnitsPojo;
 import Specifications.Specifications;
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
+import io.qameta.allure.*;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -23,7 +22,55 @@ import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.IsNull.notNullValue;
 @Epic("Классификаторы")
 public class ClassifierTest {
+    @DataProvider
+    public static Object[][] positiveData() {
+        return new Object[][]{
+                {1},
+                {5},
+                {6},
+                {100},
+                {199},
+                {200}
+        };
+    }
+    @DataProvider
+    public static Object[][] negativeData() {
+        return new Object[][]{
+                {201},
+                {Integer.MAX_VALUE},
+                {"   "},
+                {" 200 "},
+                {2.1},
+                {0},
+                {"2 1"},
+                {"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent lupta"},
+                {"123DWQ"},
+                {"!@#$%^&*(){}[]\"':;/<>\\|№\n"},
+                {"select*From users"},
+                {-100},
+                {"<script>alert( 'Hello world' );</script>"},
+                {"2 1"}
+        };
+    }
+    @DataProvider()
+    public static Object[][] guidNegative() {
+        return new Object[][]{
 
+                {"13513a3e-36d6-11ee-b5b0-005026013b0c1"},
+                {"13513a3e-36d6-11ee-b5b0-005056013b0"},
+                {"43dabce-3c42-11ee-b5b0-005096013b1c1"},
+                //  {"         "}, 403 ошибка
+                {" 13513a3e-36d6-11ee-b5b0-005056013b0c "},
+                {"13513a3e-3 6d6-11ee-b5 b0-005056013b0c"},
+                {"1кк13a3e-36d6-11ee-b5b0-00)&056 013b0c"},
+                // {"!$%^&*(){}[]':;/<>|№*******$$$!@@##"},
+                {-100},
+                {Integer.MAX_VALUE},
+                {Double.MAX_VALUE},
+                // {"<script>alert( 'Hello world' );</script>"},
+                {"Q91MXkSBG2w4bDK9Z9nprYeT4Pd69TGUdDOqWKDrlSKkIZ3JHqi0rA1G5LAfCZ54yEJ3adXLSmgtm4Z5hXMNT3ZqxkqMyqQhE9fze353egOMYAf0tESKpQtqdOzmrqiyvTjC6tCVc6Iqxgyq3TkICV3Hhk7ffbIYkIYXqk6Inktqt9xKmNqCPsemWzKVaXCiQ299HurLBuVTvZeFWYrqnyjl46h1AKLjfkZOMb0vRari1MFJz48qkpFR6RLTTBS2EtLY1rAj7OIw6zACkXgsJkUkMShenn19tEeZKsl3nAwnt4Qk1P1nzHlnSw6Kdl1jvGflS6aLfxrRoqIM0W1TDlUfCfXehzCemTTui7BddecX6aUTcvYHj3eQSYb4tiErgIdN6PMpizjNO4iZjJLTdBh6xtQC9DQKCj1gM8QKUtDYP5sO1SlEcKcjPIC0Q3jQ4yY27NCuLwAiCqdqdiMVjGYsOd90xcdRBtX5tREE7ATqk21riVMXtAIHmBAGZ2jYQ6ZDO86ohend0RPlqMbjg1G3oliIwx5gNX1solpXlUnu1hmA1TgI3mB2qF1d7zgLw9yXykzScvCtOVsvqOAShLQ7GmR9cFJ7jfHN8APVBFMkXUKEVl6NkQhAQ4ApA7ehLXapgDI4JLuaNAWwlos9gEF2eS9VJ4j8F44fksKySH1IdSkcKR0fk9KX5pIxUQ7KWfWL6aALwY9hXvTtlHWBS62rAPT2VliYrbt9rCz8UVYGyxF9Dm43WvR6xrht8fFrOCVzhRvBreXHsyqwAE4Mzg7NMG48OXKLbo7ENp2bN7L1ppoLfF75wEDx5ecbTuFEg3YS4yDtKNdreHOei2bh1moaos3Zzum6WXZWHhrzFHtris4t8QZygCaNUTeaaONxRuFZtpz91ynjBF0gNFo5G0avIZHo0L5m5SYjXi41iVh8UOHAw2LxqpsVBaXDZ22nM2CWw1fmCgGsK1Jq6QDjEzul2GGZse3qwLxIokcqlVzKuGLrLJ2DDwhoWBovx2du"}
+        };
+    }
     @Feature("Единый Классификатор")
     @Test
     @Owner("Малышев")
@@ -54,65 +101,26 @@ public class ClassifierTest {
         deleteSpec();
     }
 
-    @Test
+    @Test(dataProvider = "positiveData")
     @Feature("Единый Классификатор")
-    @DisplayName("Получение списка классификаторов1")
-    @Description("Получение массива Единый классификатор из 5 объектов")
-    public void getUnifiedClassifierListStepEqual5() {
+    @Step("Количество возвращаемых элементов = {step}")
+    @Owner("Малышев")
+    @Description("Получение массива Единый классификатор из объектов")
+    public void getUnifiedClassifierListPositiveStep(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .queryParam("step", 5)
+                .queryParam("step", step)
                 .get("/unified-classifier")
                 .then().log().all()
-                .body("size()", is(5));
+                .body("size()", is(step));
         deleteSpec();
     }
 
     @Test
     @Feature("Единый Классификатор")
-    @Description("Получение массива Единый классификатор из 6 объектов")
-    public void getUnifiedClassifierListStepEqual6() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 6)
-                .get("/unified-classifier")
-                .then().log().all()
-                .body("size()", is(6));
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Получение массива Единый классификатор из 199 объектов")
-    public void getUnifiedClassifierListStepEqual199() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 199)
-                .get("/unified-classifier")
-                .then().log().all()
-                .body("size()", is(199));
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Получение массива Единый классификатор из 100 объектов")
-    public void getUnifiedClassifierListStepEqual100() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 100)
-                .get("/unified-classifier")
-                .then().log().all()
-                .body("size()", is(100));
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
+    @Step("Количество возвращаемых элементов = 200")
+    @Owner("Малышев")
     @Description("Получение массива Единый классификатор, поле Step пустое")
     public void getUnifiedClassifierListStepIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -124,397 +132,66 @@ public class ClassifierTest {
         deleteSpec();
     }
 
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Позитивный тест Получение массива Единый классификатор, поле Step 1")
-    public void getUnifiedClassifierListStepMinMinus() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 1)
-                .get("unified-classifier")
-                .then().log().all()
-                .body("size()", is(1));;
-        deleteSpec();
-    }
 
-    @Test
+    @Test(dataProvider = "negativeData")
     @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step (Max+1)")
-    public void getUnifiedClassifierListStepMaxPlus() {
+    @Step("Невалидное значение = {step}")
+    @Owner("Малышев")
+    @Description("Негативный тест. Получение массива Единый классификатор")
+    public void getUnifiedClassifierListNegativeData(Object step) {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
                 .when()
-                .queryParam("step", 201)
+                .queryParam("step", step)
                 .get("unified-classifier")
                 .then().log().all();
         deleteSpec();
     }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////
     @Test
     @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step Max Integer")
-    public void getUnifiedClassifierListStepMaxInteger() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", 2147483647)
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step 3 пробела")
-    public void getUnifiedClassifierListStepSpaces() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "   ")
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step пробел перед числом и после")
-    public void getUnifiedClassifierListStepTwoSpacesAndDigit() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", " 200 ")
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step Дробное число")
-    public void getUnifiedClassifierListStepDoubleType() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", 2.1)
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step пробел в середине числа")
-    public void getUnifiedClassifierListStepDigitAndSpace() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "2 1")
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step 1024 символа")
-    public void getUnifiedClassifierListStep1024() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent lupta")
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step равен 0")
-    public void getUnifiedClassifierListStepZero() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", 0)
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step строка цифры+латинница")
-    public void getUnifiedClassifierListStepDigitLatin() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "123DWQ")
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step строка Спецсимволы")
-    public void getUnifiedClassifierListStepSpecialSymbol() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "!@#$%^&*(){}[]\"':;/<>\\|№\n")
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step строка select")
-    public void getUnifiedClassifierListStepSelect() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "select*From users")
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step отрицательное число")
-    public void getUnifiedClassifierListStepNegativeNumber() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", -100)
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step Инъекция")
-    public void getUnifiedClassifierListStepInjection() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when().log().uri()
-                .queryParam("step", "<script>alert( 'Hello world' );</script>")
-                .get("unified-classifier")
-                .then().log().all();
-        deleteSpec();
-    }
-
-
-    @Test
-    @Feature("Единый Классификатор")
+    @Step("Валидный Guid = {guid}")
     @Description("Получение единого классификатора по Гуид")
     public void getUnifiedClassifierGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .get("unified-classifier/513916c8-1677-11ee-b5ab-a0dc07f9a67b")
+                .pathParam("guid", "513916c8-1677-11ee-b5ab-a0dc07f9a67b")
+                .get("unified-classifier/{guid}")
                 .then().log().all()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getUnifiedClassifierGuid.json"));
     }
 
-    @Test
+    @Test(dataProvider = "guidNegative")
     @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение единого классификатора по Гуид, несуществующий Гуид 36 символов")
-    public void getUnifiedClassifierGuidNotExist() {
+    @Step("Невалидное значение Guid = {guid}")
+    @Description("Негативный тест Получение единого классификатора по Гуид")
+    public void getUnifiedClassifierGuidNegativeData(Object guid) {
         installSpec(requestSpecification(), responseSpecification400());
         given()
                 .when()
-                .get("unified-classifier/09bdd436-3da3-11ee-918f-7824af8ab720")
+                .pathParam("guid", guid)
+                .get("unified-classifier/{guid}")
                 .then().log().all();
 
     }
 
-    @Test
-  //  @ParameterizedTest(name = "UnifiedClassifier,Гуид {8eb9bf84-3507-11ee-918f-7824af8ab7211} ")
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест (Max+1) Получение единого классификатора по Гуид")
-    public void getUnifiedClassifierGuidMaxPlus() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("unified-classifier/8eb9bf84-3507-11ee-918f-7824af8ab7211")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест (Max-1) Получение единого классификатора по Гуид")
-    public void getUnifiedClassifierGuidMaxMinus() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("unified-classifier/8eb9bf84-3507-11ee-918f-7824af8ab72")
-                .then().log().all();
-    }
-
-   // @Test
-    @Description("Негативный тест Получение единого классификатора по Гуид, только пробелы")
-    public void getUnifiedClassifierGuidSpacies() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("unified-classifier/      ")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение единого классификатора по Гуид, пробелы в начале и в конце")
-    public void getUnifiedClassifierGuidTwoSpacies() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("unified-classifier/ 8eb9bf84-3507-11ee-918f-7824af8ab721 ")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение единого классификатора по Гуид, пробелы в середине строки")
-    public void getUnifiedClassifierGuidSpaciesIn() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("unified-classifier/8eb9bf84-35  07-11ee-918f-7824af8ab721")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение единого классификатора по Гуид, комбинация латинница, спецсимволы, кириллица числа")
-    public void getUnifiedClassifierGuidCombination() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("unified-classifier/8кb()ав84-3!07-11зз-918f-7824af8ab?*1")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение единого классификатора по Гуид, Select")
-    public void getUnifiedClassifierGuidSelect() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("unified-classifier/select")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение единого классификатора по Гуид, отрицательное число")
-    public void getUnifiedClassifierGuidNegativeNumber() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("unified-classifier/-1")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение единого классификатора по Гуид,Инъекция")
-    public void getUnifiedClassifierGuidInjection() {
-        installSpec(requestSpecification(), responseSpecification404());
-        given()
-                .when()
-                .get("unified-classifier/<script>alert( 'Hello world' );</script>")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый Классификатор")
-    @Description("Негативный тест Получение единого классификатора по Гуид, 1024 буквы")
-    public void getUnifiedClassifierGuid1024letters() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("unified-classifier/gxswhxtknhsdoploxxjapfjmpkpczxmdlfjdkgrthqzzvlqikubahotafuuhdijsgupmqqtaayjhqnvutpsrbnqcgypgavjchnwryowuryjoavwmedyzemvfcwgxaddhpzmenrhryfotslitzzvpnwpbqhevugimknufhmqokkojtrnebnppbcvdfqzfpfaznrpdiqcjlmcshvhaygannurnuwqarnuqesaghlzhsbzzjtnnmnppsxhfjgxbgyskjifyvprwzlbdstrzpwczkkijscuumeutjxkghhujpycvizixjvuimgllrlxrcffxkaywnxuedexowpaovdhzxjomnmicqlmqsfyzdmicuvbsviwxmgqggiabffsczvqblvdjvfclpelnwmvaiuzfgrkhvbrxezehgnqtnnylvoixmydujlhiqttgwqmuoapxewvzwlmhfufzewpiqalfwddblvisdebxuqvitcbrmdesaneekmeoldibydhgpwmdgyhkggndvnqdngtqyacqffhkqsmmumjqxfghockypfyfvdslkmaeegakuakdwucpridzjnqsluqhezjorgoonzfvhvmulysknczvtewsadocupjbxkyeqyqekamtsvcsaitjuthpsbllxhemshnxsocunelzfglqqbvzobuouaictkwezixyoghfujiiykhtdjyxatgeihskjcweynknedplkbddtudmnrvhfvozalpgjlhmkdfnxzuwowtmbsxcsqnxbpiegkufpixpcnyeeekfubvspwaietagusqngnfbjozfmillxruvplvtvxnawkxppmmesqawzcezinmllmomgbpgompvkyyxjvuyolrskxrhgzjqkuaaxdonslbsgukrpbtbpmtcswaqsvdrwxlqhxccnwwegsuntuzxxzhbvleoogqlzbnmmuqenbfkhzcpkevmcxxwptgapageocdtsmfvnbtzljlywxydkpzjojfyjyihfinmwjengjor\n")
-                .then().log().all();
-    }
 ///////////////////////////////////////////getEopList//////////////////////////////////////////////////////
 
-    @Test
+    @Test(dataProvider = "positiveData")
     @Feature("Единый ограничительный перечень")
+    @Step("Количество возвращаемых элементов = {step}")
     @Description("Получение массива всех категорий Единый ограничительный перечень, валидация Json схема")
-    public void getEopList() {
+    public void getEopList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .queryParam("step", 200)
+                .queryParam("step", step)
                 .get("eop")
                 .then().log().all()
-                .body("size()", is(200))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getEopList.json"));
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Получение массива всех категорий Единый ограничительный перечень из 5 объектов")
-    public void getEopListStepEqual5() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 5)
-                .get("/eop")
-                .then().log().all()
-                .body("size()", is(5))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getEopList.json"));
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Получение массива всех категорий Единый ограничительный перечень из 6 объектов")
-    public void getEopListStepEqual6() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 6)
-                .get("/eop")
-                .then().log().all()
-                .body("size()", is(6))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getEopList.json"));
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Получение массива всех категорий Единый ограничительный перечень из 199 объектов")
-    public void getEopListStepEqual199() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 199)
-                .get("/eop")
-                .then().log().all()
-                .body("size()", is(199))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getEopList.json"));
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Получение массива всех категорий Единый ограничительный перечень из 100 объектов")
-    public void getEopListStepEqual100() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 100)
-                .get("/eop")
-                .then().log().all()
-                .body("size()", is(100))
+                .body("size()", is(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getEopList.json"));
         deleteSpec();
     }
@@ -532,345 +209,74 @@ public class ClassifierTest {
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getEopList.json"));
         deleteSpec();
     }
-
-    @Test
+    ///////////////////////////////////////////////////////////////////
+    @Test (dataProvider = "negativeData")
     @Feature("Единый ограничительный перечень")
-    @Description("Получение массива Единый ограничительный перечень, поле Step 1")
-    public void getEopListStepMinMinus() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 1)
-                .get("eop")
-                .then().log().all()
-                .body("size()", is(1));
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step (Max+1)")
-    public void getEopListStepMaxPlus() {
+    @Step("Невалидное значение = {step}")
+    @Owner("Малышев")
+    @Description("Негативный тест Получение массива Единый ограничительный перечень")
+    public void getEopListNegativeStep(Object step) {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
                 .when()
-                .queryParam("step", 201)
+                .queryParam("step", step)
                 .get("eop")
                 .then().log().all();
         deleteSpec();
     }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step Max Integer")
-    public void getEopListStepMaxInteger() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", Integer.MAX_VALUE)
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step 3 пробела")
-    public void getEopListStepSpaces() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "   ")
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step пробел перед числом и после")
-    public void getEopListStepTwoSpacesAndDigit() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", " 200 ")
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step Дробное число")
-    public void getEopListStepDoubleType() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", 2.1)
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step пробел в середине числа")
-    public void getEopListStepDigitAndSpace() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "2 1")
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step 1024 символа")
-    public void getEopListStep1024() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent lupta")
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step равен 0")
-    public void getEopListStepZero() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", 0)
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step строка цифры+латинница")
-    public void getEopListStepDigitLatin() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "123DWQ")
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый классификатор, поле Step строка Спецсимволы")
-    public void getEopListStepSpecialSymbol() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "!@#$%^&*(){}[]\"':;/<>\\|№\n")
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step строка select")
-    public void getEopListStepSelect() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "select*From users")
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step отрицательное число")
-    public void getEopListStepNegativeNumber() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", -100)
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение массива Единый ограничительный перечень, поле Step Инъекция")
-    public void getEopListStepInjection() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "<script>alert( 'Hello world' );</script>")
-                .get("eop")
-                .then().log().all();
-        deleteSpec();
-    }
-
 
     ///////////getEopGuid///////////
 
     @Test
     @Feature("Единый ограничительный перечень")
+    @Step("Валидное значение Guid = {guid}")
+    @Owner("Малышев")
     @Description("Получение единого ограничительного переченя номенклатуры по Гуид")
     public void getEopGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .get("eop/698688ac-1c9f-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "698688ac-1c9f-11ee-b5ac-005056013b0c")
+                .get("eop/{guid}")
                 .then().log().all()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getEopGuid.json"));
         deleteSpec();
     }
 
-    @Test
+    @Test(dataProvider = "guidNegative")
     @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение единого ограничительного перечня по Гуид, несуществующий Гуид 36 символов")
-    public void getEopGuidNotExist() {
+    @Step("Невалидное значение Guid = {guid}")
+    @Owner("Малышев")
+    @Description("Негативный тест Получение единого ограничительного перечня по Гуид")
+    public void getEopGuidNegativeData(Object guid) {
         installSpec(requestSpecification(), responseSpecification400());
         given()
                 .when()
-                .get("eop/09bdd436-3da3-11ee-918f-5824af8ab723")
+                .pathParam("guid", guid)
+                .get("eop/{guid}")
                 .then().log().all();;
-
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест (Max+1) Получение единого ограничительного перечня по Гуид")
-    public void getEopGuidMaxPlus() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("eop/8eb9bf84-3507-11ee-918f-7824af8ab7211")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест (Max-1) Получение единого ограничительного перечня по Гуид")
-    public void getEopGuidMaxMinus() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("eop/8eb9bf84-3507-11ee-918f-7824af8ab72")
-                .then().log().all();
-    }
-
-  //  @Test
-    @Description("Негативный тест Получение единого оганичительного перечня по Гуид, только пробелы")
-    public void getEopGuidSpacies() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("eop/      ")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение единого оганичительного перечня  по Гуид, пробелы в начале и в конце")
-    public void getEopGuidTwoSpacies() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("eop/ 8eb9bf84-3507-11ee-918f-7824af8ab721 ")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение еединого оганичительного перечня по Гуид, пробелы в середине строки")
-    public void getEopGuidSpaciesIn() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("eop/8eb9bf84-35  07-11ee-918f-7824af8ab721")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение единого оганичительного перечня по Гуид, комбинация латинница, спецсимволы, кириллица числа")
-    public void getEopGuidCombination() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("eop/8кb()ав84-3!07-11зз-918f-7824af8ab?*1")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение единого оганичительного перечня по Гуид, Select")
-    public void getEopGuidSelect() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("eop/select")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение единого единого оганичительного перечня по Гуид, отрицательное число")
-    public void getEopGuidNegativeNumber() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("eop/-1")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение единого оганичительного перечня по Гуид,Инъекция")
-    public void getEopGuidInjection() {
-        installSpec(requestSpecification(), responseSpecification404());
-        given()
-                .when()
-                .get("eop/<script>alert( 'Hello world' );</script>")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единый ограничительный перечень")
-    @Description("Негативный тест Получение единого оганичительного перечня по Гуид,Инъекция")
-    public void getEopGuid1024letters() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("eop/Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent lupta")
-                .then().log().all();
     }
 
 
     ////////////////////getUnitsList///////////////////////////
     @Test
     @Feature("Единицы измерения")
+    @ParameterizedTest
+    @ValueSource(ints = { 1, 5, 23})
+    @Step("Валидное значение = {step}")
+    @Owner("Малышев")
     @Description("Получение массива единиц измерения")
-    public void getUnitsList() {
+    public void getUnitsList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         List<UnitsPojo> response =
                 given()
                         .when()
-                        .queryParam("step", 13)
+                        .queryParam("step", step)
                         .get("units")
                         .then().log().all()
                         .extract().body().jsonPath().getList(".", UnitsPojo.class);
-                       // .stream();
-                      //  toList();
-        Assertions.assertEquals(response.size(), 13);
+        Assertions.assertEquals(response.size(), step);
         response.forEach(x -> Assert.assertEquals(x.getGuid().length(), 36));
         response.forEach(x -> Assert.assertTrue(x.getCode().length() <= 4)); // уточнить
         response.forEach(x -> Assert.assertTrue(x.getName().length() <= 25));
@@ -881,33 +287,6 @@ public class ClassifierTest {
         deleteSpec();
     }
 
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Получение массива Единиц измерения из 5 объектов")
-    public void getUnitsListStepEqual5() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 5)
-                .get("units")
-                .then().log().all()
-                .body("size()", is(5));
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Получение массива всех категорий Единый ограничительный перечень из 6 объектов")
-    public void getUnitsListStepEqual6() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 6)
-                .get("units")
-                .then().log().all()
-                .body("size()", is(6));
-        deleteSpec();
-    }
 
     @Test
     @Feature("Единицы измерения")
@@ -950,184 +329,16 @@ public class ClassifierTest {
         deleteSpec();
     }
 
-    @Test
-    @Feature("Единицы измерения")
-    @Description("олучение массива всех Единиц измерения, поле Step 1")
-    public void getUnitsListStepMinMinus() {
-        installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
-                .when()
-                .queryParam("step", 1)
-                .get("units")
-                .then().log().all()
-                .body("size()", is(1));
-        deleteSpec();
-    }
 
-    @Test
+    @Test(dataProvider = "negativeData")
     @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step (Max+1)")
-    public void getUnitsListStepMaxPlus() {
+    @Step("Невалидное значение = {step}")
+    @Description("Негативный тест Получение массива всех Единиц измерения")
+    public void getUnitsListNegativeStep(Object step) {
         installSpec(requestSpecification(), Specifications.responseSpecification400());
         given()
                 .when()
-                .queryParam("step", 201)
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step Max Integer")
-    public void geUnitsListStepMaxInteger() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", Integer.MAX_VALUE)
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step 3 пробела")
-    public void getUnitsListStepSpaces() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "   ")
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step пробел перед числом и после")
-    public void getUnitsListStepTwoSpacesAndDigit() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", " 200 ")
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step Дробное число")
-    public void getUnitsListStepDoubleType() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", 2.1)
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step пробел в середине числа")
-    public void getUnitsListStepDigitAndSpace() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "2 1")
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step 1024 символа")
-    public void getUnitsListStep1024() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent lupta")
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step равен 0")
-    public void getUnitsListStepZero() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", 0)
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step строка цифры+латинница")
-    public void getUnitsListStepDigitLatin() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "123DWQ")
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step строка Спецсимволы")
-    public void getUnitsListStepSpecialSymbol() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "!@#$%^&*(){}[]\"':;/<>\\|№\n")
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step строка select")
-    public void getUnitsListStepSelect() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "select*From users")
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step отрицательное число")
-    public void getUnitsListStepNegativeNumber() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given().log().uri()
-                .when()
-                .queryParam("step", -100)
-                .get("units")
-                .then().log().all();
-        deleteSpec();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение массива всех Единиц измерения, поле Step Инъекция")
-    public void getUnitsListStepInjection() {
-        installSpec(requestSpecification(), Specifications.responseSpecification400());
-        given()
-                .when()
-                .queryParam("step", "<script>alert( 'Hello world' );</script>")
+                .queryParam("step", step)
                 .get("units")
                 .then().log().all();
         deleteSpec();
@@ -1137,136 +348,30 @@ public class ClassifierTest {
     ////////////////////////////////getUnitsGuid//////////////////////////////////////////////////////////
     @Test
     @Feature("Единицы измерения")
+    @Step("Валидное значение = 85303f5a-e3aa-11e2-91f0-c80aa9301ced")
     @Description("Получение единиц измерения по Гуид")
     public void getUnitsGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .get("units/85303f5a-e3aa-11e2-91f0-c80aa9301ced")
+                .pathParam("guid", "85303f5a-e3aa-11e2-91f0-c80aa9301ced")
+                .get("units/{guid}")
                 .then().log().all()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getUnitsGuid.json"));
         deleteSpec();
     }
 
-    @Test
+    @Test(dataProvider = "guidNegative")
     @Feature("Единицы измерения")
-    @Description("Негативный тест Получение единиц измерения по Гуид, несуществующий Гуид 36 символов")
-    public void getUnitsGuidNotExist() {
+    @Step("Невалидное значение = {guid}")
+    @Description("Негативный тест Получение единиц измерения по Гуид")
+    public void getUnitsGuidNegativeData(Object guid) {
         installSpec(requestSpecification(), responseSpecification400());
         given()
                 .when()
-                .get("units/00bdd436-3da3-11ee-900f-5824af8ab723")
-                .then().log().all();
-
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест (Max+1) Получение единиц измерения по Гуид")
-    public void getUnitsGuidMaxPlus() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("units/8eb9bf84-3507-11ee-918f-7824af8ab7211")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест (Max-1) Получение единиц измерения по Гуид")
-    public void getUnitsGuidMaxMinus() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("units/3107dadb-fd6a-11df-ad89-001cc40d947")
-                .then().log().all();
-    }
-
- //   @Test
-    @Description("Негативный тест Получение единиц измерения по Гуид, только пробелы")
-    public void getUnitsGuidSpacies() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("units/      ")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение единиц измерения по Гуид, пробелы в начале и в конце")
-    public void getUnitsGuidTwoSpacies() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("units/ 8eb9bf84-3507-11ee-918f-7824af8ab721 ")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение единиц измерения по Гуид, пробелы в середине строки")
-    public void getUnitsGuidSpaciesIn() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("units/8eb9bf84-35  07-11ee-918f-7824af8ab721")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение единиц измерения по Гуид, комбинация латинница, спецсимволы, кириллица числа")
-    public void getUnitsGuidCombination() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("units/8кb()ав84-3!07-11зз-918f-7824af8ab?*1")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Пединиц измерения по Гуид, Select")
-    public void getUnitsGuidSelect() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("units/select")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение единиц измерения по Гуид, отрицательное число")
-    public void getUnitsGuidNegativeNumber() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("units/-1")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение единиц измерения по Гуид,Инъекция")
-    public void getUnitsGuidInjection() {
-        installSpec(requestSpecification(), responseSpecification404());
-        given()
-                .when()
-                .get("units/<script>alert( 'Hello world' );</script>")
-                .then().log().all();
-    }
-
-    @Test
-    @Feature("Единицы измерения")
-    @Description("Негативный тест Получение единиц измерения по Гуид,Инъекция")
-    public void getUnitsGuid1024letters() {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .get("units/Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent lupta")
+                .pathParam("guid", guid)
+                .get("units/{guid}")
                 .then().log().all();
     }
 }

@@ -5,16 +5,16 @@ import org.testng.annotations.DataProvider;
 
 
 public class GetPositivedataprovider {
-    @DataProvider
+  //  @DataProvider
     @Description("Позитивные тесты с использованием DataProvider")
     public static Object[][] positiveData() {
         return new Object[][]{
+                {1},
                 {5},
-                {-1}
-//                {"6"},
-//                {"100"},
-//                {"199"},
-//                {"200"}
+                {6},
+                {100},
+                {199},
+                {200}
         };
     }
         @DataProvider
