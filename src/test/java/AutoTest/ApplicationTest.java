@@ -1,9 +1,6 @@
 package AutoTest;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
+import io.qameta.allure.*;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.testng.annotations.Test;
 
@@ -41,8 +38,9 @@ public class ApplicationTest {
         deleteSpec();
     }
 
-    @Test (dataProvider = "guidNegative", dataProviderClass = NomenclatureTest.class)
+    @Test (dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
     @Feature("Работа с заявками")
+    @Step("Невалидный Гуид = {guid}")
     @Owner("Малышев")
     @Description("Негативные тесты Получение изменеий по заявке по Гуид ")
     public void getChangeRequestGuidNegative(Object guid) {
