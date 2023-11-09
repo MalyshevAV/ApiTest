@@ -20,7 +20,7 @@ public class NomenclatureTest {
                 {5, 0, "Болт"},
                 {1, 1, "Болт"},
                 {100, 2, "01сб"},
-                //{2, 3, "4d0e1f7b-5149-11ee-b5b0-005056013b0c1"},
+                {2, 3, "f3ec794a-35d5-11ee-918f-7824af8ab720"},
                 {6, 4, "00"},
                 {176, 5, "Болт"}
         };
@@ -66,7 +66,7 @@ public class NomenclatureTest {
                 {4.0, 5, "Болт"},
                 {201, 3, "Болт"},
                 {201.1, 1, "Болт"},
-                {0, 1, "01сб"},
+                {0, 2, "01сб"},
                 {-1, 4, "00"},
                 {-0.1, 5, "00"},
         };
@@ -162,6 +162,7 @@ public class NomenclatureTest {
     @Test
     @Feature("Поиск номенклатуры")
     @Owner("Малышев")
+    @Step("Количество возвращаемых элементов = {step}, Тип поиска = {type}, Поисковый запрос = {data}")
     @Description("Поиск номенклатуры, step = пустое поле")
     public void getNomenclatureSearchType1() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
@@ -181,7 +182,7 @@ public class NomenclatureTest {
     @Feature("Поиск номенклатуры")
     @Owner("Малышев")
     @Step("Степ = {step}, Тип запроса = {type}, Параметр запроса = {data}")
-    @Description("Поиск номенклатуры, получение пустого тела, неверный параметр запроса {data} = Bolt ")
+    @Description("Поиск номенклатуры, получение пустого тела, неверный параметр запроса {data}")
     public void getNomenclatureSearchBodyIsEmpty(int step, int type, Object data) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given().log().uri()

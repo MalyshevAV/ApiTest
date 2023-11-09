@@ -27,8 +27,7 @@ public class ClassifierTest {
     public static Object[][] positiveData() {
         return new Object[][]{
                 {1},
-                {5},
-                {6},
+                {2},
                 {100},
                 {199},
                 {200}
@@ -39,6 +38,7 @@ public class ClassifierTest {
         return new Object[][]{
                 {201},
                 {Integer.MAX_VALUE},
+                {Double.MAX_VALUE},
                 {"   "},
                 {" 200 "},
                 {2.1},
@@ -64,11 +64,12 @@ public class ClassifierTest {
                 {" 13513a3e-36d6-11ee-b5b0-005056013b0c "},
                 {"13513a3e-3 6d6-11ee-b5 b0-005056013b0c"},
                 {"1кк13a3e-36d6-11ee-b5b0-00)&056 013b0c"},
-                // {"!$%^&*(){}[]':;/<>|№*******$$$!@@##"},
+              //  {"!$%^&*(){}[]':;/<>|№*******$$$!@@##"}, Path parameters were not correctly defined
                 {-100},
                 {Integer.MAX_VALUE},
                 {Double.MAX_VALUE},
-                // {"{5, 5, "Bolt"},"},
+                {"select*From Users"},
+              //  {"<script>alert( 'Hello world' );</script>"}, 404 ошибка
                 {"Q91MXkSBG2w4bDK9Z9nprYeT4Pd69TGUdDOqWKDrlSKkIZ3JHqi0rA1G5LAfCZ54yEJ3adXLSmgtm4Z5hXMNT3ZqxkqMyqQhE9fze353egOMYAf0tESKpQtqdOzmrqiyvTjC6tCVc6Iqxgyq3TkICV3Hhk7ffbIYkIYXqk6Inktqt9xKmNqCPsemWzKVaXCiQ299HurLBuVTvZeFWYrqnyjl46h1AKLjfkZOMb0vRari1MFJz48qkpFR6RLTTBS2EtLY1rAj7OIw6zACkXgsJkUkMShenn19tEeZKsl3nAwnt4Qk1P1nzHlnSw6Kdl1jvGflS6aLfxrRoqIM0W1TDlUfCfXehzCemTTui7BddecX6aUTcvYHj3eQSYb4tiErgIdN6PMpizjNO4iZjJLTdBh6xtQC9DQKCj1gM8QKUtDYP5sO1SlEcKcjPIC0Q3jQ4yY27NCuLwAiCqdqdiMVjGYsOd90xcdRBtX5tREE7ATqk21riVMXtAIHmBAGZ2jYQ6ZDO86ohend0RPlqMbjg1G3oliIwx5gNX1solpXlUnu1hmA1TgI3mB2qF1d7zgLw9yXykzScvCtOVsvqOAShLQ7GmR9cFJ7jfHN8APVBFMkXUKEVl6NkQhAQ4ApA7ehLXapgDI4JLuaNAWwlos9gEF2eS9VJ4j8F44fksKySH1IdSkcKR0fk9KX5pIxUQ7KWfWL6aALwY9hXvTtlHWBS62rAPT2VliYrbt9rCz8UVYGyxF9Dm43WvR6xrht8fFrOCVzhRvBreXHsyqwAE4Mzg7NMG48OXKLbo7ENp2bN7L1ppoLfF75wEDx5ecbTuFEg3YS4yDtKNdreHOei2bh1moaos3Zzum6WXZWHhrzFHtris4t8QZygCaNUTeaaONxRuFZtpz91ynjBF0gNFo5G0avIZHo0L5m5SYjXi41iVh8UOHAw2LxqpsVBaXDZ22nM2CWw1fmCgGsK1Jq6QDjEzul2GGZse3qwLxIokcqlVzKuGLrLJ2DDwhoWBovx2du"}
         };
     }

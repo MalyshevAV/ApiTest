@@ -25,7 +25,15 @@ public class AuxiliaryTest {
                 {"units", 1, ""},
                 {"okpd2", 1, ""},
                 {"okved2", 1, ""},
-                {"tnved", 5, ""}
+                {"tnved", 5, ""},
+                {"nomenclature", 5, "2017-07-21"},
+                {"basic-services", 1, "2017-07-21"},
+                {"unified-classifier", 1, "2017-07-21"},
+                {"eop", 1, "2017-07-21"},
+                {"units", 1, "2017-07-21"},
+                {"okpd2", 1, "2017-07-21"},
+                {"okved2", 1, "2017-07-21"},
+                {"tnved", 5, "2017-07-21"}
         };
     }
     @DataProvider
@@ -95,9 +103,9 @@ public class AuxiliaryTest {
     @Test(dataProvider = "data")
     @Feature("Вспомогательные")
     @Owner("Малышев")
-    @Step("Тип изменяемых объектов = {type}, Количество возвращаемых элементов = {step}, Поле Дата не заполнено")
+    @Step("Тип изменяемых объектов = {type}, Количество возвращаемых элементов = {step}, Поле Дата = {data}")
     @Description("Проверка списка изменений")
-    public void getListOfChanges(String type, Integer step, String date) {
+    public void getListOfChangesDateIsEmpty(String type, Integer step, String date) {
         installSpec(requestSpecification(), responseSpecification());
         given()
                 .when()
