@@ -6,13 +6,13 @@ import Specifications.Specifications;
 import io.qameta.allure.*;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -21,8 +21,18 @@ import static io.restassured.RestAssured.filters;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.IsNull.notNullValue;
+
 @Epic("Классификаторы")
+
 public class ClassifierTest {
+    @DataProvider
+    public static Object[][] value() {
+        return new Object[][]{
+                {1},
+                {5},
+                {23}
+        };
+    }
     @DataProvider
     public static Object[][] positiveData() {
         return new Object[][]{
@@ -259,13 +269,10 @@ public class ClassifierTest {
                 .get("eop/{guid}")
                 .then().log().all();;
     }
-
-
-    ////////////////////getUnitsList///////////////////////////
-
     @Feature("Единицы измерения")
-    @ParameterizedTest
-   @ValueSource(ints = { 1, 5, 23})
+    @Test(dataProvider = "value")
+    //@ParameterizedTest
+    //@ValueSource(ints = { 1, 5, 23})
     @Step("Валидное значение = {step}")
     @Owner("Малышев")
     @Description("Получение массива единиц измерения")
