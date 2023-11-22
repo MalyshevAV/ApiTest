@@ -15,15 +15,42 @@ public class NomenclatureTest {
 
 
     @DataProvider
-    public static Object[][] test() {
+    public static Object[][] service() {
         return new Object[][]{
-                {5, 0, "Болт"},
-                {1, 1, "Болт"},
-                {100, 2, "01сб"},
-                {2, 3, "f3ec794a-35d5-11ee-918f-7824af8ab720"},
-                {6, 4, "00"},
-                {176, 5, "Болт"}
+                {5, 0, "Болт", 0},
+                {1, 1, "Болт", 0},
+                {1, 1, "Болт", 0},
+                {100, 2, "01сб", 0},
+                {2, 3, "f3ec794a-35d5-11ee-918f-7824af8ab720", 0},
+                {6, 4, "00", 0},
+                {176, 5, "Болт", 0}
         };
+    }
+        @DataProvider
+        public static Object[][] negativeService() {
+            return new Object[][]{
+                    {5, 0, "Болт", 2},
+                    {1, 1, "Болт", -1},
+                    {1, 1, "Болт", 1.1},
+                    {100, 2, "01сб", Integer.MAX_VALUE},
+                    {2, 3, "f3ec794a-35d5-11ee-918f-7824af8ab720", 5},
+                    {6, 4, "00", Double.MAX_VALUE},
+                    {176, 5, "Болт", "<script>alert( 'Hello world' );</script>"},
+                    {176, 5, "Болт", "select*from users"},
+
+            };
+    }
+        @DataProvider
+        public static Object[][] serviceIsAbsent() {
+            return new Object[][]{
+                    {5, 0, "Болт"},
+                    {1, 1, "Болт"},
+                    {1, 1, "Болт"},
+                    {100, 2, "01сб"},
+                    {2, 3, "f3ec794a-35d5-11ee-918f-7824af8ab720"},
+                    {6, 4, "00"},
+                    {176, 5, "Болт"}
+            };
     }
     @DataProvider
     public static Object[][] nomenclatureSearchEmptyBody() {
@@ -139,18 +166,38 @@ public class NomenclatureTest {
 
 //////////////////////////////////Поиск номенклатуры/////////////////////////////////////////////////////
 
-    @Test(dataProvider = "test")
+    @Test(dataProvider = "serviceIsAbsent")
     @Feature("Поиск номенклатуры")
     @Step("Количество возвращаемых элементов = {step}, Тип поиска = {type}, Поисковый запрос = {data}")
     @Owner("Малышев")
-    @Description("Поиск номенклатуры, type" )
-    public void getNomenclatureSearchDataProvider(Object step, Object type, Object data) {
+    @Description("Поиск номенклатуры, без параметра service" )
+    public void getNomenclatureSearchDataProviderServiceIsAbsent(Object step, Object type, Object data) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
                 .queryParam("step", step)
                 .queryParam("type", type)
                 .queryParam("data", data)
+                .get("nomenclature/search")
+                .then().log().all()
+                .body("size()", is(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getNomenclatureSearch.json"));
+        System.out.println("Количество возвращаемых элементов : " + step+ ", " + " Тип поиска: " + type + ", " + " Поисковой запрос:  " + data );
+        deleteSpec();
+    }
+    @Test(dataProvider = "service")
+    @Feature("Поиск номенклатуры")
+    @Step("Количество возвращаемых элементов = {step}, Тип поиска = {type}, Поисковый запрос = {data}, Параметр сервис = {service}")
+    @Owner("Малышев")
+    @Description("Поиск номенклатуры, с параметром service" )
+    public void getNomenclatureSearchDataProviderService(Object step, Object type, Object data, int service) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .queryParam("type", type)
+                .queryParam("data", data)
+                .queryParam("service", service)
                 .get("nomenclature/search")
                 .then().log().all()
                 .body("size()", is(step))
@@ -214,6 +261,22 @@ public class NomenclatureTest {
                 .get("nomenclature/search")
                 .then().log().all();
         deleteSpec();
-
+    }
+    @Test(dataProvider = "negativeService")
+    @Feature("Поиск номенклатуры")
+    @Step("Количество возвращаемых элементов = {step}, Тип поиска = {type}, Поисковый запрос = {data}, Сервис = {service}")
+    @Owner("Малышев")
+    @Description("Невалидное значение поля Сервис")
+    public void getNomenclatureSearchNegativeSte(Object step, Object type, Object data, Object service) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given().log().uri()
+                .when()
+                .queryParam("step", step)
+                .queryParam("type", type)
+                .queryParam("data", data)
+                .queryParam("service", service)
+                .get("nomenclature/search")
+                .then().log().all();
+        deleteSpec();
     }
 }

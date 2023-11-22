@@ -102,8 +102,15 @@
         ],
         "minLength": 36,
         "maxLength": 36
-      }
+      },
+      "service": {
+        "type": [
+          "boolean",
+          "null"
+        ]
+       }
     },
+
     "required": [
       "guid",
       "code",
@@ -120,7 +127,8 @@
       "length",
       "dimensionsUnit",
       "weight",
-      "weightUnit"
+      "weightUnit",
+      "service"
     ]
   }
 }

@@ -277,5 +277,407 @@ public class ClassifireIsAllRussianTest {
                 .get("tnved/{guid}")
                 .then().log().all();
     }
+
+    /////////////////////////////////Получение списка OKOPF /////////////////////////////////////////
+    @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение ОKOPF")
+    @Step("Получение массива Степ = {step}")
+    @Owner("Малышев")
+    @Description("Получение списка OKOPF")
+    public void getOkopfList(int step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("/okopf")
+                .then().log().all()
+                .body("size()", is(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOkopfList.json"));
+        deleteSpec();
+    }
+
+    @Test
+    @Feature("Получение ОКOPF")
+    @Owner("Малышев")
+    @Description("Получение массива ОКOPF, поле Step пустое")
+    public void getOkopfListStepIsEmpty() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .get("okopf")
+                .then().log().all()
+                .body("size()", is(lessThanOrEqualTo(200)))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOkopfList.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение ОКOPF")
+    @Owner("Малышев")
+    @Step("Невалидный Степ = {step}")
+    @Description("Негативный тест Получение массива OKOPF")
+    public void getOkopfListStepMaxPlus(Object step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("okopf")
+                .then().log().all();
+        deleteSpec();
+    }
+    /////////////////////////////////Получение OKOPF по Гуид/////////////////////////////////////////
+    @Test
+    @Feature("Получение OKOPF")
+    @Owner("Малышев")
+    @Step("Валидный Гуид")
+    @Description("Получение OKOPF по Гуид, валидация при помощи схемы Json")
+    public void getOkopfGuid() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .get("/okopf/{guid}")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getTvendGuid.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение OKOPF")
+    @Owner("Малышев")
+    @Step("Невалидный Гуид = {guid}")
+    @Description("Негативный тест Получение OKOPF по Гуид, несуществующий Гуид")
+    public void getOkopfGuidNotExist(Object guid) {
+        installSpec(requestSpecification(), responseSpecification400());
+        given()
+                .when()
+                .pathParam("guid", guid)
+                .get("okopf/{guid}")
+                .then().log().all();
+    }
+
+
+    /////////////////////////////////Получение списка Country /////////////////////////////////////////
+    @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Country")
+    @Step("Получение массива Степ = {step}")
+    @Owner("Малышев")
+    @Description("Получение списка Country")
+    public void getCountryList(int step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("/country")
+                .then().log().all()
+                .body("size()", is(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getCountryList.json"));
+        deleteSpec();
+    }
+
+    @Test
+    @Feature("Получение Country")
+    @Owner("Малышев")
+    @Description("Получение массива Country, поле Step пустое")
+    public void getCountryListStepIsEmpty() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .get("country")
+                .then().log().all()
+                .body("size()", is(lessThanOrEqualTo(200)))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getCountryList.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Country")
+    @Owner("Малышев")
+    @Step("Невалидный Степ = {step}")
+    @Description("Негативный тест Получение массива Country")
+    public void getCountryListStepMaxPlus(Object step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("country")
+                .then().log().all();
+        deleteSpec();
+    }
+
+    /////////////////////////////////Получение Country по Гуид/////////////////////////////////////////
+    @Test
+    @Feature("Получение Country")
+    @Owner("Малышев")
+    @Step("Валидный Гуид")
+    @Description("Получение Country по Гуид, валидация при помощи схемы Json")
+    public void getCountryGuid() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .get("/country/{guid}")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getCountryGuid.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Country")
+    @Owner("Малышев")
+    @Step("Невалидный Гуид = {guid}")
+    @Description("Негативный тест Получение Country по Гуид, несуществующий Гуид")
+    public void getCountryGuidNotExist(Object guid) {
+        installSpec(requestSpecification(), responseSpecification400());
+        given()
+                .when()
+                .pathParam("guid", guid)
+                .get("country/{guid}")
+                .then().log().all();
+    }
+
+    /////////////////////////////////Получение списка Region /////////////////////////////////////////
+    @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Region")
+    @Step("Получение массива Степ = {step}")
+    @Owner("Малышев")
+    @Description("Получение списка Region")
+    public void getRegionList(int step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("/region")
+                .then().log().all()
+                .body("size()", is(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getRegionList.json"));
+        deleteSpec();
+    }
+
+    @Test
+    @Feature("Получение Region")
+    @Owner("Малышев")
+    @Description("Получение массива Region, поле Step пустое")
+    public void getRegionListStepIsEmpty() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .get("region")
+                .then().log().all()
+                .body("size()", is(lessThanOrEqualTo(200)))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getRegionList.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Region")
+    @Owner("Малышев")
+    @Step("Невалидный Степ = {step}")
+    @Description("Негативный тест Получение массива Region")
+    public void getRegionListStepMaxPlus(Object step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("region")
+                .then().log().all();
+        deleteSpec();
+    }
+
+    /////////////////////////////////Получение Region по Гуид/////////////////////////////////////////
+    @Test
+    @Feature("Получение Region")
+    @Owner("Малышев")
+    @Step("Валидный Гуид")
+    @Description("Получение Region по Гуид, валидация при помощи схемы Json")
+    public void getRegionGuid() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .get("/region/{guid}")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getRegionGuid.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Region")
+    @Owner("Малышев")
+    @Step("Невалидный Гуид = {guid}")
+    @Description("Негативный тест Получение Region по Гуид, несуществующий Гуид")
+    public void getRegionGuidNotExist(Object guid) {
+        installSpec(requestSpecification(), responseSpecification400());
+        given()
+                .when()
+                .pathParam("guid", guid)
+                .get("region/{guid}")
+                .then().log().all();
+    }
+
+
+    /////////////////////////////////Получение списка Bank /////////////////////////////////////////
+    @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Bank")
+    @Step("Получение массива Степ = {step}")
+    @Owner("Малышев")
+    @Description("Получение списка Bank")
+    public void getBankList(int step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("/bank")
+                .then().log().all()
+                .body("size()", is(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankList.json"));
+        deleteSpec();
+    }
+
+    @Test
+    @Feature("Получение Bank")
+    @Owner("Малышев")
+    @Description("Получение массива Bank, поле Step пустое")
+    public void getBankListStepIsEmpty() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .get("bank")
+                .then().log().all()
+                .body("size()", is(lessThanOrEqualTo(200)))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankList.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Bank")
+    @Owner("Малышев")
+    @Step("Невалидный Степ = {step}")
+    @Description("Негативный тест Получение массива Bank")
+    public void getBankListStepMaxPlus(Object step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("bank")
+                .then().log().all();
+        deleteSpec();
+    }
+
+    /////////////////////////////////Получение Bank по Гуид/////////////////////////////////////////
+    @Test
+    @Feature("Получение Bank")
+    @Owner("Малышев")
+    @Step("Валидный Гуид")
+    @Description("Получение Bank по Гуид, валидация при помощи схемы Json")
+    public void getBankGuid() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .get("/bank/{guid}")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankGuid.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Bank")
+    @Owner("Малышев")
+    @Step("Невалидный Гуид = {guid}")
+    @Description("Негативный тест Получение Bank по Гуид, несуществующий Гуид")
+    public void getBankGuidNotExist(Object guid) {
+        installSpec(requestSpecification(), responseSpecification400());
+        given()
+                .when()
+                .pathParam("guid", guid)
+                .get("bank/{guid}")
+                .then().log().all();
+    }
+
+    /////////////////////////////////Получение списка Currency /////////////////////////////////////////
+    @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Currency")
+    @Step("Получение массива Степ = {step}")
+    @Owner("Малышев")
+    @Description("Получение списка Currency")
+    public void getCurrencyList(int step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("/currency")
+                .then().log().all()
+                .body("size()", is(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getCurrencyList.json"));
+        deleteSpec();
+    }
+
+    @Test
+    @Feature("Получение Currency")
+    @Owner("Малышев")
+    @Description("Получение массива Currency, поле Step пустое")
+    public void getCurrencyListStepIsEmpty() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .get("currency")
+                .then().log().all()
+                .body("size()", is(lessThanOrEqualTo(200)))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getCurrencyList.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Currency")
+    @Owner("Малышев")
+    @Step("Невалидный Степ = {step}")
+    @Description("Негативный тест Получение массива Currency")
+    public void getCurrencyListStepMaxPlus(Object step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("currency")
+                .then().log().all();
+        deleteSpec();
+    }
+
+    /////////////////////////////////Получение Currency по Гуид/////////////////////////////////////////
+    @Test
+    @Feature("Получение Currency")
+    @Owner("Малышев")
+    @Step("Валидный Гуид")
+    @Description("Получение Currency по Гуид, валидация при помощи схемы Json")
+    public void getCurrencyGuid() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .get("/currency/{guid}")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getCurrencyGuid.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Currency")
+    @Owner("Малышев")
+    @Step("Невалидный Гуид = {guid}")
+    @Description("Негативный тест Получение Currency по Гуид, несуществующий Гуид")
+    public void getCurrencyGuidNotExist(Object guid) {
+        installSpec(requestSpecification(), responseSpecification400());
+        given()
+                .when()
+                .pathParam("guid", guid)
+                .get("currency/{guid}")
+                .then().log().all();
+    }
+
 }
 

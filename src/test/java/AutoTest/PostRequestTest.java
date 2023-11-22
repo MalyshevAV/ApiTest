@@ -30,8 +30,7 @@ import java.io.FileReader;
 import java.util.*;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_CLASS;
-import static org.junit.jupiter.api.TestInstance.Lifecycle.PER_METHOD;
+
 
 
 @Epic("Создание заявки на изменение, удаление")
@@ -512,7 +511,7 @@ public class PostRequestTest {
     }
 
 
-    @org.junit.jupiter.api.Test
+    @Test
     @Feature("Позитивный тест")
     @Owner("Малышев")
     @Description("Формирование заявки на добавление записи c Максимальным значением в атрибутах Тип = 1")
@@ -558,7 +557,7 @@ public class PostRequestTest {
                 .body("result", equalTo("ok"));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @Feature("Позитивный тест")
     @Owner("Малышев")
     @Description("Создаем заявку c максимальным значением на вывод из обращения минимальное количество  Тип = 3")
@@ -642,7 +641,7 @@ public class PostRequestTest {
     }
 
 
-    @org.junit.jupiter.api.Test//(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
+    @Test//(dataProvider = "type", dataProviderClass = GetPositivedataprovider.class)
     @Feature("Негативный тест")
     @Owner("Малышев")
     @Description("Формирование заявки на добавление записи c Макс+1 в атрибутах Тип = 1")
@@ -687,7 +686,7 @@ public class PostRequestTest {
                 .body("guid", is(nullValue()));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @Feature("Негативный тест")
     @Owner("Малышев")
     @Description("Создаем заявку c Макс+1 на вывод из обращения минимальное количество  Тип = 3")
@@ -758,7 +757,7 @@ public class PostRequestTest {
                 .then().log().all()
                 .body("guid", is(nullValue()));
     }
-    @org.junit.jupiter.api.Test
+    @Test
     @Feature("Негативный тест")
     @Owner("Малышев")
     @Description("Формирование заявки на добавление записис пустыми обязательними полями Тип = 1")
@@ -794,7 +793,7 @@ public class PostRequestTest {
     }
 
 
-    @org.junit.jupiter.api.Test
+    @Test
     @Feature("Негативный тест")
     @Owner("Малышев")
     @Description("Создаем заявку с обязательнами пустыми полями на вывод из обращения Тип = 3")
@@ -825,7 +824,7 @@ public class PostRequestTest {
                 .then().log().all()
                 .body("guid", is(nullValue()));
     }
-    @org.junit.jupiter.api.Test
+    @Test
     @Feature("Негативный тест")
     @Owner("Малышев")
     @Description("Пустой объект")
@@ -996,7 +995,7 @@ public class PostRequestTest {
                 .then().log().all()
                 .body("guid", is(nullValue()));
     }
-    @org.junit.jupiter.api.Test
+    @Test
     @Feature("Негативный тест")
     @Owner("Малышев")
     @Description("Создаем заявку Запрос и изменение с обязательними полями Тип = 1")
@@ -1103,7 +1102,7 @@ public class PostRequestTest {
                 .then().log().all()
                 .body("guid", is(nullValue()));
     }
-    @org.junit.jupiter.api.Test
+    @Test
     @Feature("Негативный тест")
     @Owner("Малышев")
     @Description("Создаем заявку Запрос и изменение с обязательними полями Тип = 1")
@@ -1140,7 +1139,7 @@ public class PostRequestTest {
                 .body("guid", is(nullValue()));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     @Feature("Негативный тест")
     @Owner("Малышев")
     @Description("Создаем заявку с обязательнами полями на вывод из обращения Тип = 3")
