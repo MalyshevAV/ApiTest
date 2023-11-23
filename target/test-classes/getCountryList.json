@@ -10,26 +10,38 @@
         "maxLength": 36
       },
       "code": {
-        "type": "string",
-        "minLength": 0,
-        "maxLength": 9
+        "type": "integer",
+        "minLength": 3,
+        "maxLength": 3
       },
       "name": {
         "type": "string",
-        "minLength": 0,
-        "maxLength": 150
+        "minLength": 1,
+        "maxLength": 100
       },
       "nameFull": {
         "type": "string",
-        "minLength": 0,
-        "maxLength": 250
+        "minLength": 1,
+        "maxLength": 150
+      },
+      "codeAlpha2": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 2
+      },
+      "codeAlpha3": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 3
       }
     },
     "required": [
       "guid",
       "code",
       "name",
-      "nameFull"
+      "nameFull",
+      "codeAlpha2",
+      "codeAlpha3"
     ]
   }
 }

@@ -9,27 +9,27 @@
         "minLength": 36,
         "maxLength": 36
       },
-      "code": {
-        "type": "string",
-        "minLength": 0,
-        "maxLength": 9
-      },
       "name": {
         "type": "string",
-        "minLength": 0,
+        "minLength": 1,
         "maxLength": 150
       },
-      "nameFull": {
+      "comment": {
         "type": "string",
-        "minLength": 0,
+        "minLength": 1,
         "maxLength": 250
+      },
+      "code": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 9
+      },
+      "codeMnemonic": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10
       }
     },
-    "required": [
-      "guid",
-      "code",
-      "name",
-      "nameFull"
-    ]
+    "required": ["guid","name", "comment", "code", "codeMnemonic" ]
   }
 }

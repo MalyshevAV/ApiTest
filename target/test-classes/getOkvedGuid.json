@@ -10,19 +10,27 @@
     "code": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 9
+      "maxLength": 12
     },
     "name": {
       "type": "string",
       "minLength": 0,
       "maxLength": 150
-    },
+            },
     "nameFull": {
       "type": "string",
       "minLength": 0,
-      "maxLength": 250
+      "maxLength": 100
+    },
+    "archive": {
+      "type": "boolean"
+    },
+    "dateOutputArchive": {
+      "type": ["null","string"],
+      "minLength": 10,
+      "maxLength": 20
     }
-  },
-  "required": ["guid", "code", "name", "nameFull"]
-}
+    },
 
+  "required": ["guid","code", "name","nameFull", "archive", "dateOutputArchive"]
+}

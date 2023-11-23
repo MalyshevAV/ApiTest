@@ -7,26 +7,37 @@
       "minLength": 36,
       "maxLength": 36
     },
+    "code": {
+      "type": "integer",
+      "minLength": 0,
+      "maxLength": 9
+    },
     "name": {
       "type": "string",
-      "minLength": 1,
+      "minLength": 0,
       "maxLength": 100
     },
     "nameFull": {
       "type": "string",
-      "minLength": 1,
+      "minLength": 0,
       "maxLength": 150
     },
-    "inn": {
+    "codeAlpha2": {
       "type": "string",
-      "minLength": 0,
-      "maxLength": 12
+      "minLength": 2,
+      "maxLength": 2
     },
-    "kpp": {
+    "codeAlpha3": {
       "type": "string",
-      "minLength": 9,
-      "maxLength": 9
+      "minLength": 3,
+      "maxLength": 3
     }
   },
-  "required": ["guid","name", "nameFull", "inn", "kpp" ]
+  "required": ["guid",
+    "code",
+    "name",
+    "nameFull",
+    "codeAlpha2",
+    "codeAlpha3"]
 }
+

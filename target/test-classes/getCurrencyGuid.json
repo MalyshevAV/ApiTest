@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "array",
-  "items": {
+
     "type": "object",
     "properties": {
       "guid": {
@@ -10,26 +9,19 @@
         "maxLength": 36
       },
       "code": {
-        "type": "string",
-        "minLength": 0,
-        "maxLength": 9
+        "type": "integer",
+        "minLength": 3,
+        "maxLength": 3
       },
-      "name": {
+      "codeSymbolic": {
         "type": "string",
-        "minLength": 0,
-        "maxLength": 150
-      },
-      "nameFull": {
-        "type": "string",
-        "minLength": 0,
-        "maxLength": 250
+        "minLength": 3,
+        "maxLength": 3
       }
     },
     "required": [
       "guid",
       "code",
-      "name",
-      "nameFull"
+      "codeSymbolic"
     ]
   }
-}

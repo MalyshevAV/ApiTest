@@ -335,11 +335,11 @@ public class ClassifireIsAllRussianTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "69b490d2-feee-11df-940c-001f29e885d8")
                 .get("/okopf/{guid}")
                 .then().log().all()
                 .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getTvendGuid.json"));
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOkopfGuid.json"));
         deleteSpec();
     }
 
