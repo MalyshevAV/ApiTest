@@ -8,14 +8,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d1c53df-9889-42c2-b20f-7a2276b62997" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/AutoTest/PartnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/ClassifireIsAllRussianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/ClassifireIsAllRussianTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/Partner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/PartnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/PartnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Specifications/Specifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Specifications/Specifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/getOkopfGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getOkopfGuid.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/getOkopfList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getOkopfList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/getPartnerGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getPartnerGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getBankGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getBankGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getBankLisrt.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getBankList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getCountryGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getCountryGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getCountryList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getCountryList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getCurrencyGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getCurrencyGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getCurrencyList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getCurrencyList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getPartnerConcernTypeGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getPartnerConcernTypeGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getPartnerConcernTypeList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getPartnerConcernTypeList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifireIsAllRussianTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifireIsAllRussianTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/getBankLisrt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/getCountryGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getCountryGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/getCountryList.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getCountryList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/getCurrencyGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getCurrencyGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/getCurrencyList.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getCurrencyList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/чек-лист.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/чек-лист.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +96,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ClassifireIsAllRussianTest.getOkopfListStepIsEmpty">
-    <configuration name="ClassifireIsAllRussianTest.getOkopfGuid" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ClassifireIsAllRussianTest.getRegionList">
+    <configuration name="ClassifireIsAllRussianTest.getRegionList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -96,7 +107,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
       <option name="MAIN_CLASS_NAME" value="AutoTest.ClassifireIsAllRussianTest" />
-      <option name="METHOD_NAME" value="getOkopfGuid" />
+      <option name="METHOD_NAME" value="getRegionList" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -104,7 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassifireIsAllRussianTest.getOkopfGuidNotExist" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PartnerTest.getPartnerConcernTypeGuid" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -113,8 +124,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.ClassifireIsAllRussianTest" />
-      <option name="METHOD_NAME" value="getOkopfGuidNotExist" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
+      <option name="METHOD_NAME" value="getPartnerConcernTypeGuid" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -122,7 +133,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassifireIsAllRussianTest.getOkopfList" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PartnerTest.getPartnerConcernTypeGuidNotExist" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -131,8 +142,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.ClassifireIsAllRussianTest" />
-      <option name="METHOD_NAME" value="getOkopfList" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
+      <option name="METHOD_NAME" value="getPartnerConcernTypeGuidNotExist" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -140,7 +151,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassifireIsAllRussianTest.getOkopfListStepIsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PartnerTest.getPartnerConcernTypeList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -149,8 +160,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.ClassifireIsAllRussianTest" />
-      <option name="METHOD_NAME" value="getOkopfListStepIsEmpty" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
+      <option name="METHOD_NAME" value="getPartnerConcernTypeList" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -158,7 +169,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassifireIsAllRussianTest.getOkopfListStepMaxPlus" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PartnerTest.getPartnerConcernTypeListStepMaxPlus" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -167,8 +178,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.ClassifireIsAllRussianTest" />
-      <option name="METHOD_NAME" value="getOkopfListStepMaxPlus" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
+      <option name="METHOD_NAME" value="getPartnerConcernTypeListStepMaxPlus" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -178,11 +189,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ClassifireIsAllRussianTest.getOkopfListStepIsEmpty" />
-        <item itemvalue="TestNG.ClassifireIsAllRussianTest.getOkopfGuidNotExist" />
-        <item itemvalue="TestNG.ClassifireIsAllRussianTest.getOkopfListStepMaxPlus" />
-        <item itemvalue="TestNG.ClassifireIsAllRussianTest.getOkopfGuid" />
-        <item itemvalue="TestNG.ClassifireIsAllRussianTest.getOkopfList" />
+        <item itemvalue="TestNG.ClassifireIsAllRussianTest.getRegionList" />
+        <item itemvalue="TestNG.PartnerTest.getPartnerConcernTypeList" />
+        <item itemvalue="TestNG.PartnerTest.getPartnerConcernTypeGuidNotExist" />
+        <item itemvalue="TestNG.PartnerTest.getPartnerConcernTypeGuid" />
+        <item itemvalue="TestNG.PartnerTest.getPartnerConcernTypeListStepMaxPlus" />
       </list>
     </recent_temporary>
   </component>
@@ -254,6 +265,8 @@
       <workItem from="1700461422373" duration="7331000" />
       <workItem from="1700649943386" duration="10703000" />
       <workItem from="1700737667109" duration="15095000" />
+      <workItem from="1700805418496" duration="6536000" />
+      <workItem from="1701064366709" duration="23517000" />
     </task>
     <servers />
   </component>

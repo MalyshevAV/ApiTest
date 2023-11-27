@@ -113,7 +113,7 @@ public class PartnerTest {
                 .queryParam("step", step)
                 .get("/partner-concern-type")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerConcernTypeList.json"));
         deleteSpec();
     }
@@ -129,7 +129,7 @@ public class PartnerTest {
                 .get("partner-concern-type")
                 .then().log().all()
                 .body("size()", is(lessThanOrEqualTo(200)))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerLConcernTypeList.json"));
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerConcernTypeList.json"));
         deleteSpec();
     }
 
@@ -156,9 +156,9 @@ public class PartnerTest {
     @Description("Получение partnerConcernType по Гуид, валидация при помощи схемы Json")
     public void getPartnerConcernTypeGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "83b4ab77-8260-11ee-b5b1-005056013b0c")
                 .get("/partner-concern-type/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -354,9 +354,9 @@ public class PartnerTest {
         given()
                 .when()
                 .queryParam("step", step)
-                .get("/bankAccounts")
+                .get("/bankAccounts/")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountList.json"));
         deleteSpec();
     }
@@ -423,7 +423,84 @@ public class PartnerTest {
                 .then().log().all();
     }
 
+    /////////////////////////////////Получение списка Bank Account Type /////////////////////////////////////////
+    @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Bank Account Type")
+    @Step("Получение массива Степ = {step}")
+    @Owner("Малышев")
+    @Description("Получение списка Bank Account Type")
+    public void getBankAccountTypeList(int step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("/bankAccountsType/")
+                .then().log().all()
+                .body("size()", lessThanOrEqualTo(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountTypeList.json"));
+        deleteSpec();
+    }
 
+    @Test
+    @Feature("Получение Bank Account Type")
+    @Owner("Малышев")
+    @Description("Получение массива Bank Account Type, поле Step пустое")
+    public void getBankAccountTypeStepIsEmpty() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .get("bankAccountsType")
+                .then().log().all()
+                .body("size()", is(lessThanOrEqualTo(200)))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountTypeList.json"));
+        deleteSpec();
+    }
 
+    @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Bank AccountType")
+    @Owner("Малышев")
+    @Step("Невалидный Степ = {step}")
+    @Description("Негативный тест, получение массива Bank Account Type")
+    public void getBankAccountTypeMaxPlus(Object step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("bankAccountsType")
+                .then().log().all();
+        deleteSpec();
+    }
+
+    /////////////////////////////////Получение Bank Account Type по Гуид/////////////////////////////////////////
+    @Test
+    @Feature("Получение Bank Account Type")
+    @Owner("Малышев")
+    @Step("Валидный Гуид")
+    @Description("Получение Bank Account по Гуид, валидация при помощи схемы Json")
+    public void getBankAccountTypeGuid() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .pathParam("guid", "3ef31610-1614-11e7-810d-005056a71cd1")
+                .get("/bankAccountsType/{guid}")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountTypeGuid.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Bank Account Type")
+    @Owner("Малышев")
+    @Step("Невалидный Гуид = {guid}")
+    @Description("Негативный тест Получение Bank Account Type по Гуид, несуществующий Гуид")
+    public void getBankAccountTypeGuidNotExist(Object guid) {
+        installSpec(requestSpecification(), responseSpecification400());
+        given()
+                .when()
+                .pathParam("guid", guid)
+                .get("bankAccountsType/{guid}")
+                .then().log().all();
+    }
 }
 

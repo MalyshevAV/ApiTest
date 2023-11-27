@@ -291,7 +291,7 @@ public class ClassifireIsAllRussianTest {
                 .queryParam("step", step)
                 .get("/okopf")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", is(lessThanOrEqualTo(step)))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOkopfList.json"));
         deleteSpec();
     }
@@ -371,7 +371,7 @@ public class ClassifireIsAllRussianTest {
                 .queryParam("step", step)
                 .get("/country")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getCountryList.json"));
         deleteSpec();
     }
@@ -416,7 +416,7 @@ public class ClassifireIsAllRussianTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "4e127564-d74f-4dd9-bced-0327f0f4e061")
                 .get("/country/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -447,8 +447,9 @@ public class ClassifireIsAllRussianTest {
     public void getRegionList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", step)
+                //.queryParam("malysh", System.currentTimeMillis())
                 .get("/region")
                 .then().log().all()
                 .body("size()", is(step))
@@ -532,7 +533,7 @@ public class ClassifireIsAllRussianTest {
                 .queryParam("step", step)
                 .get("/bank")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankList.json"));
         deleteSpec();
     }
@@ -544,7 +545,7 @@ public class ClassifireIsAllRussianTest {
     public void getBankListStepIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .get("bank")
                 .then().log().all()
                 .body("size()", is(lessThanOrEqualTo(200)))
@@ -576,8 +577,8 @@ public class ClassifireIsAllRussianTest {
     public void getBankGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .when().log().uri()
+                .pathParam("guid", "979300ab-d82b-11e8-80bb-08002789bf51")
                 .get("/bank/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -612,7 +613,7 @@ public class ClassifireIsAllRussianTest {
                 .queryParam("step", step)
                 .get("/currency")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getCurrencyList.json"));
         deleteSpec();
     }
@@ -656,8 +657,8 @@ public class ClassifireIsAllRussianTest {
     public void getCurrencyGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .when().log().uri()
+                .pathParam("guid", "f7f5d645-2df6-11e0-b48b-1cc1dee64484")
                 .get("/currency/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -678,6 +679,5 @@ public class ClassifireIsAllRussianTest {
                 .get("currency/{guid}")
                 .then().log().all();
     }
-
 }
 

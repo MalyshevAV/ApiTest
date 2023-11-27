@@ -9,7 +9,7 @@
         "maxLength": 36
       },
       "code": {
-        "type": "integer",
+        "type": "string",
         "minLength": 3,
         "maxLength": 3
       },
