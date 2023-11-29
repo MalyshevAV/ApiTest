@@ -26,12 +26,12 @@
       },
       "dateOfBirth": {
         "type": "string",
-        "minLength": 10,
+        "minLength": 0,
         "maxLength": 20
       },
-      "pol": {
+      "sex": {
         "type": "string",
-        "minLength": 1,
+        "minLength": 0,
         "maxLength": 1
       },
       "role": {
@@ -51,7 +51,7 @@
       "position",
       "partner",
       "dateOfBirth",
-      "pol",
+      "sex",
       "role"
     ]
   }

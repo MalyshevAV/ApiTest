@@ -12,21 +12,16 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/ClassifireIsAllRussianTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/ClassifireIsAllRussianTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/PartnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/PartnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Specifications/Specifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Specifications/Specifications.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/getBankGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getBankGuid.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/getBankLisrt.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getBankList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/getCountryGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getCountryGuid.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/getCountryList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getCountryList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/getCurrencyGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getCurrencyGuid.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/getCurrencyList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getCurrencyList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getContactGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getContactGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getContactList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getContactList.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/getPartnerConcernTypeGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getPartnerConcernTypeGuid.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/getPartnerConcernTypeList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getPartnerConcernTypeList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getRegionList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getRegionList.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifireIsAllRussianTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifireIsAllRussianTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getBankLisrt.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getCountryGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getCountryGuid.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getCountryList.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getCountryList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getCurrencyGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getCurrencyGuid.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getCurrencyList.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getCurrencyList.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/чек-лист.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/чек-лист.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/PartnerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/PartnerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/getPartnerConcernTypeGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getPartnerConcernTypeGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/getPartnerConcernTypeList.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getPartnerConcernTypeList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/getRegionList.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/getRegionList.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,26 +91,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ClassifireIsAllRussianTest.getRegionList">
-    <configuration name="ClassifireIsAllRussianTest.getRegionList" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MyFirstTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="AutoTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.ClassifireIsAllRussianTest" />
-      <option name="METHOD_NAME" value="getRegionList" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PartnerTest.getPartnerConcernTypeGuid" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.PartnerTest.getPartnerConcernTypeList">
+    <configuration name="PartnerTest.getContactList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -125,7 +102,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
       <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
-      <option name="METHOD_NAME" value="getPartnerConcernTypeGuid" />
+      <option name="METHOD_NAME" value="getContactList" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -133,7 +110,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartnerTest.getPartnerConcernTypeGuidNotExist" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PartnerTest.getContactListStepIsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -143,7 +120,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
       <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
-      <option name="METHOD_NAME" value="getPartnerConcernTypeGuidNotExist" />
+      <option name="METHOD_NAME" value="getContactListStepIsEmpty" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -169,7 +146,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartnerTest.getPartnerConcernTypeListStepMaxPlus" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Structure.getSfoList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -178,8 +155,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
-      <option name="METHOD_NAME" value="getPartnerConcernTypeListStepMaxPlus" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.Structure" />
+      <option name="METHOD_NAME" value="getSfoList" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Structure.getSfoListStepIsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MyFirstTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AutoTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="AutoTest" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.Structure" />
+      <option name="METHOD_NAME" value="getSfoListStepIsEmpty" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -189,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ClassifireIsAllRussianTest.getRegionList" />
         <item itemvalue="TestNG.PartnerTest.getPartnerConcernTypeList" />
-        <item itemvalue="TestNG.PartnerTest.getPartnerConcernTypeGuidNotExist" />
-        <item itemvalue="TestNG.PartnerTest.getPartnerConcernTypeGuid" />
-        <item itemvalue="TestNG.PartnerTest.getPartnerConcernTypeListStepMaxPlus" />
+        <item itemvalue="TestNG.PartnerTest.getContactListStepIsEmpty" />
+        <item itemvalue="TestNG.PartnerTest.getContactList" />
+        <item itemvalue="TestNG.Structure.getSfoListStepIsEmpty" />
+        <item itemvalue="TestNG.Structure.getSfoList" />
       </list>
     </recent_temporary>
   </component>
@@ -266,7 +261,13 @@
       <workItem from="1700649943386" duration="10703000" />
       <workItem from="1700737667109" duration="15095000" />
       <workItem from="1700805418496" duration="6536000" />
-      <workItem from="1701064366709" duration="23517000" />
+      <workItem from="1701064366709" duration="24146000" />
+      <workItem from="1701150740723" duration="5231000" />
+      <workItem from="1701156570580" duration="7908000" />
+      <workItem from="1701186108750" duration="2629000" />
+      <workItem from="1701236878541" duration="6331000" />
+      <workItem from="1701251799914" duration="1737000" />
+      <workItem from="1701260357064" duration="8142000" />
     </task>
     <servers />
   </component>

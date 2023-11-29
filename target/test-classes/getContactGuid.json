@@ -28,7 +28,7 @@
         "minLength": 10,
         "maxLength": 20
       },
-      "pol": {
+      "sex": {
         "type": "string",
         "minLength": 1,
         "maxLength": 1
@@ -50,7 +50,7 @@
       "position",
       "partner",
       "dateOfBirth",
-      "pol",
+      "sex",
       "role"
     ]
   }

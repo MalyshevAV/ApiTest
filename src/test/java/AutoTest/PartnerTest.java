@@ -108,7 +108,7 @@ public class PartnerTest {
     @Description("Получение списка partnerConcernType")
     public void getPartnerConcernTypeList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .queryParam("step", step)
                 .get("/partner-concern-type")
@@ -124,7 +124,7 @@ public class PartnerTest {
     @Description("Получение массива partnerConcernType, поле Step пустое")
     public void getPartnerConcernTypeListStepIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .get("partner-concern-type")
                 .then().log().all()
@@ -190,7 +190,7 @@ public class PartnerTest {
     public void getContactList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", step)
                 .get("/contact")
                 .then().log().all()
@@ -205,7 +205,7 @@ public class PartnerTest {
     @Description("Получение массива Contact, поле Step пустое")
     public void getContactListStepIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .get("contact")
                 .then().log().all()
@@ -270,10 +270,10 @@ public class PartnerTest {
     @Description("Получение списка Contact-roles")
     public void getContactRolesList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .queryParam("step", step)
-                .get("/contact-roles")
+                .get("contact-roles")
                 .then().log().all()
                 .body("size()", is(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getContactRolesList.json"));
@@ -352,7 +352,7 @@ public class PartnerTest {
     public void getBankAccountList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", step)
                 .get("/bankAccounts/")
                 .then().log().all()
@@ -431,10 +431,10 @@ public class PartnerTest {
     @Description("Получение списка Bank Account Type")
     public void getBankAccountTypeList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .queryParam("step", step)
-                .get("/bankAccountsType/")
+                .get("bankAccountsType")
                 .then().log().all()
                 .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountTypeList.json"));

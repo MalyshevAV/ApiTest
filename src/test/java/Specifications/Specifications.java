@@ -18,7 +18,7 @@ public class Specifications {
         return new RequestSpecBuilder()
                 .setAuth(basic("Administrator", "1234567809"))
                 .setBaseUri("http://dev1c:8080/MDM_Gribov_2541/hs/klass/")
-               // .setBaseUri("http://i1c.ddns.net:60380/TEST_KIT_MDM/hs/klass/")
+               // .setBaseUri("http://dev1c:8080/mdm_h/hs/klass/")
                 .setContentType(ContentType.JSON)
                 .setAccept(ContentType.JSON)
                 .build();

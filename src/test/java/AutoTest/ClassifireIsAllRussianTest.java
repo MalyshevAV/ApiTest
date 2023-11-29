@@ -287,7 +287,7 @@ public class ClassifireIsAllRussianTest {
     public void getOkopfList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", step)
                 .get("/okopf")
                 .then().log().all()
@@ -366,7 +366,7 @@ public class ClassifireIsAllRussianTest {
     @Description("Получение списка Country")
     public void getCountryList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .queryParam("step", step)
                 .get("/country")
@@ -529,9 +529,9 @@ public class ClassifireIsAllRussianTest {
     public void getBankList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", step)
-                .get("/bank")
+                .get("bank")
                 .then().log().all()
                 .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankList.json"));
