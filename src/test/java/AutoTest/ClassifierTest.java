@@ -38,6 +38,7 @@ public class ClassifierTest {
         return new Object[][]{
                 {1},
                 {2},
+                {10},
                 {100},
                 {199},
                 {200}

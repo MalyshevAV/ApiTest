@@ -13,6 +13,90 @@ import static org.hamcrest.Matchers.lessThanOrEqualTo;
 @Epic("Оргструктура")
 
 public class Structure {
+
+    /////////////////////////////////Получение списка Organization /////////////////////////////////////////
+    @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Organization")
+    @Step("Получение массива Степ = {step}")
+    @Owner("Малышев")
+    @Description("Получение списка Organization")
+    public void getOrganizationList(int step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("/organization")
+                .then().log().all()
+                .body("size()", is(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOrganizationList.json"));
+        deleteSpec();
+    }
+
+    @Test
+    @Feature("Получение Organization")
+    @Owner("Малышев")
+    @Description("Получение массива Organization, поле Step пустое")
+    public void getOrganizationListStepIsEmpty() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .get("organization")
+                .then().log().all()
+                .body("size()", is(lessThanOrEqualTo(200)))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOrganizationList.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Organization")
+    @Owner("Малышев")
+    @Step("Невалидный Степ = {step}")
+    @Description("Негативный тест Получение массива Organization")
+    public void getOrganizationListStepMaxPlus(Object step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("organization")
+                .then().log().all();
+        deleteSpec();
+    }
+
+    /////////////////////////////////Получение Organization по Гуид/////////////////////////////////////////
+    @Test
+    @Feature("Получение Organization")
+    @Owner("Малышев")
+    @Step("Валидный Гуид")
+    @Description("Получение Organization по Гуид, валидация при помощи схемы Json")
+    public void getOrganizationGuid() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when().log().uri()
+                .pathParam("guid", "c31a4eef-8942-11ee-b5b1-005056013b0c")
+                .get("/organization/{guid}")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOrganizationGuid.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Organization")
+    @Owner("Малышев")
+    @Step("Невалидный Гуид = {guid}")
+    @Description("Негативный тест Получение Organization по Гуид, несуществующий Гуид")
+    public void getOrganizationGuidNotExist(Object guid) {
+        installSpec(requestSpecification(), responseSpecification400());
+        given()
+                .when()
+                .pathParam("guid", guid)
+                .get("organization/{guid}")
+                .then().log().all();
+    }
+
+
+
+
     /////////////////////////////////Получение списка Divisions /////////////////////////////////////////
     @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
     @Feature("Получение Divisions")
@@ -26,7 +110,7 @@ public class Structure {
                 .queryParam("step", step)
                 .get("/divisions")
                 .then().log().all()
-                .body("size()", lessThanOrEqualTo(step))
+                .body("size()", is(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getDivisionsList.json"));
         deleteSpec();
     }
@@ -71,8 +155,8 @@ public class Structure {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when().log().uri()
-                .pathParam("guid", "f7f5d645-2df6-11e0-b48b-1cc1dee64484")
-                .get("/divisions{guid}")
+                .pathParam("guid", "c31a4eef-8942-11ee-b5b1-005056013b0c")
+                .get("/divisions/{guid}")
                 .then().log().all()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getDivisionsGuid.json"));
@@ -154,8 +238,8 @@ public class Structure {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when().log().uri()
-                .pathParam("guid", "f7f5d645-2df6-11e0-b48b-1cc1dee64484")
-                .get("/sfo{guid}")
+                .pathParam("guid", "62b368cb-895a-11ee-b5b1-005056013b0c")
+                .get("/sfo/{guid}")
                 .then().log().all()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getSfoGuid.json"));

@@ -25,7 +25,7 @@
       "functions": {
         "type": "string",
         "minLength": 0,
-        "maxLength": 1024
+        "maxLength": 10240
       },
       "signCFO": {
         "type": "boolean"
