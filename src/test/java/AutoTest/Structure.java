@@ -72,7 +72,7 @@ public class Structure {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when().log().uri()
-                .pathParam("guid", "c31a4eef-8942-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "b5bf5253-8aaa-11ee-b5b1-005056013b0c")
                 .get("/organization/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -188,7 +188,7 @@ public class Structure {
     @Description("Получение списка Sfo")
     public void getSfoList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when().log().uri()
                 .queryParam("step", step)
                 .get("/sfo")

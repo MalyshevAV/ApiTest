@@ -449,7 +449,6 @@ public class ClassifireIsAllRussianTest {
         given()
                 .when().log().uri()
                 .queryParam("step", step)
-                //.queryParam("malysh", System.currentTimeMillis())
                 .get("/region")
                 .then().log().all()
                 .body("size()", is(step))

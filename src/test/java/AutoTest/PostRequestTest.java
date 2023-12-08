@@ -34,7 +34,7 @@ import static io.restassured.RestAssured.given;
 
 
 @Epic("Создание заявки на изменение, удаление")
-//@TestInstance(PER_METHOD)
+
 
 public class PostRequestTest {
 

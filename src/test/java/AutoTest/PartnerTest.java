@@ -8,17 +8,50 @@ import io.qameta.allure.*;
 
 import io.restassured.module.jsv.JsonSchemaValidator;
 
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 //import static org.hamcrest.MatcherAssert.assertThat;
+import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 
 import static Specifications.Specifications.*;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 @Epic("Контрагенты")
 public class PartnerTest {
+   // @ParameterizedTest
+  //  @ValueSource(ints = {0, 2})
+    @Feature("Позитивный тест")
+    @Owner("Малышев")
+    @Step("Отправка заявки с Типом = {type}")
+    @Description("Создание пользователя")
+    public  void postPartner() {
+        installSpec(requestSpecification(), responseSpecification());
+        UUID uuid = UUID.randomUUID();
+        HashMap<String, Object> postPartner = new HashMap<>();
+        HashMap<String, Object> autor = new HashMap<>();
+        HashMap<String, Object> data = new HashMap<>();
+        postPartner.put("autor", autor);
+        postPartner.put("data", data);
+        postPartner.put("type", 1);
 
+
+        data.put("inn", "7728212268");
+        data.put("kpp", "7728212260");
+        data.put("kppAdditional", "770101001");
+        autor.put("fio", "Ivanov ivan");
+        autor.put("email", "ivanov@yandex.ru");
+        given()
+                .body(postPartner)
+                .when()
+                .post("partner")
+                .then().log().all()
+                .assertThat()
+                .body("guid", hasLength((36)));
+    }
 
     /////////////////////////////////Получение списка Partner /////////////////////////////////////////
     @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
@@ -239,7 +272,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "1ef134d0-8a1a-11ee-b5b1-005056013b0c")
                 .get("/contact/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -320,7 +353,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "13a5f0a4-8960-11ee-b5b1-005056013b0c")
                 .get("/contact-roles/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -401,7 +434,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "fe3562f8-8ebe-11ee-b5b1-005056013b0c")
                 .get("/bankAccounts/{guid}")
                 .then().log().all()
                 .assertThat()
