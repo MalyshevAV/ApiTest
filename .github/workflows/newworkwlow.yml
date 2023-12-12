@@ -1,9 +1,9 @@
-name: myfirstAcnions
+name: myfirstAcnions 
 on:
  push:
     branches: 
       - master
-jobs: 
+jobs:  
   build:
     runs-on: ubuntu-latest
     steps:   
