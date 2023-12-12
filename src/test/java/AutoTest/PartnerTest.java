@@ -111,7 +111,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "d8708a2f-8a97-11ee-b5b1-005056013b0c")
                 .get("/partner/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -387,9 +387,9 @@ public class PartnerTest {
         given()
                 .when().log().uri()
                 .queryParam("step", step)
-                .get("/bankAccounts/")
+                .get("/bankAccounts")
                 .then().log().all()
-                .body("size()", lessThanOrEqualTo(step))
+                .body("size()", is(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountList.json"));
         deleteSpec();
     }

@@ -118,12 +118,7 @@
               "minLength": 0,
               "maxLength": 9
             },
-            "dateIn": {
-              "type": "string",
-              "minLength": 10,
-              "maxLength": 20
-            },
-            "dateOut": {
+            "date": {
               "type": "string",
               "minLength": 10,
               "maxLength": 20
@@ -132,8 +127,7 @@
           "required": [
             "type",
             "code",
-            "dateIn",
-            "dateOut"
+            "date"
           ]
         }
       ]
@@ -174,12 +168,7 @@
               "minLength": 0,
               "maxLength": 9
             },
-            "dateIn": {
-              "type": "string",
-              "minLength": 10,
-              "maxLength": 20
-            },
-            "dateOut": {
+            "date": {
               "type": "string",
               "minLength": 10,
               "maxLength": 20
@@ -188,8 +177,7 @@
           "required": [
             "division",
             "code",
-            "dateIn",
-            "dateOut"
+            "date"
           ]
         }
       ]

@@ -3,12 +3,12 @@ package AutoTest;
 import Specifications.Specifications;
 import io.qameta.allure.*;
 import io.restassured.module.jsv.JsonSchemaValidator;
+import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static Specifications.Specifications.*;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.lessThanOrEqualTo;
+import static org.hamcrest.Matchers.*;
 
 @Epic("Оргструктура")
 
@@ -38,12 +38,26 @@ public class Structure {
     @Description("Получение массива Organization, поле Step пустое")
     public void getOrganizationListStepIsEmpty() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .get("organization")
                 .then().log().all()
                 .body("size()", is(lessThanOrEqualTo(200)))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOrganizationList.json"));
+        deleteSpec();
+    }
+    @Test
+    @Feature("Получение Organization")
+    @Owner("Малышев")
+    @Description("Получение массива Organization, поле Step пустое")
+    public void getOrganizationMsfo() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        Response response = given()
+                .when()
+                .get("organization")
+                .then().log().all()
+                .body("name", hasItem("Vogel&Noot AgroSrb ad (Сербия)"))  //class.find {it.name == ‘Ivan’}
+                .extract().response();
         deleteSpec();
     }
 

@@ -53,7 +53,7 @@
         },
         "organizationCode": {
           "type": "string",
-          "minLength": 1,
+          "minLength": 0,
           "maxLength": 9
         },
         "concernType": {
@@ -63,7 +63,7 @@
         },
         "concernTypeCode": {
           "type": "string",
-          "minLength": 1,
+          "minLength": 0,
           "maxLength": 9
         },
         "noResident": {
@@ -81,12 +81,12 @@
         },
         "kppAdditional": {
           "type": "string",
-          "minLength": 9,
+          "minLength": 0,
           "maxLength": 9
         },
         "registrationNumber": {
           "type": "string",
-          "minLength": 1,
+          "minLength": 0,
           "maxLength": 50
         },
         "ogrn": {
@@ -96,7 +96,7 @@
         },
         "okpo": {
           "type": "string",
-          "minLength": 14,
+          "minLength": 0,
           "maxLength": 14
         },
         "okved": {
@@ -106,7 +106,7 @@
         },
         "okvedCode": {
           "type": "string",
-          "minLength": 1,
+          "minLength": 0,
           "maxLength": 12
         },
         "separateUnit": {
@@ -124,7 +124,7 @@
         },
         "bankBIC": {
           "type": "string",
-          "minLength": 2,
+          "minLength": 0,
           "maxLength": 9
         },
         "okopf": {
@@ -134,7 +134,7 @@
         },
         "okopfName": {
           "type": "string",
-          "minLength": 1,
+          "minLength": 0,
           "maxLength": 150
         },
         "reliabilitySupplier": {
@@ -148,8 +148,8 @@
         },
         "dateVerified": {
           "type": "string",
-          "minLength": 36,
-          "maxLength": 36
+          "minLength": 10,
+          "maxLength": 20
         },
         "country": {
           "type": "string",
@@ -169,7 +169,7 @@
         },
         "regionCode": {
           "type": "string",
-          "minLength": 2,
+          "minLength": 0,
           "maxLength": 3
         },
         "contactInformation": {
