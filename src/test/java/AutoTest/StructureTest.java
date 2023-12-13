@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.*;
 
 @Epic("Оргструктура")
 
-public class Structure {
+public class StructureTest {
 
     /////////////////////////////////Получение списка Organization /////////////////////////////////////////
     @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)

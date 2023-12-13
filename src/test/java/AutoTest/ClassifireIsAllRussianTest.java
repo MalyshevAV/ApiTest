@@ -496,7 +496,7 @@ public class ClassifireIsAllRussianTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "755e817d-9465-11ee-b5b1-005056013b0c")
                 .get("/region/{guid}")
                 .then().log().all()
                 .assertThat()

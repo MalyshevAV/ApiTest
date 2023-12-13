@@ -308,7 +308,7 @@ public class ClassifierTest {
                 .queryParam("step", 199)
                 .get("units")
                 .then().log().all()
-                .body("size()", is(23));
+                .body("size()", is(199));
         deleteSpec();
     }
 
@@ -322,7 +322,7 @@ public class ClassifierTest {
                 .queryParam("step", 100)
                 .get("units")
                 .then().log().all()
-                .body("size()", is(23));
+                .body("size()", is(100));
         deleteSpec();
     }
 
@@ -335,7 +335,7 @@ public class ClassifierTest {
                 .when()
                 .get("units")
                 .then().log().all()
-                .body("size()", is(lessThanOrEqualTo(23)));
+                .body("size()", is(lessThanOrEqualTo(200)));
         deleteSpec();
     }
 

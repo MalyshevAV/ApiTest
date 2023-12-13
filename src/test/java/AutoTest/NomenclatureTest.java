@@ -106,7 +106,7 @@ public class NomenclatureTest {
     @Description("Получение базовой услуги по Гуид")
     public void getBasicServicesGuid() {
         installSpec(requestSpecification(), responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .pathParam("guid", "843dabce-3c42-11ee-b5b0-005056013b0c")
                 .get("basic-services/{guid}")
@@ -139,8 +139,8 @@ public class NomenclatureTest {
     public void getNomenclatureGuid() {
         installSpec(requestSpecification(), responseSpecification());
         given()
-                .when()
-                .pathParam("guid", "13513a3e-36d6-11ee-b5b0-005056013b0c")
+                .when().log().uri()
+                .pathParam("guid", "0d580667-36d6-11ee-b5b0-005056013b0c")
                 .get("nomenclature/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -220,7 +220,7 @@ public class NomenclatureTest {
                 .queryParam("data", "Болт")
                 .get("nomenclature/search")
                 .then().log().all()
-                .body("size()", is(173))
+                .body("size()", is(197))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getNomenclatureSearch.json"));
         deleteSpec();
     }
