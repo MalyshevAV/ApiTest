@@ -9,103 +9,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4d1c53df-9889-42c2-b20f-7a2276b62997" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/139d93d2-30e7-4e6b-9c3d-3ec96182da62-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/16d42052-8374-4b84-995b-124ef46bd11f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/1edeb77b-4e30-45a0-8b4d-8b826bc0d1df-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/26c2b57c-9427-475f-b7d7-b9010d46468f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/2cdbf8c6-3975-4df8-ad45-dcb383725715-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/3c261280-4a4a-4c7b-bac5-e30818c2b1e9-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/405b075f-27db-44b8-9437-30d34a24c946-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/47e9b675-66dc-4d0a-b22a-aa006239286c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/5466e798-db38-4e55-a5f6-515ec5d11a4f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/563358bf-2ccc-4987-880e-ac7d8b3d592f-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/7c79d63c-9d71-421b-af02-c2934cfa4cf1-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/84e5f647-8ae9-4b91-9fcd-4ee029702a4d-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/9c2467f6-bd5a-460c-bf17-9a2b59cba30c-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/b464f717-98ed-4fe2-8900-7754344c7b46-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/bf9d6af2-7982-4ad5-96d3-370318880760-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/d7609e0d-c332-4fba-b305-e290e3ce5a6e-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/da27e0d2-f72e-4c10-9815-9dde8a8902f3-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/allure-results/ee7b005c-89a2-4120-8df0-db932bcf1616-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefirebooter4613659230760120034.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire/surefirebooter8298817383185229650.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/ApplicationTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/AuxiliaryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifierTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifireIsAllRussianTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifirePost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/NomenclatureTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/PartnerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/PostRequestTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/Structure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MDM/POJO/OkpdPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MDM/POJO/PartnerPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MDM/POJO/TnvdPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MDM/POJO/UnifiedClassifirePojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MDM/POJO/UnitsPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MDM/POJO/getBeListPojo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/Autor$AutorBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/Autor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/Data$DataBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PojoPost$PojoPostBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PojoPost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature$PostNomenclatureBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/Responsible$ResponsibleBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/Responsible.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Specifications/GetPositivedataprovider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Specifications/Specifications.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Test/Step.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Test/StepEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/allure.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getBankAccountGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getBankAccountList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getBankAccountTypeGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getBankAccountTypeList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getBankGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getBankList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getBasicServicesGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getChangeRequest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getChenge-Reuest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getContactGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getContactList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getContactRolesGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getContactRolesList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getCountryGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getCountryList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getCurrencyGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getCurrencyList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getDivisionsGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getDivisionsList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getEopGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getEopList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getListOfChanges.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getNomenclatureGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getNomenclatureSearch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getOkopfGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getOkopfList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getOkvedGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getOkvedList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getOrganizationGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getOrganizationList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getPartnerConcernTypeGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getPartnerConcernTypeList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getPartnerGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getPartnerList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getRegionGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getRegionList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getSfoGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getSfoList.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getTvendGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getUnifiedClassifierGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/getUnitsGuid.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/postNomenclarureChange-request.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/postNomenclatureUsingJsonFil.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tvend.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/AuxiliaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/AuxiliaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/StructureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/StructureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire/surefire15495057262681750315tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire/surefire_014970367999591747621tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire/surefirebooter4644052288761935347.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/AuxiliaryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/AuxiliaryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/StructureTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/StructureTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,8 +85,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PartnerTest.getContactGuidNotExist">
-    <configuration name="PartnerTest.getBankAccountGuid" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.FinanceTest.getDdsArticlesList">
+    <configuration name="AuxiliaryTest.getListOfChangesDate" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -185,8 +95,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
-      <option name="METHOD_NAME" value="getBankAccountGuid" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.AuxiliaryTest" />
+      <option name="METHOD_NAME" value="getListOfChangesDate" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -194,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartnerTest.getBankAccountStepIsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AuxiliaryTest.getListOfChangesDateIsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -203,8 +113,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
-      <option name="METHOD_NAME" value="getBankAccountStepIsEmpty" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.AuxiliaryTest" />
+      <option name="METHOD_NAME" value="getListOfChangesDateIsEmpty" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -212,7 +122,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartnerTest.getContactGuid" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AuxiliaryTest.getListOfChangesNegative" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -221,8 +131,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
-      <option name="METHOD_NAME" value="getContactGuid" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.AuxiliaryTest" />
+      <option name="METHOD_NAME" value="getListOfChangesNegative" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -230,7 +140,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartnerTest.getContactGuidNotExist" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AuxiliaryTest.getListOfChangesNegativeDate" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -239,8 +149,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
-      <option name="METHOD_NAME" value="getContactGuidNotExist" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.AuxiliaryTest" />
+      <option name="METHOD_NAME" value="getListOfChangesNegativeDate" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -248,7 +158,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartnerTest.getContactList" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FinanceTest.getDdsArticlesList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -257,8 +167,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
-      <option name="METHOD_NAME" value="getContactList" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.FinanceTest" />
+      <option name="METHOD_NAME" value="getDdsArticlesList" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -268,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PartnerTest.getContactGuidNotExist" />
-        <item itemvalue="TestNG.PartnerTest.getContactGuid" />
-        <item itemvalue="TestNG.PartnerTest.getContactList" />
-        <item itemvalue="TestNG.PartnerTest.getBankAccountGuid" />
-        <item itemvalue="TestNG.PartnerTest.getBankAccountStepIsEmpty" />
+        <item itemvalue="TestNG.FinanceTest.getDdsArticlesList" />
+        <item itemvalue="TestNG.AuxiliaryTest.getListOfChangesDate" />
+        <item itemvalue="TestNG.AuxiliaryTest.getListOfChangesDateIsEmpty" />
+        <item itemvalue="TestNG.AuxiliaryTest.getListOfChangesNegative" />
+        <item itemvalue="TestNG.AuxiliaryTest.getListOfChangesNegativeDate" />
       </list>
     </recent_temporary>
   </component>
@@ -367,7 +277,9 @@
       <workItem from="1702392845844" duration="797000" />
       <workItem from="1702393661042" duration="993000" />
       <workItem from="1702403748375" duration="13000" />
-      <workItem from="1702403837214" duration="1924000" />
+      <workItem from="1702403837214" duration="5622000" />
+      <workItem from="1702446455599" duration="20788000" />
+      <workItem from="1702535195217" duration="116000" />
     </task>
     <servers />
   </component>

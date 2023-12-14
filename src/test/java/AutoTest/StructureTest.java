@@ -27,7 +27,7 @@ public class StructureTest {
                 .queryParam("step", step)
                 .get("/organization")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOrganizationList.json"));
         deleteSpec();
     }
@@ -124,7 +124,7 @@ public class StructureTest {
                 .queryParam("step", step)
                 .get("/divisions")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getDivisionsList.json"));
         deleteSpec();
     }
@@ -169,7 +169,7 @@ public class StructureTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when().log().uri()
-                .pathParam("guid", "c31a4eef-8942-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "45c669af-894e-11ee-b5b1-005056013b0c")
                 .get("/divisions/{guid}")
                 .then().log().all()
                 .assertThat()

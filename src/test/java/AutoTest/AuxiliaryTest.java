@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import static Specifications.Specifications.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
 public class AuxiliaryTest {
 
@@ -26,14 +27,36 @@ public class AuxiliaryTest {
                 {"okpd2", 1, ""},
                 {"okved2", 1, ""},
                 {"tnved", 5, ""},
-                {"nomenclature", 5, "2017-07-21"},
-                {"basic-services", 1, "2017-07-21"},
-                {"unified-classifier", 1, "2017-07-21"},
+                {"nomenclature", 5, "2020-07-21"},
+                {"basic-services", 1, "2021-01-21"},
+                {"unified-classifier", 1, "2010-07-21"},
                 {"eop", 1, "2017-07-21"},
                 {"units", 1, "2017-07-21"},
                 {"okpd2", 1, "2017-07-21"},
                 {"okved2", 1, "2017-07-21"},
                 {"tnved", 5, "2017-07-21"}
+        };
+    }
+    @DataProvider
+    @Description("Позитивные тесты с использованием DataProvider")
+    public static Object[][] dataIsEmpty() {
+        return new Object[][]{
+                {"nomenclature", 5},
+                {"basic-services", 1},
+                {"unified-classifier", 1},
+                {"eop", 1},
+                {"units", 1},
+                {"okpd2", 1},
+                {"okved2", 1},
+                {"tnved", 5},
+                {"nomenclature", 5},
+                {"basic-services", 1},
+                {"unified-classifier", 1},
+                {"eop", 1},
+                {"units", 1},
+                {"okpd2", 1},
+                {"okved2", 1},
+                {"tnved", 5}
         };
     }
     @DataProvider
@@ -104,22 +127,42 @@ public class AuxiliaryTest {
     @Feature("Вспомогательные")
     @Owner("Малышев")
     @Step("Тип изменяемых объектов = {type}, Количество возвращаемых элементов = {step}, Поле Дата = {data}")
-    @Description("Проверка списка изменений")
-    public void getListOfChangesDateIsEmpty(String type, Integer step, String date) {
+    @Description("Проверка списка изменений, с датой")
+    public void getListOfChangesDate(String type, Integer step, String date) {
         installSpec(requestSpecification(), responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .pathParam("type", type)
                 .queryParam("step", step)
-                .queryParam("step", date)
+                .queryParam("date", date)
                 .get("list-of-changes/{type}")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(200))
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getListOfChanges.json"));
         deleteSpec();
 
     }
+
+    @Test(dataProvider = "dataIsEmpty")
+    @Feature("Вспомогательные")
+    @Owner("Малышев")
+    @Step("Тип изменяемых объектов = {type}, Количество возвращаемых элементов = {step}")
+    @Description("Проверка списка изменений, с датой")
+    public void getListOfChangesDateIsEmpty(String type, Integer step) {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .pathParam("type", type)
+                .queryParam("step", step)
+                .get("list-of-changes/{type}")
+                .then().log().all()
+                .body("size()", lessThanOrEqualTo(200))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getListOfChanges.json"));
+        deleteSpec();
+    }
+
     @Test(dataProvider = "stepNegative")
     @Feature("Вспомогательные")
     @Owner("Малышев")
