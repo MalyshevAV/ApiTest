@@ -167,7 +167,7 @@ public class ClassifireIsAllRussianTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "377593d9-168f-11ee-b5ab-a0dc07f9a67b")
+                .pathParam("guid", "1ed68f25-9d9c-11ee-b5b3-005056013b0c")
                 .get("/okved2/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -256,7 +256,7 @@ public class ClassifireIsAllRussianTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "8c496b15-23e3-11ee-b5ac-005056013b0c")
+                .pathParam("guid", "84462f2e-9d9c-11ee-b5b3-005056013b0c")
                 .get("/tnved/{guid}")
                 .then().log().all()
                 .assertThat()

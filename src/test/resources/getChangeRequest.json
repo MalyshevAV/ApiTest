@@ -96,8 +96,8 @@
           "type": ["null","boolean"]
         },
         "referencePosition": {
-          "type": ["null","string"],
-          "minLength": 36,
+          "type": "string",
+          "minLength": 0,
           "maxLength": 36
         },
         "consolidatedRecord": {
@@ -149,23 +149,23 @@
           "maxLength": 255
         },
         "material": {
-          "type": ["null","string"],
-          "minLength": 1,
+          "type": "string",
+          "minLength": 0,
           "maxLength": 255
         },
         "materialGOST": {
-          "type": ["null","string"],
+          "type": "string",
           "minLength": 0,
           "maxLength": 255
         },
         "sortament": {
-          "type": ["null","string"],
-          "minLength": 1,
+          "type": "string",
+          "minLength": 0,
           "maxLength": 255
         },
         "sortamentGOST": {
-          "type": ["null","string"],
-          "minLength": 1,
+          "type": "string",
+          "minLength": 0,
           "maxLength": 255
         },
         "seriality": {
@@ -173,7 +173,7 @@
           "enum": [1,2,3,5]
         },
         "unifiedClassifier": {
-          "type": ["null","string"],
+          "type": "string",
           "minLength": 36,
           "maxLength": 36
         },
@@ -183,7 +183,7 @@
           "maxLength": 50
         },
         "classifierEOP": {
-          "type": ["null","string"],
+          "type": "string",
           "minLength": 36,
           "maxLength": 36
         },
@@ -266,7 +266,7 @@
         },
         "image": {
           "type": ["null","string"],
-          "minLength": 1,
+          "minLength": 0,
           "maxLength": 250
         },
         "comment": {

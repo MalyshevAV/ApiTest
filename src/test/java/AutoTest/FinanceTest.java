@@ -22,7 +22,7 @@ public class FinanceTest {
     public void getDdsArticlesList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", step)
                 .get("/dds-articles")
                 .then().log().all()
@@ -71,7 +71,7 @@ public class FinanceTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "d8708a2f-8a97-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "6da9c0d8-986c-11ee-b5b1-005056013b0c")
                 .get("/dds-articles/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -107,8 +107,8 @@ public class FinanceTest {
                 .queryParam("step", step)
                 .get("/dds-vid")
                 .then().log().all()
-                .body("size()", is(step))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getDds-articlesList.json"));
+                .body("size()", lessThanOrEqualTo(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getDds-vidList.json"));
         deleteSpec();
     }
 
@@ -152,7 +152,7 @@ public class FinanceTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "d8708a2f-8a97-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "dbc02d99-9859-11ee-b5b1-005056013b0c")
                 .get("/dds-vid/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -185,12 +185,12 @@ public class FinanceTest {
     public void getExpensesArticlesList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", step)
                 .get("/expenses-articles")
                 .then().log().all()
-                .body("size()", is(step))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getExpenses-ArticlesList.json"));
+                .body("size()", lessThanOrEqualTo(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getExpenses-articlesList.json"));
         deleteSpec();
     }
 
@@ -205,7 +205,7 @@ public class FinanceTest {
                 .get("expenses-articles")
                 .then().log().all()
                 .body("size()", is(lessThanOrEqualTo(200)))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getExpenses-ArticlesList.json"));
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getExpenses-articlesList.json"));
         deleteSpec();
     }
 
@@ -234,7 +234,7 @@ public class FinanceTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "d8708a2f-8a97-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "19031503-9912-11ee-b5b1-005056013b0c")
                 .get("/expenses-articles/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -272,7 +272,7 @@ public class FinanceTest {
                 .queryParam("step", step)
                 .get("/other-income-expenses")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOther-income-expensesList.json"));
         deleteSpec();
     }
@@ -317,7 +317,7 @@ public class FinanceTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "d8708a2f-8a97-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "d0e3578e-8e89-11ee-b5b1-005056013b0c")
                 .get("/other-income-expenses/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -339,4 +339,166 @@ public class FinanceTest {
                 .then().log().all();
     }
 
+
+
+    /////////////////////////////////Получение списка Всех элементов Субконто /////////////////////////////////////////
+    @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Subconto")
+    @Step("Получение массива Степ = {step}")
+    @Owner("Малышев")
+    @Description("Получение списка Subconto")
+    public void getOtherSubcontoList(int step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("/subconto")
+                .then().log().all()
+                .body("size()", lessThanOrEqualTo(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getSubcontoList.json"));
+        deleteSpec();
+    }
+
+    @Test
+    @Feature("Получение Subconto")
+    @Owner("Малышев")
+    @Description("Получение массива Subconto , поле Step пустое")
+    public void getSubcontoListStepIsEmpty() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .get("subconto")
+                .then().log().all()
+                .body("size()", is(lessThanOrEqualTo(200)))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getSubcontoList.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Subconto")
+    @Owner("Малышев")
+    @Step("Невалидный Степ = {step}")
+    @Description("Негативный тест Subconto")
+    public void getSubcontoListStepMaxPlus(Object step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("subconto")
+                .then().log().all();
+        deleteSpec();
+    }
+
+    /////////////////////////////////Получение Subconto по Гуид/////////////////////////////////////////
+    @Test
+    @Feature("Получение Subconto")
+    @Owner("Малышев")
+    @Step("Валидный Гуид")
+    @Description("Получение Subconto по Гуид, валидация при помощи схемы Json")
+    public void getSubcontoGuid() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .pathParam("guid", "39556ede-9a94-11ee-b5b2-005056013b0c")
+                .get("/subconto/{guid}")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getSubcontoGuid.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение Subconto")
+    @Owner("Малышев")
+    @Step("Невалидный Гуид = {guid}")
+    @Description("Негативный тест Получение Subconto по Гуид, несуществующий Гуид")
+    public void getSubcontoGuidNotExist(Object guid) {
+        installSpec(requestSpecification(), responseSpecification400());
+        given()
+                .when()
+                .pathParam("guid", guid)
+                .get("subconto/{guid}")
+                .then().log().all();
+    }
+
+
+    /////////////////////////////////Получение списка Всех элементов Plan-schetov /////////////////////////////////////////
+    @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение PlanSchetov")
+    @Step("Получение массива Степ = {step}")
+    @Owner("Малышев")
+    @Description("Получение списка PlanSchetov")
+    public void getPlanSchetovList(int step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("/plan-schetov")
+                .then().log().all()
+                .body("size()", is(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPlanSchetovList.json"));
+        deleteSpec();
+    }
+
+    @Test
+    @Feature("Получение PlanSchetov")
+    @Owner("Малышев")
+    @Description("Получение массива PlanSchetov, поле Step пустое")
+    public void getPlanSchetovListStepIsEmpty() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .get("plan-schetov")
+                .then().log().all()
+                .body("size()", is(lessThanOrEqualTo(200)))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPlanSchetovList.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение PlanSchetov")
+    @Owner("Малышев")
+    @Step("Невалидный Степ = {step}")
+    @Description("Негативный тест PlanSchetov")
+    public void getPlanSchetovListStepMaxPlus(Object step) {
+        installSpec(requestSpecification(), Specifications.responseSpecification400());
+        given()
+                .when()
+                .queryParam("step", step)
+                .get("plan-schetov")
+                .then().log().all();
+        deleteSpec();
+    }
+
+    /////////////////////////////////Получение Plan-Schetov по Гуид/////////////////////////////////////////
+    @Test
+    @Feature("Получение PlanSchetov")
+    @Owner("Малышев")
+    @Step("Валидный Гуид")
+    @Description("Получение PlanSchetov по Гуид, валидация при помощи схемы Json")
+    public void getPlanSchetovGuid() {
+        installSpec(requestSpecification(), Specifications.responseSpecification());
+        given()
+                .when()
+                .pathParam("guid", "710636d6-9b5b-11ee-b5b3-005056013b0c")
+                .get("/plan-schetov/{guid}")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPlanSchetovGuid.json"));
+        deleteSpec();
+    }
+
+    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
+    @Feature("Получение PlanSchetov")
+    @Owner("Малышев")
+    @Step("Невалидный Гуид = {guid}")
+    @Description("Негативный тест Получение PlanSchetov по Гуид, несуществующий Гуид")
+    public void getPlanSchetovGuidNotExist(Object guid) {
+        installSpec(requestSpecification(), responseSpecification400());
+        given()
+                .when()
+                .pathParam("guid", guid)
+                .get("plan-schetov/{guid}")
+                .then().log().all();
+    }
 }

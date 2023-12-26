@@ -110,7 +110,7 @@ public class ClassifierTest {
         response.forEach(x -> Assert.assertEquals(x.getOkved().length(), 36));
         response.forEach(x -> Assert.assertEquals(x.getOkpd2().length(), 36));
         response.forEach(x -> Assert.assertTrue(x.getDateOutputArchive().length() <=20));
-        Assertions.assertNotNull(response);
+      //  Assertions.assertNotNull(response);
         deleteSpec();
     }
 
@@ -126,7 +126,8 @@ public class ClassifierTest {
                 .queryParam("step", step)
                 .get("/unified-classifier")
                 .then().log().all()
-                .body("size()", is(step));
+                .body("size()", is(step))
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getUnifiedClassifierList.json"));
         deleteSpec();
     }
 

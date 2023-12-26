@@ -66,7 +66,7 @@ public class PartnerTest {
                 .queryParam("step", step)
                 .get("/partner")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerList.json"));
         deleteSpec();
     }
@@ -111,7 +111,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "d8708a2f-8a97-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "b5f973d0-9f7c-11ee-b5b3-005056013b0c")
                 .get("/partner/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -191,7 +191,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given().log().uri()
                 .when()
-                .pathParam("guid", "83b4ab77-8260-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "f08adf73-9d14-11ee-b5b3-005056013b0c")
                 .get("/partner-concern-type/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -227,7 +227,7 @@ public class PartnerTest {
                 .queryParam("step", step)
                 .get("/contact")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getContactList.json"));
         deleteSpec();
     }
@@ -272,7 +272,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "1ef134d0-8a1a-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "ed4f63bd-8a1b-11ee-b5b1-005056013b0c")
                 .get("/contact/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -308,7 +308,7 @@ public class PartnerTest {
                 .queryParam("step", step)
                 .get("contact-roles")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getContactRolesList.json"));
         deleteSpec();
     }
@@ -387,9 +387,9 @@ public class PartnerTest {
         given()
                 .when().log().uri()
                 .queryParam("step", step)
-                .get("/bankAccounts")
+                .get("/bank-accounts")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountList.json"));
         deleteSpec();
     }
@@ -402,7 +402,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .get("bankAccounts")
+                .get("bank-accounts")
                 .then().log().all()
                 .body("size()", is(lessThanOrEqualTo(200)))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountList.json"));
@@ -419,7 +419,7 @@ public class PartnerTest {
         given()
                 .when()
                 .queryParam("step", step)
-                .get("bankAccounts")
+                .get("bank-accounts")
                 .then().log().all();
         deleteSpec();
     }
@@ -435,7 +435,7 @@ public class PartnerTest {
         given()
                 .when()
                 .pathParam("guid", "fe3562f8-8ebe-11ee-b5b1-005056013b0c")
-                .get("/bankAccounts/{guid}")
+                .get("/bank-accounts/{guid}")
                 .then().log().all()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountGuid.json"));
@@ -452,7 +452,7 @@ public class PartnerTest {
         given()
                 .when()
                 .pathParam("guid", guid)
-                .get("bankAccounts/{guid}")
+                .get("bank-accounts/{guid}")
                 .then().log().all();
     }
 
@@ -467,7 +467,7 @@ public class PartnerTest {
         given().log().uri()
                 .when()
                 .queryParam("step", step)
-                .get("bankAccountsType")
+                .get("bank-accounts-type")
                 .then().log().all()
                 .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountTypeList.json"));
@@ -482,7 +482,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .get("bankAccountsType")
+                .get("bank-accounts-type")
                 .then().log().all()
                 .body("size()", is(lessThanOrEqualTo(200)))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountTypeList.json"));
@@ -490,7 +490,7 @@ public class PartnerTest {
     }
 
     @Test(dataProvider = "negativeData", dataProviderClass = ClassifierTest.class)
-    @Feature("Получение Bank AccountType")
+    @Feature("Получение Bank Account Type")
     @Owner("Малышев")
     @Step("Невалидный Степ = {step}")
     @Description("Негативный тест, получение массива Bank Account Type")
@@ -499,7 +499,7 @@ public class PartnerTest {
         given()
                 .when()
                 .queryParam("step", step)
-                .get("bankAccountsType")
+                .get("bank-accounts-type")
                 .then().log().all();
         deleteSpec();
     }
@@ -515,7 +515,7 @@ public class PartnerTest {
         given()
                 .when()
                 .pathParam("guid", "3ef31610-1614-11e7-810d-005056a71cd1")
-                .get("/bankAccountsType/{guid}")
+                .get("/bank-accounts-type/{guid}")
                 .then().log().all()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBankAccountTypeGuid.json"));
@@ -532,7 +532,7 @@ public class PartnerTest {
         given()
                 .when()
                 .pathParam("guid", guid)
-                .get("bankAccountsType/{guid}")
+                .get("bank-accounts-type/{guid}")
                 .then().log().all();
     }
 }

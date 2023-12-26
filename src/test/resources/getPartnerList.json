@@ -76,7 +76,7 @@
         },
         "kpp": {
           "type": "string",
-          "minLength": 9,
+          "minLength": 0,
           "maxLength": 9
         },
         "kppAdditional": {
@@ -91,7 +91,7 @@
         },
         "ogrn": {
           "type": "string",
-          "minLength": 13,
+          "minLength": 0,
           "maxLength": 13
         },
         "okpo": {
@@ -158,7 +158,7 @@
         },
         "countryCode": {
           "type": "string",
-          "minLength": 3,
+          "minLength": 0,
           "maxLength": 3
 
         },

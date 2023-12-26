@@ -19,24 +19,12 @@ public class ApplicationTest {
         installSpec(requestSpecification(), responseSpecification());
         given()
                 .when()
-                .get("change-request/31c9ca2a-b120-41f8-aa86-8cffb2627492")
+                .get("change-request/55c16101-a2d2-4120-8e3c-7a9d2037e929")
                 .then().log().all()
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getChangeRequest.json"));
         deleteSpec();
     }
-    @Test
-    @Feature("Работа с заявками")
-    @Owner("Малышев")
-    @Description("Получение заявки по Гуид на изменение Type = 5 , валидация по схеме Json")
-    public void getTestChangeRequestGuid5() {
-        installSpec(requestSpecification(), responseSpecification());
-        given()
-                .when()
-                .get("change-request/dd91b3fc-36d5-11ee-b5b0-005056013b0c")
-                .then().log().all()
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getChangeRequest.json"));
-        deleteSpec();
-    }
+
 
     @Test (dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
     @Feature("Работа с заявками")

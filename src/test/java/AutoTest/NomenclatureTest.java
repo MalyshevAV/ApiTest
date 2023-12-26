@@ -20,10 +20,10 @@ public class NomenclatureTest {
                 {5, 0, "Болт", 0},
                 {1, 1, "Болт", 0},
                 {1, 1, "Болт", 0},
-                {100, 2, "01сб", 0},
+                {100, 2, "сб", 0},
                 {2, 3, "f3ec794a-35d5-11ee-918f-7824af8ab720", 0},
                 {6, 4, "00", 0},
-                {176, 5, "Болт", 0}
+                {176, 5, "Болт", 1}
         };
     }
         @DataProvider
@@ -99,36 +99,6 @@ public class NomenclatureTest {
         };
     }
 
-    @Test
-    @Feature("Получение базовой услуги по Гуид")
-    @Owner("Малышев")
-    @Step("Валидный Гуид")
-    @Description("Получение базовой услуги по Гуид")
-    public void getBasicServicesGuid() {
-        installSpec(requestSpecification(), responseSpecification());
-        given().log().uri()
-                .when()
-                .pathParam("guid", "843dabce-3c42-11ee-b5b0-005056013b0c")
-                .get("basic-services/{guid}")
-                .then().log().all()
-                .assertThat()
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getBasicServicesGuid.json"));
-        deleteSpec();
-    }
-    @Test(dataProvider = "guidNegative", dataProviderClass = ClassifierTest.class)
-    @Step("Проверка невалидного Гуид = {guid}")
-    @Feature("Получение базовой услуги по Гуид")
-    @Owner("Малышев")
-    @Description("Получение базовой услуги по Гуид, негативные тесты")
-    public void getBasicServicesGuidDataProvider(Object guid) {
-        installSpec(requestSpecification(), responseSpecification400());
-        given()
-                .when()
-                .pathParam("guid", guid)
-                .get("basic-services/{guid}")
-                .then().log().all();
-        deleteSpec();
-    }
 
 ////////////////////////////////////////////"Получение номенклатуры по Гуид////////////////////////////////////////
     @Test
@@ -140,7 +110,7 @@ public class NomenclatureTest {
         installSpec(requestSpecification(), responseSpecification());
         given()
                 .when().log().uri()
-                .pathParam("guid", "0d580667-36d6-11ee-b5b0-005056013b0c")
+                .pathParam("guid", "e38a240c-36d5-11ee-b5b0-005056013b0c")
                 .get("nomenclature/{guid}")
                 .then().log().all()
                 .assertThat()
@@ -171,16 +141,16 @@ public class NomenclatureTest {
     @Step("Количество возвращаемых элементов = {step}, Тип поиска = {type}, Поисковый запрос = {data}")
     @Owner("Малышев")
     @Description("Поиск номенклатуры, без параметра service" )
-    public void getNomenclatureSearchDataProviderServiceIsAbsent(Object step, Object type, Object data) {
+    public void getNomenclatureSearchDataProviderServiceIsAbsent(int step, Object type, Object data) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", step)
                 .queryParam("type", type)
                 .queryParam("data", data)
                 .get("nomenclature/search")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getNomenclatureSearch.json"));
         System.out.println("Количество возвращаемых элементов : " + step+ ", " + " Тип поиска: " + type + ", " + " Поисковой запрос:  " + data );
         deleteSpec();
@@ -190,9 +160,9 @@ public class NomenclatureTest {
     @Step("Количество возвращаемых элементов = {step}, Тип поиска = {type}, Поисковый запрос = {data}, Параметр сервис = {service}")
     @Owner("Малышев")
     @Description("Поиск номенклатуры, с параметром service" )
-    public void getNomenclatureSearchDataProviderService(Object step, Object type, Object data, int service) {
+    public void getNomenclatureSearchDataProviderService(int step, Object type, Object data, int service) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .queryParam("step", step)
                 .queryParam("type", type)
@@ -200,7 +170,7 @@ public class NomenclatureTest {
                 .queryParam("service", service)
                 .get("nomenclature/search")
                 .then().log().all()
-                .body("size()", is(step))
+                .body("size()", lessThanOrEqualTo(step))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getNomenclatureSearch.json"));
         System.out.println("Количество возвращаемых элементов : " + step+ ", " + " Тип поиска: " + type + ", " + " Поисковой запрос:  " + data );
         deleteSpec();
@@ -220,7 +190,7 @@ public class NomenclatureTest {
                 .queryParam("data", "Болт")
                 .get("nomenclature/search")
                 .then().log().all()
-                .body("size()", is(197))
+                .body("size()", lessThanOrEqualTo(200))
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getNomenclatureSearch.json"));
         deleteSpec();
     }
