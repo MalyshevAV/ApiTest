@@ -148,7 +148,7 @@ public class AuxiliaryTest {
     @Feature("Вспомогательные")
     @Owner("Малышев")
     @Step("Тип изменяемых объектов = {type}, Количество возвращаемых элементов = {step}")
-    @Description("Проверка списка изменений, с датой")
+    @Description("Проверка списка изменений, без даты")
     public void getListOfChangesDateIsEmpty(String type, Integer step) {
         installSpec(requestSpecification(), responseSpecification());
         given().log().uri()

@@ -43,10 +43,10 @@ public class NomenclatureTest {
         @DataProvider
         public static Object[][] serviceIsAbsent() {
             return new Object[][]{
-                    {5, 0, "Болт"},
+                    {5, 0, "Расходы на рекламу (медиа-видеореклама)"},
                     {1, 1, "Болт"},
                     {1, 1, "Болт"},
-                    {100, 2, "01сб"},
+                    {1, 2, "~3070029"},
                     {2, 3, "f3ec794a-35d5-11ee-918f-7824af8ab720"},
                     {6, 4, "00"},
                     {176, 5, "Болт"}
@@ -110,7 +110,7 @@ public class NomenclatureTest {
         installSpec(requestSpecification(), responseSpecification());
         given()
                 .when().log().uri()
-                .pathParam("guid", "e38a240c-36d5-11ee-b5b0-005056013b0c")
+                .pathParam("guid", "db5f909b-9de0-11ee-b5b3-005056013b0c")
                 .get("nomenclature/{guid}")
                 .then().log().all()
                 .assertThat()

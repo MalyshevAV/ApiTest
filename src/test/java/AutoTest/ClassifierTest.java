@@ -171,7 +171,7 @@ public class ClassifierTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "513916c8-1677-11ee-b5ab-a0dc07f9a67b")
+                .pathParam("guid", "70c05620-a4b7-11ee-b5b4-005056013b0c")
                 .get("unified-classifier/{guid}")
                 .then().log().all()
                 .assertThat()

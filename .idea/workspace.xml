@@ -8,7 +8,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d1c53df-9889-42c2-b20f-7a2276b62997" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/ApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/AuxiliaryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/AuxiliaryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/ClassifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/ClassifierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/NomenclatureTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/NomenclatureTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutoTest/PartnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutoTest/PartnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Specifications/Specifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Specifications/Specifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getContactGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getContactGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getContactList.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getContactList.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/getPartnerGuid.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/getPartnerGuid.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1a6e522b-1031-44ae-b76c-b0e65c1ef34c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/204f7f9f-4cbe-4528-8384-75330166d446-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/22a221e0-951c-4998-afc4-b226048516cf-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/3cc18293-25e3-4488-8798-f66e977b707f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/496bef50-5d64-4a2f-a87e-0d503c702026-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/701eb212-49ce-47a6-95de-59c998a869c6-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/78075efa-577f-4be2-a343-8e36f6934cd8-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/aae05af7-c412-4964-95e0-5f8033e657a7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d6660bff-1b26-4c75-a587-090afc82fc8d-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/ApplicationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/ApplicationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/AuxiliaryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/AuxiliaryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifierTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/ClassifierTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AutoTest/NomenclatureTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AutoTest/NomenclatureTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PojoPost$PojoPostBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PojoPost$PojoPostBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PojoPost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PojoPost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature$PostNomenclatureBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature$PostNomenclatureBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Models/PostNomenclature.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Specifications/Specifications.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Specifications/Specifications.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/чек-лист.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/чек-лист.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +81,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sasha/Api&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/docker&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -78,8 +106,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FinanceTest.getExpensesArticlesList">
-    <configuration name="ClassifierTest.getEopList" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.PartnerTest.getContactList">
+    <configuration name="PartnerTest.getContactList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -88,8 +116,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.ClassifierTest" />
-      <option name="METHOD_NAME" value="getEopList" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
+      <option name="METHOD_NAME" value="getContactList" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -97,7 +125,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FinanceTest.getExpensesArticlesList" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PartnerTest.getPartnerGuid" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -106,8 +134,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.FinanceTest" />
-      <option name="METHOD_NAME" value="getExpensesArticlesList" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
+      <option name="METHOD_NAME" value="getPartnerGuid" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -115,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NomenclatureTest.getNomenclatureSearchDataProviderService" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PartnerTest.getPartnerList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -124,8 +152,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.NomenclatureTest" />
-      <option name="METHOD_NAME" value="getNomenclatureSearchDataProviderService" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
+      <option name="METHOD_NAME" value="getPartnerList" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -133,7 +161,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NomenclatureTest.getNomenclatureSearchDataProviderServiceIsAbsent" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PartnerTest.getPartnerListStepIsEmpty" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -142,8 +170,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.NomenclatureTest" />
-      <option name="METHOD_NAME" value="getNomenclatureSearchDataProviderServiceIsAbsent" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
+      <option name="METHOD_NAME" value="getPartnerListStepIsEmpty" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -151,7 +179,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NomenclatureTest.getNomenclatureSearchType1" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PartnerTest.getPartnerSearchEmptyParametr" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MyFirstTest" />
       <extension name="coverage">
         <pattern>
@@ -160,8 +188,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="AutoTest" />
-      <option name="MAIN_CLASS_NAME" value="AutoTest.NomenclatureTest" />
-      <option name="METHOD_NAME" value="getNomenclatureSearchType1" />
+      <option name="MAIN_CLASS_NAME" value="AutoTest.PartnerTest" />
+      <option name="METHOD_NAME" value="getPartnerSearchEmptyParametr" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -171,11 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FinanceTest.getExpensesArticlesList" />
-        <item itemvalue="TestNG.NomenclatureTest.getNomenclatureSearchDataProviderService" />
-        <item itemvalue="TestNG.NomenclatureTest.getNomenclatureSearchDataProviderServiceIsAbsent" />
-        <item itemvalue="TestNG.ClassifierTest.getEopList" />
-        <item itemvalue="TestNG.NomenclatureTest.getNomenclatureSearchType1" />
+        <item itemvalue="TestNG.PartnerTest.getContactList" />
+        <item itemvalue="TestNG.PartnerTest.getPartnerList" />
+        <item itemvalue="TestNG.PartnerTest.getPartnerGuid" />
+        <item itemvalue="TestNG.PartnerTest.getPartnerListStepIsEmpty" />
+        <item itemvalue="TestNG.PartnerTest.getPartnerSearchEmptyParametr" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +311,12 @@
       <workItem from="1703241972857" duration="4622000" />
       <workItem from="1703485960886" duration="14468000" />
       <workItem from="1703571302788" duration="9383000" />
-      <workItem from="1703588124909" duration="307000" />
+      <workItem from="1703588124909" duration="3041000" />
+      <workItem from="1703658080452" duration="13167000" />
+      <workItem from="1703743194104" duration="6227000" />
+      <workItem from="1704782828540" duration="2031000" />
+      <workItem from="1704785013939" duration="10261000" />
+      <workItem from="1705046397243" duration="24152000" />
     </task>
     <servers />
   </component>

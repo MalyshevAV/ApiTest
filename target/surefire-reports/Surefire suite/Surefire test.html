@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jan 09 15:58:52 MSK 2024</td>
+</tr>
+<tr><td>Total time:</td><td>14 seconds (14480 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: 2147483647</td>
+<td></td>
+<td>1</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters:  13513a3e-36d6-11ee-b5b0-005056013b0c </td>
+<td></td>
+<td>1</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: 43dabce-3c42-11ee-b5b0-005096013b1c1</td>
+<td></td>
+<td>1</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: 13513a3e-3 6d6-11ee-b5 b0-005056013b0c</td>
+<td></td>
+<td>1</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: 1кк13a3e-36d6-11ee-b5b0-00)&056 013b0c</td>
+<td></td>
+<td>1</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: -100</td>
+<td></td>
+<td>0</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: 13513a3e-36d6-11ee-b5b0-005056013b0</td>
+<td></td>
+<td>0</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: select*From Users</td>
+<td></td>
+<td>1</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: Q91MXkSBG2w4bDK9Z9nprYeT4Pd69TGUdDOqWKDrlSKkIZ3JHqi0rA1G5LAfCZ54yEJ3adXLSmgtm4Z5hXMNT3ZqxkqMyqQhE9fze353egOMYAf0tESKpQtqdOzmrqiyvTjC6tCVc6Iqxgyq3TkICV3Hhk7ffbIYkIYXqk6Inktqt9xKmNqCPsemWzKVaXCiQ299HurLBuVTvZeFWYrqnyjl46h1AKLjfkZOMb0vRari1MFJz48qkpFR6RLTTBS2EtLY1rAj7OIw6zACkXgsJkUkMShenn19tEeZKsl3nAwnt4Qk1P1nzHlnSw6Kdl1jvGflS6aLfxrRoqIM0W1TDlUfCfXehzCemTTui7BddecX6aUTcvYHj3eQSYb4tiErgIdN6PMpizjNO4iZjJLTdBh6xtQC9DQKCj1gM8QKUtDYP5sO1SlEcKcjPIC0Q3jQ4yY27NCuLwAiCqdqdiMVjGYsOd90xcdRBtX5tREE7ATqk21riVMXtAIHmBAGZ2jYQ6ZDO86ohend0RPlqMbjg1G3oliIwx5gNX1solpXlUnu1hmA1TgI3mB2qF1d7zgLw9yXykzScvCtOVsvqOAShLQ7GmR9cFJ7jfHN8APVBFMkXUKEVl6NkQhAQ4ApA7ehLXapgDI4JLuaNAWwlos9gEF2eS9VJ4j8F44fksKySH1IdSkcKR0fk9KX5pIxUQ7KWfWL6aALwY9hXvTtlHWBS62rAPT2VliYrbt9rCz8UVYGyxF9Dm43WvR6xrht8fFrOCVzhRvBreXHsyqwAE4Mzg7NMG48OXKLbo7ENp2bN7L1ppoLfF75wEDx5ecbTuFEg3YS4yDtKNdreHOei2bh1moaos3Zzum6WXZWHhrzFHtris4t8QZygCaNUTeaaONxRuFZtpz91ynjBF0gNFo5G0avIZHo0L5m5SYjXi41iVh8UOHAw2LxqpsVBaXDZ22nM2CWw1fmCgGsK1Jq6QDjEzul2GGZse3qwLxIokcqlVzKuGLrLJ2DDwhoWBovx2du</td>
+<td></td>
+<td>0</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: 1.7976931348623157E308</td>
+<td></td>
+<td>1</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuid()'><b>getChangeRequestGuid</b><br>Test class: AutoTest.ApplicationTest</td>
+<td></td>
+<td>3</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+<tr>
+<td title='AutoTest.ApplicationTest.getChangeRequestGuidNegative()'><b>getChangeRequestGuidNegative</b><br>Test class: AutoTest.ApplicationTest<br>Parameters: 13513a3e-36d6-11ee-b5b0-005026013b0c1</td>
+<td></td>
+<td>1</td>
+<td>AutoTest.ApplicationTest@35088e87</td></tr>
+</table><p>
+</body>
+</html>

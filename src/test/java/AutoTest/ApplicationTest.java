@@ -19,7 +19,7 @@ public class ApplicationTest {
         installSpec(requestSpecification(), responseSpecification());
         given()
                 .when()
-                .get("change-request/55c16101-a2d2-4120-8e3c-7a9d2037e929")
+                .get("change-request/b8ad1a2b-3c8f-459c-a578-a2c84cffbaa6")
                 .then().log().all()
                 .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getChangeRequest.json"));
         deleteSpec();

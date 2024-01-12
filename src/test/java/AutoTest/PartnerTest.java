@@ -67,7 +67,7 @@ public class PartnerTest {
                 .get("/partner")
                 .then().log().all()
                 .body("size()", lessThanOrEqualTo(step))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerList.json"));
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
         deleteSpec();
     }
 
@@ -82,7 +82,7 @@ public class PartnerTest {
                 .get("partner")
                 .then().log().all()
                 .body("size()", is(lessThanOrEqualTo(200)))
-                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerList.json"));
+                .assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
         deleteSpec();
     }
 
@@ -132,6 +132,116 @@ public class PartnerTest {
                 .get("partner/{guid}")
                 .then().log().all();
     }
+
+
+    @Test
+    @Feature("Поиск контрагента")
+    @Owner("Малышев")
+    @Step("ИНН контрагента = {inn}")
+    @Description("Поиск контрагента по ИНН")
+    public void getPartnerSearchInnList() {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .queryParam("inn", 1410006819)
+                .get("partner/search")
+                .then().log().all()
+               // .body("name", equalTo("ЯТЭК ЯРОН РФ ППО ОАО"))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
+        deleteSpec();
+    }
+    @Test
+    @Feature("Поиск контрагента")
+    @Owner("Малышев")
+    @Step("ИНН контрагента = {inn}, КПП контрагента = {kpp}")
+    @Description("Поиск контрагента по ИНН и КПП")
+    public void getPartnerSearchInnKppList() {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .queryParam("inn", 1435035057)
+                .queryParam("kpp", 143501001)
+                .get("partner/search")
+                .then().log().all()
+                // .body("name", equalTo("ЯНЦ СО РАН"))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
+        deleteSpec();
+    }
+    @Test
+    @Feature("Поиск контрагента")
+    @Owner("Малышев")
+    @Step("Код нерезидента = {code}")
+    @Description("Поиск контрагента по Коду нерезидента")
+    public void getPartnerSearchCodeList() {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .queryParam("code", "ПрА081589")
+                .get("partner/search")
+                .then().log().all()
+                // .body("name", equalTo("ЯНЦ СО РАН"))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
+        deleteSpec();
+    }
+    @Test
+    @Feature("Поиск контрагента")
+    @Owner("Малышев")
+    @Step("Код нерезидента = {code}")
+    @Description("Поиск контрагента по Коду нерезидента")
+    public void getPartnerSearchName() {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .queryParam("name", "ООО ЗАКАРПАТЛИСТРАНС")
+                .get("partner/search")
+                .then().log().all()
+                // .body("name", equalTo("ЯНЦ СО РАН"))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
+        deleteSpec();
+    }
+    @Test
+    @Feature("Поиск контрагента")
+    @Owner("Малышев")
+    @Step("Код, ИНН, КПП, Имя не заполнены нерезидента")
+    @Description("Поиск контрагента пустые поля")
+    public void getPartnerSearchEmptyParametr() {
+        installSpec(requestSpecification(), responseSpecification400());
+        given().log().uri()
+                .when()
+                .get("partner/search")
+                .then().log().all();
+        deleteSpec();
+    }
+
+   // @Test(dataProvider = "data")
+    @Feature("Вспомогательные")
+    @Owner("Малышев")
+    @Step("Тип изменяемых объектов = {type}, Количество возвращаемых элементов = {step}, Поле Дата = {data}")
+    @Description("Проверка списка изменений, с датой")
+    public void getListOfChangesDate(String type, Integer step, String date) {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .pathParam("type", type)
+                .queryParam("step", step)
+                .queryParam("date", date)
+                .get("list-of-changes/{type}")
+                .then().log().all()
+                .body("size()", lessThanOrEqualTo(200))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getListOfChanges.json"));
+        deleteSpec();
+
+    }
+
+
+
+
+
 
     /////////////////////////////////Получение списка partnerConcernType /////////////////////////////////////////
     @Test(dataProvider = "positiveData", dataProviderClass = ClassifierTest.class)
@@ -272,7 +382,7 @@ public class PartnerTest {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
                 .when()
-                .pathParam("guid", "ed4f63bd-8a1b-11ee-b5b1-005056013b0c")
+                .pathParam("guid", "5c792eff-b12a-11ee-b5b6-005056013b0c")
                 .get("/contact/{guid}")
                 .then().log().all()
                 .assertThat()
