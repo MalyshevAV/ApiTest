@@ -109,10 +109,10 @@ public class PartnerTest {
     @Description("Получение Partner по Гуид, валидация при помощи схемы Json")
     public void getPartnerGuid() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
-                .pathParam("guid", "b5f973d0-9f7c-11ee-b5b3-005056013b0c")
-                .get("/partner/{guid}")
+                .pathParam("guid", "e7250815-9f7e-11ee-b5b3-005056013b0c") //e7250815-9f7e-11ee-b5b3-005056013b0c
+                .get("/partner/{guid}")///b5f973cb-9f7c-11ee-b5b3-005056013b0c
                 .then().log().all()
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerGuid.json"));
@@ -174,14 +174,14 @@ public class PartnerTest {
     @Owner("Малышев")
     @Step("Код нерезидента = {code}")
     @Description("Поиск контрагента по Коду нерезидента")
-    public void getPartnerSearchCodeList() {
+    public void getPartnerSearchCodeNoResident() {
         installSpec(requestSpecification(), responseSpecification());
         given().log().uri()
                 .when()
-                .queryParam("code", "ПрА081589")
+                .queryParam("registrationNumber", "ПрА081589")
                 .get("partner/search")
                 .then().log().all()
-                // .body("name", equalTo("ЯНЦ СО РАН"))
+                // .body("size()", is(3))
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
         deleteSpec();
@@ -190,15 +190,31 @@ public class PartnerTest {
     @Feature("Поиск контрагента")
     @Owner("Малышев")
     @Step("Код нерезидента = {code}")
-    @Description("Поиск контрагента по Коду нерезидента")
+    @Description("Поиск контрагента по Коду в 1c Mdm")
+    public void getPartnerSearchCodeMdm() {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .queryParam("code", "1198156")
+                .get("partner/search")
+                .then().log().all()
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
+        deleteSpec();
+    }
+    @Test
+    @Feature("Поиск контрагента")
+    @Owner("Малышев")
+    @Step("Код нерезидента = {code}")
+    @Description("Поиск контрагента по Имени")
     public void getPartnerSearchName() {
         installSpec(requestSpecification(), responseSpecification());
         given().log().uri()
                 .when()
-                .queryParam("name", "ООО ЗАКАРПАТЛИСТРАНС")
+                .queryParam("name", "ООО ВЕГА")
                 .get("partner/search")
                 .then().log().all()
-                // .body("name", equalTo("ЯНЦ СО РАН"))
+               // .body("size()", equalTo(1))
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
         deleteSpec();

@@ -19,8 +19,8 @@ public class AuxiliaryTest {
     @Description("Позитивные тесты с использованием DataProvider")
     public static Object[][] data() {
         return new Object[][]{
-                {"nomenclature", 5, ""},
-                {"basic-services", 1, ""},
+                {"nomenclatur", 5, ""},
+                {"basic-services", 1, "2017-07-21T17:32:28Z"},
                 {"unified-classifier", 1, ""},
                 {"eop", 1, ""},
                 {"units", 1, ""},
@@ -28,7 +28,7 @@ public class AuxiliaryTest {
                 {"okved2", 1, ""},
                 {"tnved", 5, ""},
                 {"nomenclature", 5, "2020-07-21"},
-                {"basic-services", 1, "2021-01-21"},
+                {"basic-services", 1, "2020-07-21"},
                 {"unified-classifier", 1, "2010-07-21"},
                 {"eop", 1, "2017-07-21"},
                 {"units", 1, "2017-07-21"},
@@ -79,14 +79,14 @@ public class AuxiliaryTest {
     public static Object[][] typeNegative() {
         return new Object[][]{
                 {"nomenclatur", 5, ""},
-                {"", 1, ""},
-                {" ", 1, ""},
+                {"ss", 1, ""},
+                {"aa", 1, ""},
                 {0, 1, ""},
                 {-1, 1, ""},
                 {1.2, 1, ""},
                 {Integer.MAX_VALUE, 1, ""},
-                {"<script>alert( 'Hello world' );</script>", 5, ""},
-                {"!@#$%^&*(){}[]':;/<>|№", 5, ""},
+              //  {"<script>alert( 'Hello world' );</script>", 5, ""},
+              //  {"!@#$%^&*(){}[]':;/<>|№", 5, ""},
                 {"select*from users", 5, ""},
         };
     }

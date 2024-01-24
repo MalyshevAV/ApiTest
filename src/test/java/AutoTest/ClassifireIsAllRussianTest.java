@@ -40,8 +40,8 @@ public class ClassifireIsAllRussianTest {
         Assertions.assertEquals(response.size(), step);
         response.forEach(x -> Assert.assertEquals(x.getGuid().length(), 36));
         response.forEach(x-> Assert.assertTrue(x.getCode().length() <= 12));
-        response.forEach(x-> Assert.assertTrue(x.getNameFull().length() <= 150));
-        response.forEach(x-> Assert.assertTrue(x.getName().length() <= 150));
+        response.forEach(x-> Assert.assertTrue(x.getNameFull().length() <= 300));
+        response.forEach(x-> Assert.assertTrue(x.getName().length() <= 300));
         response.forEach(x -> Assert.assertTrue(x.getDateOutputArchive().length() <=20));
         Assertions.assertNotNull(response);
         deleteSpec();

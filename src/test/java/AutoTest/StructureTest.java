@@ -22,7 +22,7 @@ public class StructureTest {
     @Description("Получение списка Organization")
     public void getOrganizationList(int step) {
         installSpec(requestSpecification(), Specifications.responseSpecification());
-        given()
+        given().log().uri()
                 .when()
                 .queryParam("step", step)
                 .get("/organization")
