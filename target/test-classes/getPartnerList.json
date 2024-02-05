@@ -17,7 +17,6 @@
           "type": "string",
           "minLength": 10,
           "maxLength": 20
-
         },
         "code": {
           "type": "string",
@@ -34,11 +33,62 @@
           "minLength": 1,
           "maxLength": 100
         },
+        "nameAbbreviatedHistory": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 20
+                },
+                "nameAbbreviated": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                }
+              },
+              "required": [
+                "date",
+                "nameAbbreviated"
+              ]
+            }
+          ]
+        },
+
         "nameFull": {
           "type": "string",
           "minLength": 1,
-          "maxLength": 150
+          "maxLength": 200
         },
+        "nameFullHistory": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 20
+                },
+                "nameFull": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 150
+                }
+              },
+              "required": [
+                "date",
+                "nameFull"
+              ]
+            }
+          ]
+        },
+
+
         "type": {
           "type": "integer",
           "enum": [1, 2]
@@ -79,6 +129,31 @@
           "minLength": 0,
           "maxLength": 9
         },
+        "kppHistory": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 20
+                },
+                "kpp": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                }
+              },
+              "required": [
+                "date",
+                "kpp"
+              ]
+            }
+          ]
+        },
+
         "kppAdditional": {
           "type": "string",
           "minLength": 0,

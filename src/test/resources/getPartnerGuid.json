@@ -42,7 +42,7 @@
                   "minLength": 1,
                   "maxLength": 20
                 },
-                "kpp": {
+                "nameAbbreviated": {
                   "type": "string",
                   "minLength": 1,
                   "maxLength": 100
@@ -50,7 +50,7 @@
               },
               "required": [
                 "date",
-                "kpp"
+                "nameAbbreviated"
               ]
             }
           ]
@@ -72,15 +72,15 @@
                   "minLength": 1,
                   "maxLength": 20
                 },
-                "kpp": {
+                "nameFull": {
                   "type": "string",
                   "minLength": 1,
-                  "maxLength": 100
+                  "maxLength": 150
                 }
               },
               "required": [
                 "date",
-                "kpp"
+                "nameFull"
               ]
             }
           ]

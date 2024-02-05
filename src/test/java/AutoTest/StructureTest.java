@@ -109,6 +109,76 @@ public class StructureTest {
     }
 
 
+///////////////////////////////////// Поиск организации //////////////////////////////
+
+    @Test
+    @Feature("Получение Organization")
+    @Owner("Малышев")
+    @Step("ИНН контрагента = {inn}")
+    @Description("Поиск организации по ИНН")
+    public void getOrganizationSearchInnList() {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .queryParam("inn", 2127319070)
+                .get("organization/search")
+                .then().log().all()
+                // .body("name", equalTo("ЯТЭК ЯРОН РФ ППО ОАО"))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOrganizationList.json"));
+        deleteSpec();
+    }
+    @Test
+    @Feature("Получение Organization")
+    @Owner("Малышев")
+    @Step("ИНН организации = {inn}, КПП организации = {kpp}")
+    @Description("Поиск организации по ИНН и КПП")
+    public void getOrganizationSearchInnKppList() {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .queryParam("inn", 7743525900L)
+                .queryParam("kpp", 774301001)
+                .get("organization/search")
+                .then().log().all()
+                // .body("name", equalTo("ЯНЦ СО РАН"))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOrganizationList.json"));
+        deleteSpec();
+    }
+    @Test
+    @Feature("Получение Organization")
+    @Owner("Малышев")
+    @Step("Код нерезидента = {code}")
+    @Description("Поиск организации по Коду нерезидента")
+    public void getPartnerSearchCodeNoResident() {
+        installSpec(requestSpecification(), responseSpecification());
+        given().log().uri()
+                .when()
+                .queryParam("registrationNumber", 101430854)
+                .get("organization/search")
+                .then().log().all()
+                // .body("size()", is(3))
+                .assertThat()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getOrganizationList.json"));
+        deleteSpec();
+    }
+
+
+    @Test
+    @Feature("Получение Organization")
+    @Owner("Малышев")
+    @Step("Код, ИНН, КПП  не заполнены нерезидента")
+    @Description("Поиск контрагента пустые поля")
+    public void getОrganizationSearchEmptyParametr() {
+        installSpec(requestSpecification(), responseSpecification400());
+        given().log().uri()
+                .when()
+                .get("organization/search")
+                .then().log().all();
+        deleteSpec();
+    }
+
 
 
     /////////////////////////////////Получение списка Divisions /////////////////////////////////////////
