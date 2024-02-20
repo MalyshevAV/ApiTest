@@ -184,7 +184,7 @@ public class NomenclatureTest {
     public void getNomenclatureSearchType1() {
         installSpec(requestSpecification(), Specifications.responseSpecification());
         given()
-                .when()
+                .when().log().uri()
                 .queryParam("step", "")
                 .queryParam("type", 1)
                 .queryParam("data", "Болт")

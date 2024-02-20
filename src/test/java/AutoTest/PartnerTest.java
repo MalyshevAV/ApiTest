@@ -164,8 +164,9 @@ public class PartnerTest {
                 .queryParam("kpp", 143501001)
                 .get("partner/search")
                 .then().log().all()
-                // .body("name", equalTo("ЯНЦ СО РАН"))
+                .body("name", hasItem("ЯНЦ СО РАН"))
                 .assertThat()
+               // .body("name", equalTo("ЯНЦ СО РАН"))
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
         deleteSpec();
     }
@@ -183,6 +184,7 @@ public class PartnerTest {
                 .then().log().all()
                 // .body("size()", is(3))
                 .assertThat()
+                .body("size()", is(1))
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
         deleteSpec();
     }
@@ -199,6 +201,7 @@ public class PartnerTest {
                 .get("partner/search")
                 .then().log().all()
                 .assertThat()
+                .body("size()", is(1))
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
         deleteSpec();
     }
@@ -214,7 +217,7 @@ public class PartnerTest {
                 .queryParam("name", "ООО ВЕГА")
                 .get("partner/search")
                 .then().log().all()
-               // .body("size()", equalTo(1))
+                .body("size()", notNullValue())
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("getPartnerSearchList.json"));
         deleteSpec();
